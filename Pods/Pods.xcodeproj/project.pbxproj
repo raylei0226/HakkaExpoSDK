@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		AA6E119C34F4DE60D4FFF46C6C2543EA /* IndoorAtlas */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AC5F05A10CCF8C873BAE6C8A92BB494D /* Build configuration list for PBXAggregateTarget "IndoorAtlas" */;
+			buildPhases = (
+				EC6AEA8BF25C16189524CC9C761EE73A /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = IndoorAtlas;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		47F56E25B58DF8DA5BBF453C00057DDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		90C4EC879E184E680D76B0415E17FF73 /* Pods-HakkaExpo2023-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7B9708EAFA2DC28E827743F9F08DE5 /* Pods-HakkaExpo2023-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B93430EA583AF300EE8E75F3131AB807 /* Pods-HakkaExpo2023-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFBD228DDE190F51B3042D448A75045 /* Pods-HakkaExpo2023-iOS-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53BAA5774248256F152624929A839AFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA6E119C34F4DE60D4FFF46C6C2543EA;
+			remoteInfo = IndoorAtlas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F84F71A99197F281B23103C4587D435 /* Pods-HakkaExpo2023-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HakkaExpo2023-iOS"; path = Pods_HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F2E117BAA24C29B8FF9E9226251367 /* IndoorAtlas-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "IndoorAtlas-xcframeworks.sh"; sourceTree = "<group>"; };
+		4783CD124E5A52FBFC6A84D02D43922E /* Pods-HakkaExpo2023-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HakkaExpo2023-iOS-Info.plist"; sourceTree = "<group>"; };
+		4BFBD228DDE190F51B3042D448A75045 /* Pods-HakkaExpo2023-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HakkaExpo2023-iOS-dummy.m"; sourceTree = "<group>"; };
+		562B90BD6A7026760311A4029FED1BF4 /* Pods-HakkaExpo2023-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HakkaExpo2023-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		5CEC8E859C696A1B65511586C8F4AE02 /* IndoorAtlas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IndoorAtlas.debug.xcconfig; sourceTree = "<group>"; };
+		5E7B9708EAFA2DC28E827743F9F08DE5 /* Pods-HakkaExpo2023-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HakkaExpo2023-iOS-umbrella.h"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		751CDA50337CC0BD6D84F0969047482E /* IndoorAtlas.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = IndoorAtlas.xcframework; path = "indooratlas-ios-sdk/IndoorAtlas.xcframework"; sourceTree = "<group>"; };
+		90D7586A3BCD395776766B4454E06E61 /* Pods-HakkaExpo2023-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HakkaExpo2023-iOS.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B2B3AD75A691729F782C76A18FADD36C /* IndoorAtlas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IndoorAtlas.release.xcconfig; sourceTree = "<group>"; };
+		B43DCFCC43A87E85E12536B810DDB2F9 /* Pods-HakkaExpo2023-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HakkaExpo2023-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E0AFE58A69CE5C1025F40935BCB25127 /* Pods-HakkaExpo2023-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HakkaExpo2023-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F61631A71968574FBD74FF36C7E6C4CD /* Pods-HakkaExpo2023-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HakkaExpo2023-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36B3DF40BC765856CDC7F05C30A9E180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F56E25B58DF8DA5BBF453C00057DDE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019E412834608EC7DFE82C55BBB15A32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37F2E117BAA24C29B8FF9E9226251367 /* IndoorAtlas-xcframeworks.sh */,
+				5CEC8E859C696A1B65511586C8F4AE02 /* IndoorAtlas.debug.xcconfig */,
+				B2B3AD75A691729F782C76A18FADD36C /* IndoorAtlas.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IndoorAtlas";
+			sourceTree = "<group>";
+		};
+		1B742492380D6B4D9B17DB07C0BC8CAD /* IndoorAtlas */ = {
+			isa = PBXGroup;
+			children = (
+				EF34E51ED28A60FDE099655AA7BD8714 /* Frameworks */,
+				019E412834608EC7DFE82C55BBB15A32 /* Support Files */,
+			);
+			name = IndoorAtlas;
+			path = IndoorAtlas;
+			sourceTree = "<group>";
+		};
+		3FB45999922617A4A065DD4D2211CF2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F84F71A99197F281B23103C4587D435 /* Pods-HakkaExpo2023-iOS */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5F5BC7C48FECA492B73E603323B1A095 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF02C0AFA5EC7B1EAA9D06BDCF913031 /* Pods-HakkaExpo2023-iOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A3D7500DAD52FB50D1E4FCD18FCDC7DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B742492380D6B4D9B17DB07C0BC8CAD /* IndoorAtlas */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF02C0AFA5EC7B1EAA9D06BDCF913031 /* Pods-HakkaExpo2023-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				90D7586A3BCD395776766B4454E06E61 /* Pods-HakkaExpo2023-iOS.modulemap */,
+				F61631A71968574FBD74FF36C7E6C4CD /* Pods-HakkaExpo2023-iOS-acknowledgements.markdown */,
+				562B90BD6A7026760311A4029FED1BF4 /* Pods-HakkaExpo2023-iOS-acknowledgements.plist */,
+				4BFBD228DDE190F51B3042D448A75045 /* Pods-HakkaExpo2023-iOS-dummy.m */,
+				4783CD124E5A52FBFC6A84D02D43922E /* Pods-HakkaExpo2023-iOS-Info.plist */,
+				5E7B9708EAFA2DC28E827743F9F08DE5 /* Pods-HakkaExpo2023-iOS-umbrella.h */,
+				E0AFE58A69CE5C1025F40935BCB25127 /* Pods-HakkaExpo2023-iOS.debug.xcconfig */,
+				B43DCFCC43A87E85E12536B810DDB2F9 /* Pods-HakkaExpo2023-iOS.release.xcconfig */,
+			);
+			name = "Pods-HakkaExpo2023-iOS";
+			path = "Target Support Files/Pods-HakkaExpo2023-iOS";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A3D7500DAD52FB50D1E4FCD18FCDC7DD /* Pods */,
+				3FB45999922617A4A065DD4D2211CF2E /* Products */,
+				5F5BC7C48FECA492B73E603323B1A095 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF34E51ED28A60FDE099655AA7BD8714 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				751CDA50337CC0BD6D84F0969047482E /* IndoorAtlas.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A5577489AB6C77DEA2B365D2F0EF80D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C4EC879E184E680D76B0415E17FF73 /* Pods-HakkaExpo2023-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E5AAEA9B3F746D1374830F343C4E22B0 /* Pods-HakkaExpo2023-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0733F37CCF92A516547858DE4EDBB7F /* Build configuration list for PBXNativeTarget "Pods-HakkaExpo2023-iOS" */;
+			buildPhases = (
+				A5577489AB6C77DEA2B365D2F0EF80D2 /* Headers */,
+				176B82E7A4C17BCE096465577996B52D /* Sources */,
+				36B3DF40BC765856CDC7F05C30A9E180 /* Frameworks */,
+				F96C2A0D8F8F43B01BD1CDD64F2E47C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AC6B378CC764B7CCD9385B1A2588496 /* PBXTargetDependency */,
+			);
+			name = "Pods-HakkaExpo2023-iOS";
+			productName = Pods_HakkaExpo2023_iOS;
+			productReference = 2F84F71A99197F281B23103C4587D435 /* Pods-HakkaExpo2023-iOS */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3FB45999922617A4A065DD4D2211CF2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA6E119C34F4DE60D4FFF46C6C2543EA /* IndoorAtlas */,
+				E5AAEA9B3F746D1374830F343C4E22B0 /* Pods-HakkaExpo2023-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F96C2A0D8F8F43B01BD1CDD64F2E47C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EC6AEA8BF25C16189524CC9C761EE73A /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/IndoorAtlas/IndoorAtlas-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/IndoorAtlas/IndoorAtlas-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/IndoorAtlas/IndoorAtlas-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		176B82E7A4C17BCE096465577996B52D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93430EA583AF300EE8E75F3131AB807 /* Pods-HakkaExpo2023-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AC6B378CC764B7CCD9385B1A2588496 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IndoorAtlas;
+			target = AA6E119C34F4DE60D4FFF46C6C2543EA /* IndoorAtlas */;
+			targetProxy = 53BAA5774248256F152624929A839AFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		58DCA3AEC2D05FC80BC2077E9D45CD00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0AFE58A69CE5C1025F40935BCB25127 /* Pods-HakkaExpo2023-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		68C559C8677B54FE757AC022618DB77F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CEC8E859C696A1B65511586C8F4AE02 /* IndoorAtlas.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B5482907A4912D0BB8C076FBA6335BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43DCFCC43A87E85E12536B810DDB2F9 /* Pods-HakkaExpo2023-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F308AC8C22FBC52BC7703B3CFECE84D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B3AD75A691729F782C76A18FADD36C /* IndoorAtlas.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5F05A10CCF8C873BAE6C8A92BB494D /* Build configuration list for PBXAggregateTarget "IndoorAtlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C559C8677B54FE757AC022618DB77F /* Debug */,
+				F308AC8C22FBC52BC7703B3CFECE84D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0733F37CCF92A516547858DE4EDBB7F /* Build configuration list for PBXNativeTarget "Pods-HakkaExpo2023-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58DCA3AEC2D05FC80BC2077E9D45CD00 /* Debug */,
+				B5482907A4912D0BB8C076FBA6335BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
