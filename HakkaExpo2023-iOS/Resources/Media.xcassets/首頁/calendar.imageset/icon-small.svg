@@ -1,0 +1,12 @@
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#weixvo2bva)">
+        <path d="M3.6 8H2.4a.4.4 0 0 0-.4.4v1.2c0 .22.18.4.4.4h1.2a.4.4 0 0 0 .4-.4V8.4a.4.4 0 0 0-.4-.4zM3.6 5H2.4a.4.4 0 0 0-.4.4v1.2c0 .22.18.4.4.4h1.2a.4.4 0 0 0 .4-.4V5.4a.4.4 0 0 0-.4-.4zM6.6 5H5.4a.4.4 0 0 0-.4.4v1.2c0 .22.18.4.4.4h1.2a.4.4 0 0 0 .4-.4V5.4a.4.4 0 0 0-.4-.4zM6.6 8H5.4a.4.4 0 0 0-.4.4v1.2c0 .22.18.4.4.4h1.2a.4.4 0 0 0 .4-.4V8.4a.4.4 0 0 0-.4-.4zM9.6 8H8.4a.4.4 0 0 0-.4.4v1.2c0 .22.18.4.4.4h1.2a.4.4 0 0 0 .4-.4V8.4a.4.4 0 0 0-.4-.4zM9.6 5H8.4a.4.4 0 0 0-.4.4v1.2c0 .22.18.4.4.4h1.2a.4.4 0 0 0 .4-.4V5.4a.4.4 0 0 0-.4-.4z" fill="#74318E"/>
+        <path d="M1 3h10" stroke="#74318E" stroke-miterlimit="10" stroke-linecap="round"/>
+        <rect x=".5" y=".5" width="11" height="11" rx=".5" stroke="#74318E"/>
+    </g>
+    <defs>
+        <clipPath id="weixvo2bva">
+            <path fill="#fff" d="M0 0h12v12H0z"/>
+        </clipPath>
+    </defs>
+</svg>
