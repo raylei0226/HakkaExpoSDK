@@ -16,8 +16,9 @@ typealias hud = SVProgressHUD
     @IBOutlet weak var carouselCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var toOfficialWebsiteButton: UIButton!
-      
+    
     private let carouselViewModel = MainPageViewModel()
+    private var timer: Timer?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +30,35 @@ typealias hud = SVProgressHUD
         //監聽網路狀態
         Reachability.shared.startNetworkReachabilityObserver()
         
-        
         //註冊cell
         carouselCollectionView.register(UINib(nibName: "CarouselCollectionViewCell", bundle: Bundle(for: MainPageViewController.self)), forCellWithReuseIdentifier: Configs.CellNames.carouselCollectionViewCell)
         
-        
         //設置page control 總數
         pageControl.numberOfPages = carouselViewModel.numberOfItems
-        pageControl.currentPage = 0
         
+        startTimer()
     }
     
+    private func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
+    }
     
-   
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc private func scrollToNextPage() {
+        guard let currentIndexPath = carouselCollectionView.indexPathsForVisibleItems.first else {
+            return
+        }
+        
+        let nextItem = currentIndexPath.item + 1
+        let nextIndexPath = IndexPath(item: nextItem % carouselViewModel.numberOfItems, section: currentIndexPath.section)
+        
+        carouselCollectionView.scrollToItem(at: nextIndexPath, at: .centeredHorizontally, animated: true)
+    }
+    
     @IBAction func buttonClicked(_ sender: UIButton) {
         
         //tag 1:前往官網 2:踏點闖關 3:360環景 4:智慧導引 5:AR互動 6:退出 7:更多
@@ -73,32 +90,42 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Configs.CellNames.carouselCollectionViewCell, for: indexPath) as? CarouselCollectionViewCell else { return UICollectionViewCell() }
         
-//        let imageName = carouselViewModel.getItems(at: indexPath.item)
-//
-//        cell.cofigure(with: imageName)
-        let imageArray = [ UIImage(named: "pic1"), UIImage(named: "pic2")]
-        cell.imageView.image = imageArray[indexPath.row]
-    
+        let imageName = carouselViewModel.getItems(at: indexPath.item)
+        
+        cell.cofigure(with: imageName)
+
         return cell
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: carouselCollectionView.bounds.width, height: carouselCollectionView.bounds.height)
+        return carouselCollectionView.frame.size
+    }
+
+    
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        stopTimer()
+        
     }
     
-    
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        pageControl.currentPage = currentPage
+    }
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        let visibleRect = CGRect(origin: carouselCollectionView.contentOffset, size: carouselCollectionView.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        if let visibleIndexPath = carouselCollectionView.indexPathForItem(at: visiblePoint) {
-            pageControl.currentPage = visibleIndexPath.item
-        }
+        let currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        pageControl.currentPage = currentPage
+    
+        startTimer()
+        
+//        let visibleRect = CGRect(origin: carouselCollectionView.contentOffset, size: carouselCollectionView.bounds.size)
+//        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+//        if let visibleIndexPath = carouselCollectionView.indexPathForItem(at: visiblePoint) {
+//            pageControl.currentPage = visibleIndexPath.item
+//
+//
+//        }
     }
-    
-
-    
-    
 }

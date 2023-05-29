@@ -17,7 +17,7 @@ class MainPageViewModel {
     
     init() {
         
-        carouselItems = ["pic1", "pic2"]
+        carouselItems = ["pic1", "pic2", "pic3"]
     }
     
     

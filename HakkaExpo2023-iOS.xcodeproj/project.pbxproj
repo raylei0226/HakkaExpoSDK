@@ -43,7 +43,6 @@
 		3BAF032D2A1CAF0200E514E1 /* MarineLife3DModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF032C2A1CAF0200E514E1 /* MarineLife3DModel.swift */; };
 		3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03302A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift */; };
 		3BAF03332A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF03312A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib */; };
-		3BAF03352A1F3CAC00E514E1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03342A1F3CAC00E514E1 /* Button.swift */; };
 		3BAF03382A20437E00E514E1 /* GLTFSceneKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF03372A20437E00E514E1 /* GLTFSceneKit */; };
 		3BAF033B2A20550800E514E1 /* EntryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF033A2A20550800E514E1 /* EntryClass.swift */; };
 		3BAF033C2A2055AB00E514E1 /* EntryClass.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3BAF033A2A20550800E514E1 /* EntryClass.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -109,7 +108,6 @@
 		3BAF032C2A1CAF0200E514E1 /* MarineLife3DModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineLife3DModel.swift; sourceTree = "<group>"; };
 		3BAF03302A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BAF03312A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
-		3BAF03342A1F3CAC00E514E1 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3BAF033A2A20550800E514E1 /* EntryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryClass.swift; sourceTree = "<group>"; };
 		631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +182,6 @@
 		3BAF02C02A1708DC00E514E1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3BAF03342A1F3CAC00E514E1 /* Button.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -608,7 +605,6 @@
 				3BAF03192A1C621400E514E1 /* VenueViewModel.swift in Sources */,
 				3BAF03152A1C61DF00E514E1 /* VenueTableViewCell.swift in Sources */,
 				3BAF032D2A1CAF0200E514E1 /* MarineLife3DModel.swift in Sources */,
-				3BAF03352A1F3CAC00E514E1 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

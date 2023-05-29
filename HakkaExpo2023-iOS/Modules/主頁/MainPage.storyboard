@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,8 +35,8 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pcu-Gc-HKK">
                                 <rect key="frame" x="0.0" y="53.5" width="375" height="166.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="evE-vN-P0f">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="evE-vN-P0f">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -50,7 +49,9 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nDZ-7I-t7w">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -84,9 +85,6 @@
                                     <constraint firstItem="5xf-bP-so6" firstAttribute="centerX" secondItem="5gQ-dL-w0K" secondAttribute="centerX" id="nPb-10-gRm"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XpK-i2-sHF">
-                                <rect key="frame" x="129.5" y="186" width="116.5" height="26"/>
-                            </pageControl>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="07T-aP-FCR">
                                 <rect key="frame" x="30" y="275" width="315" height="85"/>
                                 <subviews>
@@ -295,7 +293,7 @@
                                                         <rect key="frame" x="0.0" y="30.5" width="326" height="205"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ars-T9-ISm">
-                                                                <rect key="frame" x="15" y="0.0" width="228" height="12"/>
+                                                                <rect key="frame" x="15" y="0.0" width="228.5" height="12"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="lSU-tW-wld">
                                                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
@@ -305,12 +303,12 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuL-eh-n8Q">
-                                                                        <rect key="frame" x="24" y="0.0" width="204" height="12"/>
+                                                                        <rect key="frame" x="24" y="0.0" width="204.5" height="12"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="展期：">
                                                                                 <attributes>
                                                                                     <color key="NSColor" red="0.45016133790000001" green="0.1934939027" blue="0.55482828620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <font key="NSFont" size="12" name=".PingFangTC-Regular"/>
+                                                                                    <font key="NSFont" metaFont="cellTitle"/>
                                                                                     <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                 </attributes>
@@ -429,6 +427,11 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="JIJ-Eg-y0d"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="niu-gc-wUu"/>
                             </scrollView>
+                            <pageControl opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XpK-i2-sHF">
+                                <rect key="frame" x="129.5" y="186" width="116.5" height="26"/>
+                                <color key="pageIndicatorTintColor" name="notEnabledGray"/>
+                                <color key="currentPageIndicatorTintColor" name="themePurple"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -494,8 +497,5 @@
         <namedColor name="themePurple">
             <color red="0.45098039215686275" green="0.19215686274509805" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
