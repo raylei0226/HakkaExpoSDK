@@ -17,6 +17,7 @@ typealias hud = SVProgressHUD
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var toOfficialWebsiteButton: UIButton!
     
+    
     private let carouselViewModel = MainPageViewModel()
     private var timer: Timer?
     
@@ -39,6 +40,10 @@ typealias hud = SVProgressHUD
         startTimer()
     }
     
+    override public func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     private func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
     }
@@ -48,6 +53,7 @@ typealias hud = SVProgressHUD
         timer = nil
     }
     
+
     @objc private func scrollToNextPage() {
         guard let currentIndexPath = carouselCollectionView.indexPathsForVisibleItems.first else {
             return
@@ -66,7 +72,7 @@ typealias hud = SVProgressHUD
             
         case 1: print(sender.tag)
         case 2: print(sender.tag)
-        case 3: print(sender.tag)
+        case 3: Router.shared.navigateToPanorama(self)
         case 4: print(sender.tag)
         case 5: print(sender.tag)
         case 6: self.dismiss(animated: true)

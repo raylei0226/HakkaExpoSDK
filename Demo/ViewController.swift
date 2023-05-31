@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBAction func demoButtonClicked(_ sender: Any) {
         
-        EntryClass.shared.start(self)
+        Router.shared.startApp(self)
     }
 }
 

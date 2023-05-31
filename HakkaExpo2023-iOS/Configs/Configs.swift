@@ -19,8 +19,12 @@ struct Configs {
         static let deviceUUID = "DeviceUUID"
     }
     
-    struct BoundleID {
+    struct BoundleID{
         static let id = "omniguider.HakkaExpo2023-iOS.com"
+    }
+    
+    static var Bunlde = {
+        Bundle(identifier: BoundleID.id)
     }
     
     //專案配色
@@ -52,10 +56,15 @@ struct Configs {
     }
     
     
+    struct Basic {
+        static let backgroundImage = "themeBackground"
+    }
+    
     //cell name
     
     struct CellNames {
         
         static let carouselCollectionViewCell = "carouselCollectionViewCell"
+        static let panoramaTableViewCell = "panoramaTableViewCell"
     }
 }

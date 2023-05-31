@@ -44,8 +44,11 @@
 		3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03302A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift */; };
 		3BAF03332A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF03312A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib */; };
 		3BAF03382A20437E00E514E1 /* GLTFSceneKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF03372A20437E00E514E1 /* GLTFSceneKit */; };
-		3BAF033B2A20550800E514E1 /* EntryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF033A2A20550800E514E1 /* EntryClass.swift */; };
-		3BAF033C2A2055AB00E514E1 /* EntryClass.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3BAF033A2A20550800E514E1 /* EntryClass.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF033E2A24A0C500E514E1 /* BasicViewController.swift */; };
+		3BAF03462A25C7FD00E514E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03452A25C7FD00E514E1 /* Router.swift */; };
+		3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03482A25F1B400E514E1 /* PanoramaViewModel.swift */; };
+		3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF034C2A25FBFE00E514E1 /* PanoramaTableViewCell.swift */; };
+		3BAF034F2A25FBFE00E514E1 /* PanoramaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF034D2A25FBFE00E514E1 /* PanoramaTableViewCell.xib */; };
 		D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +111,11 @@
 		3BAF032C2A1CAF0200E514E1 /* MarineLife3DModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineLife3DModel.swift; sourceTree = "<group>"; };
 		3BAF03302A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BAF03312A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
-		3BAF033A2A20550800E514E1 /* EntryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryClass.swift; sourceTree = "<group>"; };
+		3BAF033E2A24A0C500E514E1 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		3BAF03452A25C7FD00E514E1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3BAF03482A25F1B400E514E1 /* PanoramaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaViewModel.swift; sourceTree = "<group>"; };
+		3BAF034C2A25FBFE00E514E1 /* PanoramaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaTableViewCell.swift; sourceTree = "<group>"; };
+		3BAF034D2A25FBFE00E514E1 /* PanoramaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaTableViewCell.xib; sourceTree = "<group>"; };
 		631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FAFC231239541F503F75B2 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,7 +181,6 @@
 				3BAF02C12A1708F800E514E1 /* Extensions */,
 				3BAF02C02A1708DC00E514E1 /* Common */,
 				3BAF02B92A1706B300E514E1 /* HakkaExpo2023_iOS.h */,
-				3BAF033A2A20550800E514E1 /* EntryClass.swift */,
 			);
 			path = "HakkaExpo2023-iOS";
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 		3BAF02C22A17091900E514E1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF033D2A24A0AA00E514E1 /* Basic */,
 				3BAF03172A1C61EC00E514E1 /* Venue */,
 				3BAF030E2A1C4FCC00E514E1 /* AR互動 */,
 				3BAF030D2A1C4FBC00E514E1 /* 智慧導引 */,
@@ -262,6 +269,7 @@
 			children = (
 				3BAF02D52A17290A00E514E1 /* AppCoordinator.swift */,
 				3BAF02D72A17294200E514E1 /* Coordinator.swift */,
+				3BAF03452A25C7FD00E514E1 /* Router.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -313,6 +321,9 @@
 			children = (
 				3BAF030A2A1C4F7100E514E1 /* PanoramaViewController.swift */,
 				3BAF03112A1C532F00E514E1 /* Panorama.storyboard */,
+				3BAF03482A25F1B400E514E1 /* PanoramaViewModel.swift */,
+				3BAF034C2A25FBFE00E514E1 /* PanoramaTableViewCell.swift */,
+				3BAF034D2A25FBFE00E514E1 /* PanoramaTableViewCell.xib */,
 			);
 			path = "360環景";
 			sourceTree = "<group>";
@@ -368,6 +379,14 @@
 			path = "海底世界";
 			sourceTree = "<group>";
 		};
+		3BAF033D2A24A0AA00E514E1 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF033E2A24A0C500E514E1 /* BasicViewController.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		59D31F6C84B1FC177623D8A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,7 +415,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BAF02BA2A1706B300E514E1 /* HakkaExpo2023_iOS.h in Headers */,
-				3BAF033C2A2055AB00E514E1 /* EntryClass.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +521,7 @@
 				3BAF03332A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib in Resources */,
 				3BAF03162A1C61DF00E514E1 /* VenueTableViewCell.xib in Resources */,
 				3BAF03252A1C8FB400E514E1 /* Media.xcassets in Resources */,
+				3BAF034F2A25FBFE00E514E1 /* PanoramaTableViewCell.xib in Resources */,
 				3BAF03212A1C8E9700E514E1 /* Aquarium.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,15 +608,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */,
+				3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */,
+				3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */,
 				3BAF02FF2A17510C00E514E1 /* DeviceIDManager.swift in Sources */,
 				3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */,
 				3BAF02F82A174CD600E514E1 /* MainPageViewController.swift in Sources */,
 				3BAF02D62A17290A00E514E1 /* AppCoordinator.swift in Sources */,
+				3BAF03462A25C7FD00E514E1 /* Router.swift in Sources */,
+				3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */,
 				3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */,
 				3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
 				3BAF031D2A1C646F00E514E1 /* ARInteraction.swift in Sources */,
-				3BAF033B2A20550800E514E1 /* EntryClass.swift in Sources */,
 				3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */,
 				3BAF03062A1B20A800E514E1 /* APIRouter.swift in Sources */,
 				3BAF03032A1B1F0B00E514E1 /* NewworkManager.swift in Sources */,
@@ -851,7 +873,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -881,7 +903,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
