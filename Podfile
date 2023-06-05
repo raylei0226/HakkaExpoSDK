@@ -8,6 +8,7 @@ target 'HakkaExpo2023-iOS' do
   # Pods for HakkaExpo2023-iOS
   
   pod 'IndoorAtlas'
+  pod 'SDWebImageWebPCoder'
   
 end
 

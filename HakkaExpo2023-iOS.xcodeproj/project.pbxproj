@@ -26,8 +26,8 @@
 		3BAF02FA2A174CE700E514E1 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF02F92A174CE700E514E1 /* MainPage.storyboard */; };
 		3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02FC2A174ED800E514E1 /* Configs.swift */; };
 		3BAF02FF2A17510C00E514E1 /* DeviceIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02FE2A17510C00E514E1 /* DeviceIDManager.swift */; };
-		3BAF03032A1B1F0B00E514E1 /* NewworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03022A1B1F0B00E514E1 /* NewworkManager.swift */; };
-		3BAF03062A1B20A800E514E1 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03052A1B20A800E514E1 /* APIRouter.swift */; };
+		3BAF03032A1B1F0B00E514E1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03022A1B1F0B00E514E1 /* NetworkManager.swift */; };
+		3BAF03062A1B20A800E514E1 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03052A1B20A800E514E1 /* RestAPI.swift */; };
 		3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03072A1C4F0F00E514E1 /* MainPageViewModel.swift */; };
 		3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF030A2A1C4F7100E514E1 /* PanoramaViewController.swift */; };
 		3BAF03122A1C532F00E514E1 /* Panorama.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF03112A1C532F00E514E1 /* Panorama.storyboard */; };
@@ -49,6 +49,12 @@
 		3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03482A25F1B400E514E1 /* PanoramaViewModel.swift */; };
 		3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF034C2A25FBFE00E514E1 /* PanoramaTableViewCell.swift */; };
 		3BAF034F2A25FBFE00E514E1 /* PanoramaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF034D2A25FBFE00E514E1 /* PanoramaTableViewCell.xib */; };
+		3BAF03552A27228400E514E1 /* String + sha1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03542A27228400E514E1 /* String + sha1.swift */; };
+		3BAF03582A27232400E514E1 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF03572A27232400E514E1 /* CryptoSwift */; };
+		3BAF035C2A272A9500E514E1 /* HttpsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF035B2A272A9500E514E1 /* HttpsParameters.swift */; };
+		3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF035D2A2731C800E514E1 /* APIEndpoint.swift */; };
+		3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03612A28375700E514E1 /* CommonWebViewController.swift */; };
+		3BAF03682A28A09E00E514E1 /* BannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03672A28A09D00E514E1 /* BannerData.swift */; };
 		D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,8 +100,8 @@
 		3BAF02F92A174CE700E514E1 /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		3BAF02FC2A174ED800E514E1 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		3BAF02FE2A17510C00E514E1 /* DeviceIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIDManager.swift; sourceTree = "<group>"; };
-		3BAF03022A1B1F0B00E514E1 /* NewworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewworkManager.swift; sourceTree = "<group>"; };
-		3BAF03052A1B20A800E514E1 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		3BAF03022A1B1F0B00E514E1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3BAF03052A1B20A800E514E1 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		3BAF03072A1C4F0F00E514E1 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
 		3BAF030A2A1C4F7100E514E1 /* PanoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
 		3BAF03112A1C532F00E514E1 /* Panorama.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Panorama.storyboard; sourceTree = "<group>"; };
@@ -116,6 +122,12 @@
 		3BAF03482A25F1B400E514E1 /* PanoramaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaViewModel.swift; sourceTree = "<group>"; };
 		3BAF034C2A25FBFE00E514E1 /* PanoramaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaTableViewCell.swift; sourceTree = "<group>"; };
 		3BAF034D2A25FBFE00E514E1 /* PanoramaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaTableViewCell.xib; sourceTree = "<group>"; };
+		3BAF03542A27228400E514E1 /* String + sha1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + sha1.swift"; sourceTree = "<group>"; };
+		3BAF03592A2726DC00E514E1 /* CryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CryptoKit.framework; sourceTree = DEVELOPER_DIR; };
+		3BAF035B2A272A9500E514E1 /* HttpsParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpsParameters.swift; sourceTree = "<group>"; };
+		3BAF035D2A2731C800E514E1 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		3BAF03612A28375700E514E1 /* CommonWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWebViewController.swift; sourceTree = "<group>"; };
+		3BAF03672A28A09D00E514E1 /* BannerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
 		631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FAFC231239541F503F75B2 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +144,7 @@
 				3BAF02CD2A171B2800E514E1 /* SVProgressHUD in Frameworks */,
 				13EAD37FC369BCAB9B5A511A /* Pods_HakkaExpo2023_iOS.framework in Frameworks */,
 				3BAF02CA2A170DF100E514E1 /* Alamofire in Frameworks */,
+				3BAF03582A27232400E514E1 /* CryptoSwift in Frameworks */,
 				3BAF03382A20437E00E514E1 /* GLTFSceneKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +208,7 @@
 		3BAF02C12A1708F800E514E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF03532A27226600E514E1 /* String */,
 				3BAF02C72A170D6F00E514E1 /* UIVIew */,
 			);
 			path = Extensions;
@@ -219,7 +233,7 @@
 			children = (
 				3BAF02D32A17203700E514E1 /* Reachability.swift */,
 				3BAF02FE2A17510C00E514E1 /* DeviceIDManager.swift */,
-				3BAF03022A1B1F0B00E514E1 /* NewworkManager.swift */,
+				3BAF03022A1B1F0B00E514E1 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -228,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				3BAF032C2A1CAF0200E514E1 /* MarineLife3DModel.swift */,
+				3BAF03672A28A09D00E514E1 /* BannerData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,7 +250,9 @@
 		3BAF02C52A170B8200E514E1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3BAF03042A1B209B00E514E1 /* RESTful */,
+				3BAF03052A1B20A800E514E1 /* RestAPI.swift */,
+				3BAF035B2A272A9500E514E1 /* HttpsParameters.swift */,
+				3BAF035D2A2731C800E514E1 /* APIEndpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -308,14 +325,6 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
-		3BAF03042A1B209B00E514E1 /* RESTful */ = {
-			isa = PBXGroup;
-			children = (
-				3BAF03052A1B20A800E514E1 /* APIRouter.swift */,
-			);
-			path = RESTful;
-			sourceTree = "<group>";
-		};
 		3BAF03092A1C4F1700E514E1 /* 360環景 */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,8 +392,17 @@
 			isa = PBXGroup;
 			children = (
 				3BAF033E2A24A0C500E514E1 /* BasicViewController.swift */,
+				3BAF03612A28375700E514E1 /* CommonWebViewController.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		3BAF03532A27226600E514E1 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF03542A27228400E514E1 /* String + sha1.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		59D31F6C84B1FC177623D8A4 /* Pods */ = {
@@ -401,6 +419,7 @@
 		FE4A1E7B3FB2026C1C4FD544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF03592A2726DC00E514E1 /* CryptoKit.framework */,
 				631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */,
 				6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */,
 			);
@@ -440,6 +459,7 @@
 				3BAF02C92A170DF100E514E1 /* Alamofire */,
 				3BAF02CC2A171B2800E514E1 /* SVProgressHUD */,
 				3BAF03372A20437E00E514E1 /* GLTFSceneKit */,
+				3BAF03572A27232400E514E1 /* CryptoSwift */,
 			);
 			productName = "HakkaExpo2023-iOS";
 			productReference = 3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */;
@@ -498,6 +518,7 @@
 				3BAF02C82A170DF100E514E1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3BAF02CB2A171B2800E514E1 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 				3BAF03362A20437E00E514E1 /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
+				3BAF03562A27232400E514E1 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 3BAF02B72A1706B300E514E1 /* Products */;
 			projectDirPath = "";
@@ -607,8 +628,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAF03552A27228400E514E1 /* String + sha1.swift in Sources */,
 				3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */,
+				3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */,
 				3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */,
+				3BAF035C2A272A9500E514E1 /* HttpsParameters.swift in Sources */,
 				3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */,
 				3BAF02FF2A17510C00E514E1 /* DeviceIDManager.swift in Sources */,
 				3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */,
@@ -618,14 +642,16 @@
 				3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */,
 				3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */,
 				3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */,
+				3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
 				3BAF031D2A1C646F00E514E1 /* ARInteraction.swift in Sources */,
 				3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */,
-				3BAF03062A1B20A800E514E1 /* APIRouter.swift in Sources */,
-				3BAF03032A1B1F0B00E514E1 /* NewworkManager.swift in Sources */,
+				3BAF03062A1B20A800E514E1 /* RestAPI.swift in Sources */,
+				3BAF03032A1B1F0B00E514E1 /* NetworkManager.swift in Sources */,
 				3BAF03232A1C8EBC00E514E1 /* AquariumViewController.swift in Sources */,
 				3BAF03192A1C621400E514E1 /* VenueViewModel.swift in Sources */,
 				3BAF03152A1C61DF00E514E1 /* VenueTableViewCell.swift in Sources */,
+				3BAF03682A28A09E00E514E1 /* BannerData.swift in Sources */,
 				3BAF032D2A1CAF0200E514E1 /* MarineLife3DModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -974,6 +1000,14 @@
 				minimumVersion = 0.4.1;
 			};
 		};
+		3BAF03562A27232400E514E1 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -991,6 +1025,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3BAF03362A20437E00E514E1 /* XCRemoteSwiftPackageReference "GLTFSceneKit" */;
 			productName = GLTFSceneKit;
+		};
+		3BAF03572A27232400E514E1 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BAF03562A27232400E514E1 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -27,6 +27,8 @@ struct Configs {
         Bundle(identifier: BoundleID.id)
     }
     
+    static var encryptToken = "hakkaapp://"
+    
     //專案配色
     struct Colors {
         
@@ -66,5 +68,10 @@ struct Configs {
         
         static let carouselCollectionViewCell = "carouselCollectionViewCell"
         static let panoramaTableViewCell = "panoramaTableViewCell"
+    }
+    
+    struct Network {
+        static let officialWebsite = "https://www.hakkaexpo2023.tw/"
+        static let mapWebsite = "https://www.hakkaexpo2023.tw/facility/fourPlace"
     }
 }

@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 import SVProgressHUD
+import SDWebImage
+import SDWebImageWebPCoder
+import Alamofire
 
 typealias hud = SVProgressHUD
 
@@ -16,9 +19,23 @@ typealias hud = SVProgressHUD
     @IBOutlet weak var carouselCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var toOfficialWebsiteButton: UIButton!
+    @IBOutlet weak var mapImageView: UIImageView! {
+        didSet {
+            addTapGestureOnView(mapImageView)
+        }
+    }
     
+    private var carouselViewModel = MainPageViewModel() {
+        didSet {
+            //設置page control 總數
+            pageControl.numberOfPages = carouselViewModel.numberOfItems
+            
+            startTimer()
+            
+            self.carouselCollectionView.reloadData()
+        }
+    }
     
-    private let carouselViewModel = MainPageViewModel()
     private var timer: Timer?
     
     public override func viewDidLoad() {
@@ -28,20 +45,21 @@ typealias hud = SVProgressHUD
         let deviceID = DeviceIDManager.getDeviceID()
         print("裝置ID: \(deviceID)")
         
+        SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
+        
         //監聽網路狀態
         Reachability.shared.startNetworkReachabilityObserver()
         
+        RestAPI.shared.getTopBanner()
+        
         //註冊cell
         carouselCollectionView.register(UINib(nibName: "CarouselCollectionViewCell", bundle: Bundle(for: MainPageViewController.self)), forCellWithReuseIdentifier: Configs.CellNames.carouselCollectionViewCell)
-        
-        //設置page control 總數
-        pageControl.numberOfPages = carouselViewModel.numberOfItems
-        
-        startTimer()
+                
     }
     
     override public func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        RestAPI.shared.getTopBanner()
     }
     
     private func startTimer() {
@@ -53,6 +71,29 @@ typealias hud = SVProgressHUD
         timer = nil
     }
     
+    private func showWebView(_ url: String) {
+        
+        let webVC = CommonWebViewController(url: URL(string: url)!)
+        
+        self.navigationController?.show(webVC, sender: nil)
+    }
+    
+    
+    private func addTapGestureOnView(_ view: UIView) {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showMapWebsite))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func showMapWebsite() {
+        showWebView(Configs.Network.mapWebsite)
+    }
+    
+    @objc private func showOfficialWebsite() {
+        let webVC = CommonWebViewController(url: URL(string: Configs.Network.officialWebsite)!)
+        
+        self.navigationController?.show(webVC, sender: nil)
+    }
 
     @objc private func scrollToNextPage() {
         guard let currentIndexPath = carouselCollectionView.indexPathsForVisibleItems.first else {
@@ -70,13 +111,13 @@ typealias hud = SVProgressHUD
         //tag 1:前往官網 2:踏點闖關 3:360環景 4:智慧導引 5:AR互動 6:退出 7:更多
         switch sender.tag {
             
-        case 1: print(sender.tag)
+        case 1: showWebView(Configs.Network.officialWebsite)
         case 2: print(sender.tag)
         case 3: Router.shared.navigateToPanorama(self)
         case 4: print(sender.tag)
         case 5: print(sender.tag)
         case 6: self.dismiss(animated: true)
-        case 7: print(sender.tag)
+        case 7: showWebView(Configs.Network.mapWebsite)
         default:
             break
             
@@ -106,6 +147,11 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         return carouselCollectionView.frame.size
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.showWebView(Configs.Network.officialWebsite)
     }
 
     

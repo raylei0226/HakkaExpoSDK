@@ -13,7 +13,7 @@ class Reachability {
     
     static let shared = Reachability()
     
-    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
+    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.hakkaexpo2023.tw")
     
     func startNetworkReachabilityObserver() {
         

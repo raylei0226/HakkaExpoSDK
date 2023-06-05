@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonHMAC.h>
 
 //! Project version number for HakkaExpo2023_iOS.
 FOUNDATION_EXPORT double HakkaExpo2023_iOSVersionNumber;

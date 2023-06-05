@@ -9,7 +9,9 @@ import UIKit
 
 class MainPageViewModel {
     
-    private var carouselItems: [String] = []
+    private var carouselItems: [String] = [] 
+    
+    var itemsData: BannerData? 
     
     var numberOfItems: Int {
         return carouselItems.count
@@ -17,7 +19,9 @@ class MainPageViewModel {
     
     init() {
         
-        carouselItems = ["pic1", "pic2", "pic3"]
+        if let items = itemsData?.data?.compactMap({$0.bURL}) {
+            carouselItems = items
+        }
     }
     
     

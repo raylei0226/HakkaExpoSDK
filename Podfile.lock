@@ -1,16 +1,36 @@
 PODS:
   - IndoorAtlas (3.6.2)
+  - libwebp (1.2.4):
+    - libwebp/demux (= 1.2.4)
+    - libwebp/mux (= 1.2.4)
+    - libwebp/webp (= 1.2.4)
+  - libwebp/demux (1.2.4):
+    - libwebp/webp
+  - libwebp/mux (1.2.4):
+    - libwebp/demux
+  - libwebp/webp (1.2.4)
+  - SDWebImage/Core (5.15.6)
+  - SDWebImageWebPCoder (0.11.0):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.15)
 
 DEPENDENCIES:
   - IndoorAtlas
+  - SDWebImageWebPCoder
 
 SPEC REPOS:
   trunk:
     - IndoorAtlas
+    - libwebp
+    - SDWebImage
+    - SDWebImageWebPCoder
 
 SPEC CHECKSUMS:
   IndoorAtlas: 8da6339bac1923d92e7546865a85834de17f4b48
+  libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
+  SDWebImage: d47d81bea8a77187896b620dc79c3c528e8906b9
+  SDWebImageWebPCoder: 295a6573c512f54ad2dd58098e64e17dcf008499
 
-PODFILE CHECKSUM: 148a51e425dee5789ffee2da5903b34573440ace
+PODFILE CHECKSUM: 538c44ccc5146dcf06e101f415296a133a3b377b
 
 COCOAPODS: 1.11.3

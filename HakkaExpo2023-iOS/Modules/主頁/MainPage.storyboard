@@ -465,6 +465,7 @@
                     <navigationItem key="navigationItem" id="mPN-DR-4pT"/>
                     <connections>
                         <outlet property="carouselCollectionView" destination="Pcu-Gc-HKK" id="BWb-wD-gwO"/>
+                        <outlet property="mapImageView" destination="LMK-yP-05L" id="EXR-dd-CH9"/>
                         <outlet property="pageControl" destination="XpK-i2-sHF" id="U3N-6k-gxp"/>
                         <outlet property="toOfficialWebsiteButton" destination="5xf-bP-so6" id="c0M-yQ-zmE"/>
                     </connections>
