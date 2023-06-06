@@ -9,6 +9,7 @@ import Foundation
 
 enum APIEndPoint {
     case getTopBanner
+    case getPano360
     
     
     var baseURL: String {
@@ -18,6 +19,7 @@ enum APIEndPoint {
     var path: String {
         switch self {
         case .getTopBanner: return "/webapi/get_top_banner"
+        case .getPano360: return "/api/get_pano360"
         }
     }
     

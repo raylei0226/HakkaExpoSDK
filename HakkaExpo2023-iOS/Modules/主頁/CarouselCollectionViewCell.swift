@@ -13,9 +13,8 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
    
     func cofigure(with imageURL: String) {
-//       let image = UIImage(named: imageName, in: Bundle(for: MainPageViewController.self), compatibleWith: nil)!
         let url = URL(string: imageURL)
-        imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "pic1"))
+        imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "pic1", in:  Bundle(for: MainPageViewController.self), compatibleWith: nil))
     }
     
     override func awakeFromNib() {

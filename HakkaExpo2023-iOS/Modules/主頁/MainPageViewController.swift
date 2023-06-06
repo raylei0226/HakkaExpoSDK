@@ -15,7 +15,7 @@ import Alamofire
 typealias hud = SVProgressHUD
 
 @objc public class MainPageViewController: UIViewController {
-    
+
     @IBOutlet weak var carouselCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var toOfficialWebsiteButton: UIButton!
@@ -25,16 +25,7 @@ typealias hud = SVProgressHUD
         }
     }
     
-    private var carouselViewModel = MainPageViewModel() {
-        didSet {
-            //設置page control 總數
-            pageControl.numberOfPages = carouselViewModel.numberOfItems
-            
-            startTimer()
-            
-            self.carouselCollectionView.reloadData()
-        }
-    }
+    private var carouselViewModel =  MainPageViewModel()
     
     private var timer: Timer?
     
@@ -50,18 +41,17 @@ typealias hud = SVProgressHUD
         //監聽網路狀態
         Reachability.shared.startNetworkReachabilityObserver()
         
-        RestAPI.shared.getTopBanner()
-        
         //註冊cell
         carouselCollectionView.register(UINib(nibName: "CarouselCollectionViewCell", bundle: Bundle(for: MainPageViewController.self)), forCellWithReuseIdentifier: Configs.CellNames.carouselCollectionViewCell)
-                
+        carouselViewModel.observers.append(self)
     }
-    
+
     override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        RestAPI.shared.getTopBanner()
     }
     
+   
     private func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
     }
@@ -114,13 +104,26 @@ typealias hud = SVProgressHUD
         case 1: showWebView(Configs.Network.officialWebsite)
         case 2: print(sender.tag)
         case 3: Router.shared.navigateToPanorama(self)
-        case 4: print(sender.tag)
-        case 5: print(sender.tag)
+        case 4: Router.shared.navigateToArMenu(self, .arNavigation)
+        case 5: Router.shared.navigateToArMenu(self, .arInteraction)
         case 6: self.dismiss(animated: true)
         case 7: showWebView(Configs.Network.mapWebsite)
         default:
             break
             
+        }
+    }
+}
+
+
+//ViewModel Protocol
+extension MainPageViewController: MainPageViewModelObserver {
+    
+    func carouselItemsUpdated(_ items: [String]) {
+        DispatchQueue.main.async {
+            self.pageControl.currentPage = self.carouselViewModel.numberOfItems
+            self.startTimer()
+            self.carouselCollectionView.reloadData()
         }
     }
 }
@@ -157,7 +160,6 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         stopTimer()
-        
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {

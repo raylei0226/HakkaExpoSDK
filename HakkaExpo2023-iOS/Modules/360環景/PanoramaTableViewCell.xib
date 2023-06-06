@@ -18,32 +18,61 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BpT-k7-Y9o">
-                        <rect key="frame" x="15" y="15" width="290" height="250"/>
+                        <rect key="frame" x="20" y="15" width="280" height="250"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="DpL-no-Io1">
-                                <rect key="frame" x="0.0" y="0.0" width="290" height="206"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="206" id="kMP-q2-KLf"/>
+                                    <constraint firstAttribute="height" constant="195" id="lL0-dW-zUl"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="太酷辣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISh-Il-ml5">
-                                <rect key="frame" x="0.0" y="206" width="290" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TzR-W1-P4y">
+                                <rect key="frame" x="0.0" y="195" width="280" height="55"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-q3-JJr">
+                                        <rect key="frame" x="15" y="5.6666666666666572" width="250" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="太酷辣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISh-Il-ml5">
+                                                <rect key="frame" x="0.0" y="0.0" width="218" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="PLD-uh-EWo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleNarrowArrow" translatesAutoresizingMaskIntoConstraints="NO" id="b0d-4o-3Q2">
+                                                <rect key="frame" x="230" y="12" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="VfA-5C-Pbe"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Vq3-GX-IXS"/>
+                                                    <constraint firstAttribute="width" secondItem="b0d-4o-3Q2" secondAttribute="height" multiplier="1:1" id="zvo-eb-zFI"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ISh-Il-ml5" firstAttribute="centerY" secondItem="b0d-4o-3Q2" secondAttribute="centerY" id="gS0-1R-Kys"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="PLD-uh-EWo"/>
+                                    <constraint firstItem="MBw-q3-JJr" firstAttribute="centerY" secondItem="TzR-W1-P4y" secondAttribute="centerY" id="0XF-pB-plW"/>
+                                    <constraint firstItem="MBw-q3-JJr" firstAttribute="leading" secondItem="TzR-W1-P4y" secondAttribute="leading" constant="15" id="12L-Qt-lrC"/>
+                                    <constraint firstAttribute="height" constant="55" id="CUv-8S-sfN"/>
+                                    <constraint firstAttribute="trailing" secondItem="MBw-q3-JJr" secondAttribute="trailing" constant="15" id="oWe-hs-TKq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="BpT-k7-Y9o" secondAttribute="trailing" constant="15" id="5Cr-uu-szD"/>
+                    <constraint firstAttribute="trailing" secondItem="BpT-k7-Y9o" secondAttribute="trailing" constant="20" id="5Cr-uu-szD"/>
                     <constraint firstAttribute="bottom" secondItem="BpT-k7-Y9o" secondAttribute="bottom" constant="15" id="NJJ-Ta-Do2"/>
-                    <constraint firstItem="BpT-k7-Y9o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="S1L-3y-ll2"/>
+                    <constraint firstItem="BpT-k7-Y9o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="S1L-3y-ll2"/>
                     <constraint firstItem="BpT-k7-Y9o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="SsQ-rY-3q4"/>
                 </constraints>
             </tableViewCellContentView>
@@ -51,6 +80,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="cellStackView" destination="BpT-k7-Y9o" id="Gff-2o-dh2"/>
+                <outlet property="nameBackgroundView" destination="TzR-W1-P4y" id="3AI-rZ-Ggh"/>
                 <outlet property="nameLabel" destination="ISh-Il-ml5" id="O8D-kN-NGY"/>
                 <outlet property="panoramaImageView" destination="DpL-no-Io1" id="YvJ-wp-qUE"/>
             </connections>
@@ -59,5 +89,6 @@
     </objects>
     <resources>
         <image name="pic1" width="2160" height="1080"/>
+        <image name="purpleNarrowArrow" width="15" height="16"/>
     </resources>
 </document>

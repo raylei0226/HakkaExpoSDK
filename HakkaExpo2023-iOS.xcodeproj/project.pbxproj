@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13EAD37FC369BCAB9B5A511A /* Pods_HakkaExpo2023_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */; };
+		3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */; };
 		3BAF02BA2A1706B300E514E1 /* HakkaExpo2023_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAF02B92A1706B300E514E1 /* HakkaExpo2023_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BAF02CA2A170DF100E514E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF02C92A170DF100E514E1 /* Alamofire */; };
 		3BAF02CD2A171B2800E514E1 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF02CC2A171B2800E514E1 /* SVProgressHUD */; };
@@ -55,6 +56,12 @@
 		3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF035D2A2731C800E514E1 /* APIEndpoint.swift */; };
 		3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03612A28375700E514E1 /* CommonWebViewController.swift */; };
 		3BAF03682A28A09E00E514E1 /* BannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03672A28A09D00E514E1 /* BannerData.swift */; };
+		3BAF036A2A2DCDB400E514E1 /* PanoramaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03692A2DCDB400E514E1 /* PanoramaData.swift */; };
+		3BAF036D2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF036C2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift */; };
+		3BAF036F2A2DEC7F00E514E1 /* UIStackView + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF036E2A2DEC7F00E514E1 /* UIStackView + Shadow.swift */; };
+		3BAF03722A2ECD6600E514E1 /* ARMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF03712A2ECD6600E514E1 /* ARMenu.storyboard */; };
+		3BAF03742A2ECD7B00E514E1 /* ARMeniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03732A2ECD7B00E514E1 /* ARMeniViewController.swift */; };
+		3BAF03762A2EDD9A00E514E1 /* ARMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03752A2EDD9A00E514E1 /* ARMenuTableViewCell.swift */; };
 		D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Bundle.swift"; sourceTree = "<group>"; };
 		3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF02B92A1706B300E514E1 /* HakkaExpo2023_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HakkaExpo2023_iOS.h; sourceTree = "<group>"; };
 		3BAF02D32A17203700E514E1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -128,6 +136,12 @@
 		3BAF035D2A2731C800E514E1 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		3BAF03612A28375700E514E1 /* CommonWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWebViewController.swift; sourceTree = "<group>"; };
 		3BAF03672A28A09D00E514E1 /* BannerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
+		3BAF03692A2DCDB400E514E1 /* PanoramaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaData.swift; sourceTree = "<group>"; };
+		3BAF036C2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + RoundedCorners.swift"; sourceTree = "<group>"; };
+		3BAF036E2A2DEC7F00E514E1 /* UIStackView + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Shadow.swift"; sourceTree = "<group>"; };
+		3BAF03712A2ECD6600E514E1 /* ARMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARMenu.storyboard; sourceTree = "<group>"; };
+		3BAF03732A2ECD7B00E514E1 /* ARMeniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMeniViewController.swift; sourceTree = "<group>"; };
+		3BAF03752A2EDD9A00E514E1 /* ARMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMenuTableViewCell.swift; sourceTree = "<group>"; };
 		631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FAFC231239541F503F75B2 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B82F48B2A2EE6DC00B1C805 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		3BAF02AC2A1706B300E514E1 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +230,7 @@
 		3BAF02C12A1708F800E514E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3B82F48B2A2EE6DC00B1C805 /* UIImage */,
 				3BAF03532A27226600E514E1 /* String */,
 				3BAF02C72A170D6F00E514E1 /* UIVIew */,
 			);
@@ -217,6 +240,7 @@
 		3BAF02C22A17091900E514E1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF03702A2ECD3C00E514E1 /* AR選單 */,
 				3BAF033D2A24A0AA00E514E1 /* Basic */,
 				3BAF03172A1C61EC00E514E1 /* Venue */,
 				3BAF030E2A1C4FCC00E514E1 /* AR互動 */,
@@ -243,6 +267,7 @@
 			children = (
 				3BAF032C2A1CAF0200E514E1 /* MarineLife3DModel.swift */,
 				3BAF03672A28A09D00E514E1 /* BannerData.swift */,
+				3BAF03692A2DCDB400E514E1 /* PanoramaData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +294,8 @@
 		3BAF02C72A170D6F00E514E1 /* UIVIew */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF036C2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift */,
+				3BAF036E2A2DEC7F00E514E1 /* UIStackView + Shadow.swift */,
 			);
 			path = UIVIew;
 			sourceTree = "<group>";
@@ -405,6 +432,16 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		3BAF03702A2ECD3C00E514E1 /* AR選單 */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF03712A2ECD6600E514E1 /* ARMenu.storyboard */,
+				3BAF03732A2ECD7B00E514E1 /* ARMeniViewController.swift */,
+				3BAF03752A2EDD9A00E514E1 /* ARMenuTableViewCell.swift */,
+			);
+			path = "AR選單";
+			sourceTree = "<group>";
+		};
 		59D31F6C84B1FC177623D8A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +576,7 @@
 				3BAF03122A1C532F00E514E1 /* Panorama.storyboard in Resources */,
 				3BAF03272A1C8FCC00E514E1 /* art.scnassets in Resources */,
 				3BAF031B2A1C642200E514E1 /* ARInteraction.storyboard in Resources */,
+				3BAF03722A2ECD6600E514E1 /* ARMenu.storyboard in Resources */,
 				3BAF03332A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib in Resources */,
 				3BAF03162A1C61DF00E514E1 /* VenueTableViewCell.xib in Resources */,
 				3BAF03252A1C8FB400E514E1 /* Media.xcassets in Resources */,
@@ -634,13 +672,17 @@
 				3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */,
 				3BAF035C2A272A9500E514E1 /* HttpsParameters.swift in Sources */,
 				3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */,
+				3BAF036F2A2DEC7F00E514E1 /* UIStackView + Shadow.swift in Sources */,
 				3BAF02FF2A17510C00E514E1 /* DeviceIDManager.swift in Sources */,
 				3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */,
 				3BAF02F82A174CD600E514E1 /* MainPageViewController.swift in Sources */,
 				3BAF02D62A17290A00E514E1 /* AppCoordinator.swift in Sources */,
+				3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */,
 				3BAF03462A25C7FD00E514E1 /* Router.swift in Sources */,
+				3BAF03742A2ECD7B00E514E1 /* ARMeniViewController.swift in Sources */,
 				3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */,
 				3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */,
+				3BAF03762A2EDD9A00E514E1 /* ARMenuTableViewCell.swift in Sources */,
 				3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */,
 				3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
@@ -652,7 +694,9 @@
 				3BAF03192A1C621400E514E1 /* VenueViewModel.swift in Sources */,
 				3BAF03152A1C61DF00E514E1 /* VenueTableViewCell.swift in Sources */,
 				3BAF03682A28A09E00E514E1 /* BannerData.swift in Sources */,
+				3BAF036A2A2DCDB400E514E1 /* PanoramaData.swift in Sources */,
 				3BAF032D2A1CAF0200E514E1 /* MarineLife3DModel.swift in Sources */,
+				3BAF036D2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

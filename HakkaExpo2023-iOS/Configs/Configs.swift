@@ -12,6 +12,10 @@ enum Keys {
     case wikitude, googleMap
 }
 
+enum ARMenuType {
+    case arInteraction, arNavigation
+}
+
 
 struct Configs {
     
@@ -38,6 +42,7 @@ struct Configs {
         static let lightOrange = #colorLiteral(red: 0.9850116372, green: 0.9355557561, blue: 0.9105494022, alpha: 1)
         
     }
+
     
     //3DModel名稱
     struct ModelNames {
@@ -68,10 +73,16 @@ struct Configs {
         
         static let carouselCollectionViewCell = "carouselCollectionViewCell"
         static let panoramaTableViewCell = "panoramaTableViewCell"
+        static let arMenuTableViewCell = "arMenuTableViewCell"
     }
     
     struct Network {
+        static let domain = "https://hakkaexpo-test.omniguider.com"
         static let officialWebsite = "https://www.hakkaexpo2023.tw/"
         static let mapWebsite = "https://www.hakkaexpo2023.tw/facility/fourPlace"
     }
+}
+
+struct K {
+    static let processing = "處理中"
 }

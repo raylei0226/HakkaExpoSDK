@@ -30,4 +30,10 @@ import UIKit
         let panoramaVC = UIStoryboard(name: "Panorama", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "PanoramaVC")
         vc.navigationController?.pushViewController(panoramaVC, animated: true)
     }
+    
+    func navigateToArMenu(_ vc: UIViewController, _ type: ARMenuType) {
+        let arMenuVC = UIStoryboard(name: "ARMenu", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "ARMenuVC") as! ARMenuViewController
+        arMenuVC.type = type
+        vc.navigationController?.pushViewController(arMenuVC, animated: true)
+    }
 }

@@ -15,22 +15,41 @@ class RestAPI {
     private init() {}
     
     
-    func getTopBanner() {
-        
-        var viewModel = MainPageViewModel()
+    func getTopBanner(completion: @escaping (BannerData?) -> Void) {
         
         let parameters = HttpsParameters().getTimeStamp()
         
-        print("Parameters: \(parameters)")
+        print(#function,"-Parameters: \(parameters)")
         
         NetworkManager.shared.request(endpoint: APIEndPoint.getTopBanner, method: .post, parameters: parameters) { (result: Result<BannerData, Error>) in
             
             switch result {
             case .success(let decodedData):
-                viewModel.itemsData = decodedData
+                completion(decodedData)
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
+    
+    func getPano360(completion: @escaping (PanoramaData?) -> Void) {
+        
+        let parameters = HttpsParameters().getTimeStamp()
+        
+        print(#function,"-Parameters: \(parameters)")
+        
+        NetworkManager.shared.request(endpoint: APIEndPoint.getPano360, method: .post, parameters: parameters) { (result: Result<PanoramaData, Error>) in
+            
+            switch result {
+            case .success(let decodedData):
+                completion(decodedData)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
             }
         }
     }

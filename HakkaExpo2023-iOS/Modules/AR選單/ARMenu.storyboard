@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ARMenuVC" id="Y6W-OH-hqX" customClass="ARMenuViewController" customModule="HakkaExpo2023_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選擇場館" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwj-E8-zRz">
+                                <rect key="frame" x="104.5" y="55" width="111.5" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.329999999999998" id="NfR-3W-1gL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" name="themePurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="315" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hJH-ix-2OA">
+                                <rect key="frame" x="0.0" y="106.5" width="320" height="461.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="arMenuTableViewCell" id="gd0-Ex-tFP" customClass="ARMenuTableViewCell" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="315"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gd0-Ex-tFP" id="aAd-KT-TYn">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WorldPavilion" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-le-sUq">
+                                                    <rect key="frame" x="32" y="29.5" width="256" height="256"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Fdk-le-sUq" secondAttribute="height" multiplier="1:1" id="kTJ-SL-Kft"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fdk-le-sUq" firstAttribute="centerX" secondItem="aAd-KT-TYn" secondAttribute="centerX" id="2VP-1X-r5T"/>
+                                                <constraint firstItem="Fdk-le-sUq" firstAttribute="width" secondItem="aAd-KT-TYn" secondAttribute="width" multiplier="0.8" id="QgJ-Tb-WOf"/>
+                                                <constraint firstItem="Fdk-le-sUq" firstAttribute="centerY" secondItem="aAd-KT-TYn" secondAttribute="centerY" id="Tsc-TO-JTi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="menuImageView" destination="Fdk-le-sUq" id="Rfy-O0-2EW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="GGf-3L-mUd"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="jWi-Nu-1wh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qwj-E8-zRz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="35" id="1dF-pD-dIG"/>
+                            <constraint firstItem="hJH-ix-2OA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5Ca-PB-mm4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hJH-ix-2OA" secondAttribute="trailing" id="AHr-ed-Hsh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hJH-ix-2OA" secondAttribute="bottom" id="PaD-9w-Ovz"/>
+                            <constraint firstItem="qwj-E8-zRz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qmx-hS-3Xj"/>
+                            <constraint firstItem="hJH-ix-2OA" firstAttribute="top" secondItem="qwj-E8-zRz" secondAttribute="bottom" constant="25" id="xra-zI-LWL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuTableView" destination="hJH-ix-2OA" id="XoE-qx-pKu"/>
+                        <outlet property="titleLabel" destination="qwj-E8-zRz" id="qym-7g-cZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="-2.112676056338028"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WorldPavilion" width="342" height="279"/>
+        <namedColor name="themePurple">
+            <color red="0.45098039215686275" green="0.19215686274509805" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
