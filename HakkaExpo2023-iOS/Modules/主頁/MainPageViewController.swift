@@ -12,8 +12,6 @@ import SDWebImage
 import SDWebImageWebPCoder
 import Alamofire
 
-typealias hud = SVProgressHUD
-
 @objc public class MainPageViewController: UIViewController {
 
     @IBOutlet weak var carouselCollectionView: UICollectionView!

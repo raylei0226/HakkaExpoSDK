@@ -26,15 +26,6 @@
         "revision" : "a9587ec5c6515ee7d036533fdd909815a9a718ef",
         "version" : "0.4.1"
       }
-    },
-    {
-      "identity" : "svprogresshud",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sereivoanyong/SVProgressHUD.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "0f7199378eb5566ea6c1ccf16879eea2a21f667b"
-      }
     }
   ],
   "version" : 2

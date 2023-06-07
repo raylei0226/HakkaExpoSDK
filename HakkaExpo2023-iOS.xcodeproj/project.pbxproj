@@ -28,7 +28,6 @@
 		3B82F4C82A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B82F4C72A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist */; };
 		3BAF02BA2A1706B300E514E1 /* HakkaExpo2023_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAF02B92A1706B300E514E1 /* HakkaExpo2023_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BAF02CA2A170DF100E514E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF02C92A170DF100E514E1 /* Alamofire */; };
-		3BAF02CD2A171B2800E514E1 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF02CC2A171B2800E514E1 /* SVProgressHUD */; };
 		3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02D32A17203700E514E1 /* Reachability.swift */; };
 		3BAF02D62A17290A00E514E1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02D52A17290A00E514E1 /* AppCoordinator.swift */; };
 		3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02D72A17294200E514E1 /* Coordinator.swift */; };
@@ -189,7 +188,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BAF02CD2A171B2800E514E1 /* SVProgressHUD in Frameworks */,
 				13EAD37FC369BCAB9B5A511A /* Pods_HakkaExpo2023_iOS.framework in Frameworks */,
 				3BAF02CA2A170DF100E514E1 /* Alamofire in Frameworks */,
 				3BAF03582A27232400E514E1 /* CryptoSwift in Frameworks */,
@@ -220,11 +218,11 @@
 		3B82F4982A2F0C1D00B1C805 /* 放天燈 */ = {
 			isa = PBXGroup;
 			children = (
+				3B82F4A02A2F0C1D00B1C805 /* SkyLantern.storyboard */,
 				3B82F4992A2F0C1D00B1C805 /* SkyLanternVC.swift */,
 				3B82F49A2A2F0C1D00B1C805 /* SkyLanternCanvasView.swift */,
-				3B82F49B2A2F0C1D00B1C805 /* Resources */,
 				3B82F49F2A2F0C1D00B1C805 /* SkyLanternARVC.swift */,
-				3B82F4A02A2F0C1D00B1C805 /* SkyLantern.storyboard */,
+				3B82F49B2A2F0C1D00B1C805 /* Resources */,
 				3B82F4A12A2F0C1D00B1C805 /* DebugTrackingView.swift */,
 				3B82F4A22A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift */,
 				3B82F4A32A2F0C1D00B1C805 /* Service */,
@@ -578,7 +576,6 @@
 			name = "HakkaExpo2023-iOS";
 			packageProductDependencies = (
 				3BAF02C92A170DF100E514E1 /* Alamofire */,
-				3BAF02CC2A171B2800E514E1 /* SVProgressHUD */,
 				3BAF03372A20437E00E514E1 /* GLTFSceneKit */,
 				3BAF03572A27232400E514E1 /* CryptoSwift */,
 			);
@@ -638,7 +635,6 @@
 			mainGroup = 3BAF02AC2A1706B300E514E1;
 			packageReferences = (
 				3BAF02C82A170DF100E514E1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				3BAF02CB2A171B2800E514E1 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 				3BAF03362A20437E00E514E1 /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
 				3BAF03562A27232400E514E1 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
@@ -1164,14 +1160,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		3BAF02CB2A171B2800E514E1 /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sereivoanyong/SVProgressHUD.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		3BAF03362A20437E00E514E1 /* XCRemoteSwiftPackageReference "GLTFSceneKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/magicien/GLTFSceneKit";
@@ -1195,11 +1183,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3BAF02C82A170DF100E514E1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		3BAF02CC2A171B2800E514E1 /* SVProgressHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BAF02CB2A171B2800E514E1 /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
-			productName = SVProgressHUD;
 		};
 		3BAF03372A20437E00E514E1 /* GLTFSceneKit */ = {
 			isa = XCSwiftPackageProductDependency;

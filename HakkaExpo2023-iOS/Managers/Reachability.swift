@@ -21,8 +21,6 @@ class Reachability {
             
             switch status {
             case .notReachable:
-                hud.show(withStatus: "請檢查裝置的網路連線狀態")
-                hud.dismiss(withDelay: 1.0)
                 print("The network is not reachable")
             case .unknown:
                 print("It is unknown whether the network is reachable")

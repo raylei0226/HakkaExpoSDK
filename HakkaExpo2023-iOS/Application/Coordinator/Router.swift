@@ -17,8 +17,6 @@ import UIKit
     
     public func startApp(_ vc: UIViewController) {
         guard let mainVC = UIStoryboard(name: "MainPage", bundle: Configs.Bunlde()).instantiateInitialViewController() else {
-            hud.showError(withStatus: "SDK初始化錯誤")
-            hud.dismiss(withDelay: 1.0)
             return
         }
         mainVC.modalPresentationStyle = .fullScreen
