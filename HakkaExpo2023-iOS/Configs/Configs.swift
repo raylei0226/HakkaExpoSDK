@@ -16,6 +16,15 @@ enum ARMenuType {
     case arInteraction, arNavigation
 }
 
+enum Asset: String {
+    case back = "back"
+    case userLocation = "user_location"
+    case poiBackground = "poi_background"
+    
+    var image: UIImage? {return UIImage(named: rawValue, in: Configs.Bunlde(), compatibleWith: nil)
+    }
+}
+
 
 struct Configs {
     

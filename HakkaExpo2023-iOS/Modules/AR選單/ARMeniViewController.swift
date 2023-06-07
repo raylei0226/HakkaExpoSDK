@@ -60,5 +60,18 @@ extension ARMenuViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch type {
+        case .arInteraction:
+            if indexPath.row == 0 {
+                Router.shared.navigateToSkyLantern(self)
+            }
+        case .none:
+            break
+        case .arNavigation:
+            print("前往導航:\(indexPath.row)")
+        }
+    }
     
 }

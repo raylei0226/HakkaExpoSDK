@@ -13,6 +13,8 @@ class BasicViewController: UIViewController {
         super.viewDidLoad()
         
        configureBackgroundImage()
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {

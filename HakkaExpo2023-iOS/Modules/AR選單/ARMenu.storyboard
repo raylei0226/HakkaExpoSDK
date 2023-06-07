@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="315" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hJH-ix-2OA">
-                                <rect key="frame" x="0.0" y="106.5" width="320" height="461.5"/>
+                                <rect key="frame" x="0.0" y="91.5" width="320" height="476.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="arMenuTableViewCell" id="gd0-Ex-tFP" customClass="ARMenuTableViewCell" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
@@ -71,7 +71,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hJH-ix-2OA" secondAttribute="trailing" id="AHr-ed-Hsh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hJH-ix-2OA" secondAttribute="bottom" id="PaD-9w-Ovz"/>
                             <constraint firstItem="qwj-E8-zRz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qmx-hS-3Xj"/>
-                            <constraint firstItem="hJH-ix-2OA" firstAttribute="top" secondItem="qwj-E8-zRz" secondAttribute="bottom" constant="25" id="xra-zI-LWL"/>
+                            <constraint firstItem="hJH-ix-2OA" firstAttribute="top" secondItem="qwj-E8-zRz" secondAttribute="bottom" constant="10" id="xra-zI-LWL"/>
                         </constraints>
                     </view>
                     <connections>

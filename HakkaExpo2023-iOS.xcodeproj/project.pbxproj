@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		13EAD37FC369BCAB9B5A511A /* Pods_HakkaExpo2023_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */; };
 		3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */; };
+		3B82F4A82A2F0C1D00B1C805 /* SkyLanternVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4992A2F0C1D00B1C805 /* SkyLanternVC.swift */; };
+		3B82F4A92A2F0C1D00B1C805 /* SkyLanternCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F49A2A2F0C1D00B1C805 /* SkyLanternCanvasView.swift */; };
+		3B82F4AA2A2F0C1D00B1C805 /* SkyLanternResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F49C2A2F0C1D00B1C805 /* SkyLanternResources.swift */; };
+		3B82F4AB2A2F0C1D00B1C805 /* VerticalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F49D2A2F0C1D00B1C805 /* VerticalLabel.swift */; };
+		3B82F4AD2A2F0C1D00B1C805 /* SkyLanternARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F49F2A2F0C1D00B1C805 /* SkyLanternARVC.swift */; };
+		3B82F4AE2A2F0C1D00B1C805 /* SkyLantern.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B82F4A02A2F0C1D00B1C805 /* SkyLantern.storyboard */; };
+		3B82F4AF2A2F0C1D00B1C805 /* DebugTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4A12A2F0C1D00B1C805 /* DebugTrackingView.swift */; };
+		3B82F4B02A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4A22A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift */; };
+		3B82F4B12A2F0C1D00B1C805 /* SkyLanternARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4A42A2F0C1D00B1C805 /* SkyLanternARService.swift */; };
+		3B82F4B22A2F0C1D00B1C805 /* SkyLanternARServiceByARCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4A52A2F0C1D00B1C805 /* SkyLanternARServiceByARCore.swift */; };
+		3B82F4B32A2F0C1D00B1C805 /* SkyLanternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4A62A2F0C1D00B1C805 /* SkyLanternModel.swift */; };
+		3B82F4B42A2F0C1D00B1C805 /* SkyLanternNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4A72A2F0C1D00B1C805 /* SkyLanternNode.swift */; };
+		3B82F4B72A2F0FF800B1C805 /* UIColor + hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4B62A2F0FF800B1C805 /* UIColor + hex.swift */; };
+		3B82F4B92A2F150E00B1C805 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4B82A2F150E00B1C805 /* AlertManager.swift */; };
+		3B82F4BC2A2F207800B1C805 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4BB2A2F207800B1C805 /* Notification.swift */; };
+		3B82F4BE2A2F20C700B1C805 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4BD2A2F20C700B1C805 /* LocationService.swift */; };
+		3B82F4C82A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B82F4C72A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist */; };
 		3BAF02BA2A1706B300E514E1 /* HakkaExpo2023_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAF02B92A1706B300E514E1 /* HakkaExpo2023_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BAF02CA2A170DF100E514E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF02C92A170DF100E514E1 /* Alamofire */; };
 		3BAF02CD2A171B2800E514E1 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAF02CC2A171B2800E514E1 /* SVProgressHUD */; };
@@ -91,6 +108,23 @@
 
 /* Begin PBXFileReference section */
 		3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Bundle.swift"; sourceTree = "<group>"; };
+		3B82F4992A2F0C1D00B1C805 /* SkyLanternVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternVC.swift; sourceTree = "<group>"; };
+		3B82F49A2A2F0C1D00B1C805 /* SkyLanternCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternCanvasView.swift; sourceTree = "<group>"; };
+		3B82F49C2A2F0C1D00B1C805 /* SkyLanternResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternResources.swift; sourceTree = "<group>"; };
+		3B82F49D2A2F0C1D00B1C805 /* VerticalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLabel.swift; sourceTree = "<group>"; };
+		3B82F49F2A2F0C1D00B1C805 /* SkyLanternARVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternARVC.swift; sourceTree = "<group>"; };
+		3B82F4A02A2F0C1D00B1C805 /* SkyLantern.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SkyLantern.storyboard; sourceTree = "<group>"; };
+		3B82F4A12A2F0C1D00B1C805 /* DebugTrackingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugTrackingView.swift; sourceTree = "<group>"; };
+		3B82F4A22A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SkyLanternNode+FireNode.swift"; sourceTree = "<group>"; };
+		3B82F4A42A2F0C1D00B1C805 /* SkyLanternARService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternARService.swift; sourceTree = "<group>"; };
+		3B82F4A52A2F0C1D00B1C805 /* SkyLanternARServiceByARCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternARServiceByARCore.swift; sourceTree = "<group>"; };
+		3B82F4A62A2F0C1D00B1C805 /* SkyLanternModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternModel.swift; sourceTree = "<group>"; };
+		3B82F4A72A2F0C1D00B1C805 /* SkyLanternNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternNode.swift; sourceTree = "<group>"; };
+		3B82F4B62A2F0FF800B1C805 /* UIColor + hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + hex.swift"; sourceTree = "<group>"; };
+		3B82F4B82A2F150E00B1C805 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		3B82F4BB2A2F207800B1C805 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		3B82F4BD2A2F20C700B1C805 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		3B82F4C72A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HakkaExpoGoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF02B92A1706B300E514E1 /* HakkaExpo2023_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HakkaExpo2023_iOS.h; sourceTree = "<group>"; };
 		3BAF02D32A17203700E514E1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -183,6 +217,57 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		3B82F4982A2F0C1D00B1C805 /* 放天燈 */ = {
+			isa = PBXGroup;
+			children = (
+				3B82F4992A2F0C1D00B1C805 /* SkyLanternVC.swift */,
+				3B82F49A2A2F0C1D00B1C805 /* SkyLanternCanvasView.swift */,
+				3B82F49B2A2F0C1D00B1C805 /* Resources */,
+				3B82F49F2A2F0C1D00B1C805 /* SkyLanternARVC.swift */,
+				3B82F4A02A2F0C1D00B1C805 /* SkyLantern.storyboard */,
+				3B82F4A12A2F0C1D00B1C805 /* DebugTrackingView.swift */,
+				3B82F4A22A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift */,
+				3B82F4A32A2F0C1D00B1C805 /* Service */,
+				3B82F4A62A2F0C1D00B1C805 /* SkyLanternModel.swift */,
+				3B82F4A72A2F0C1D00B1C805 /* SkyLanternNode.swift */,
+			);
+			path = "放天燈";
+			sourceTree = "<group>";
+		};
+		3B82F49B2A2F0C1D00B1C805 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B82F49C2A2F0C1D00B1C805 /* SkyLanternResources.swift */,
+				3B82F49D2A2F0C1D00B1C805 /* VerticalLabel.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3B82F4A32A2F0C1D00B1C805 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3B82F4A42A2F0C1D00B1C805 /* SkyLanternARService.swift */,
+				3B82F4A52A2F0C1D00B1C805 /* SkyLanternARServiceByARCore.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3B82F4B52A2F0FDC00B1C805 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				3B82F4B62A2F0FF800B1C805 /* UIColor + hex.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		3B82F4BA2A2F206000B1C805 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3B82F4BB2A2F207800B1C805 /* Notification.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		3BAF02AC2A1706B300E514E1 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +315,8 @@
 		3BAF02C12A1708F800E514E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3B82F4BA2A2F206000B1C805 /* Notification */,
+				3B82F4B52A2F0FDC00B1C805 /* UIColor */,
 				3B82F48B2A2EE6DC00B1C805 /* UIImage */,
 				3BAF03532A27226600E514E1 /* String */,
 				3BAF02C72A170D6F00E514E1 /* UIVIew */,
@@ -258,6 +345,8 @@
 				3BAF02D32A17203700E514E1 /* Reachability.swift */,
 				3BAF02FE2A17510C00E514E1 /* DeviceIDManager.swift */,
 				3BAF03022A1B1F0B00E514E1 /* NetworkManager.swift */,
+				3B82F4B82A2F150E00B1C805 /* AlertManager.swift */,
+				3B82F4BD2A2F20C700B1C805 /* LocationService.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -285,6 +374,7 @@
 		3BAF02C62A170BA600E514E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B82F4C72A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist */,
 				3BAF03242A1C8FB400E514E1 /* Media.xcassets */,
 				3BAF03262A1C8FCC00E514E1 /* art.scnassets */,
 			);
@@ -383,8 +473,8 @@
 			children = (
 				3BAF031A2A1C642200E514E1 /* ARInteraction.storyboard */,
 				3BAF031C2A1C646F00E514E1 /* ARInteraction.swift */,
+				3B82F4982A2F0C1D00B1C805 /* 放天燈 */,
 				3BAF031F2A1C6E2800E514E1 /* 海底世界 */,
-				3BAF031E2A1C6E1D00E514E1 /* 放天燈 */,
 			);
 			path = "AR互動";
 			sourceTree = "<group>";
@@ -397,13 +487,6 @@
 				3BAF03182A1C621400E514E1 /* VenueViewModel.swift */,
 			);
 			path = Venue;
-			sourceTree = "<group>";
-		};
-		3BAF031E2A1C6E1D00E514E1 /* 放天燈 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "放天燈";
 			sourceTree = "<group>";
 		};
 		3BAF031F2A1C6E2800E514E1 /* 海底世界 */ = {
@@ -486,6 +569,7 @@
 				3BAF02B22A1706B300E514E1 /* Sources */,
 				3BAF02B32A1706B300E514E1 /* Frameworks */,
 				3BAF02B42A1706B300E514E1 /* Resources */,
+				34EDA8A961D1377A48D49569 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -512,6 +596,7 @@
 				3BAF02DB2A174A0A00E514E1 /* Resources */,
 				3BAF02F52A174AD900E514E1 /* Embed Frameworks */,
 				1549A0E7F9413BD9FE671BC0 /* [CP] Embed Pods Frameworks */,
+				3973FD7F6027D7524999F2D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -577,8 +662,10 @@
 				3BAF03272A1C8FCC00E514E1 /* art.scnassets in Resources */,
 				3BAF031B2A1C642200E514E1 /* ARInteraction.storyboard in Resources */,
 				3BAF03722A2ECD6600E514E1 /* ARMenu.storyboard in Resources */,
+				3B82F4C82A2F356300B1C805 /* HakkaExpoGoogleService-Info.plist in Resources */,
 				3BAF03332A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib in Resources */,
 				3BAF03162A1C61DF00E514E1 /* VenueTableViewCell.xib in Resources */,
+				3B82F4AE2A2F0C1D00B1C805 /* SkyLantern.storyboard in Resources */,
 				3BAF03252A1C8FB400E514E1 /* Media.xcassets in Resources */,
 				3BAF034F2A25FBFE00E514E1 /* PanoramaTableViewCell.xib in Resources */,
 				3BAF03212A1C8E9700E514E1 /* Aquarium.storyboard in Resources */,
@@ -613,6 +700,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34EDA8A961D1377A48D49569 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3973FD7F6027D7524999F2D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8632F091F96AA428B36717AF /* [CP] Check Pods Manifest.lock */ = {
@@ -668,6 +789,7 @@
 			files = (
 				3BAF03552A27228400E514E1 /* String + sha1.swift in Sources */,
 				3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */,
+				3B82F4A92A2F0C1D00B1C805 /* SkyLanternCanvasView.swift in Sources */,
 				3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */,
 				3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */,
 				3BAF035C2A272A9500E514E1 /* HttpsParameters.swift in Sources */,
@@ -676,27 +798,41 @@
 				3BAF02FF2A17510C00E514E1 /* DeviceIDManager.swift in Sources */,
 				3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */,
 				3BAF02F82A174CD600E514E1 /* MainPageViewController.swift in Sources */,
+				3B82F4BC2A2F207800B1C805 /* Notification.swift in Sources */,
 				3BAF02D62A17290A00E514E1 /* AppCoordinator.swift in Sources */,
+				3B82F4B92A2F150E00B1C805 /* AlertManager.swift in Sources */,
 				3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */,
 				3BAF03462A25C7FD00E514E1 /* Router.swift in Sources */,
+				3B82F4B12A2F0C1D00B1C805 /* SkyLanternARService.swift in Sources */,
+				3B82F4AD2A2F0C1D00B1C805 /* SkyLanternARVC.swift in Sources */,
+				3B82F4AF2A2F0C1D00B1C805 /* DebugTrackingView.swift in Sources */,
+				3B82F4B02A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift in Sources */,
 				3BAF03742A2ECD7B00E514E1 /* ARMeniViewController.swift in Sources */,
 				3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */,
 				3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */,
 				3BAF03762A2EDD9A00E514E1 /* ARMenuTableViewCell.swift in Sources */,
+				3B82F4A82A2F0C1D00B1C805 /* SkyLanternVC.swift in Sources */,
 				3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */,
+				3B82F4BE2A2F20C700B1C805 /* LocationService.swift in Sources */,
+				3B82F4AA2A2F0C1D00B1C805 /* SkyLanternResources.swift in Sources */,
 				3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
 				3BAF031D2A1C646F00E514E1 /* ARInteraction.swift in Sources */,
+				3B82F4B42A2F0C1D00B1C805 /* SkyLanternNode.swift in Sources */,
 				3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */,
 				3BAF03062A1B20A800E514E1 /* RestAPI.swift in Sources */,
+				3B82F4B22A2F0C1D00B1C805 /* SkyLanternARServiceByARCore.swift in Sources */,
+				3B82F4B72A2F0FF800B1C805 /* UIColor + hex.swift in Sources */,
 				3BAF03032A1B1F0B00E514E1 /* NetworkManager.swift in Sources */,
 				3BAF03232A1C8EBC00E514E1 /* AquariumViewController.swift in Sources */,
 				3BAF03192A1C621400E514E1 /* VenueViewModel.swift in Sources */,
 				3BAF03152A1C61DF00E514E1 /* VenueTableViewCell.swift in Sources */,
 				3BAF03682A28A09E00E514E1 /* BannerData.swift in Sources */,
+				3B82F4AB2A2F0C1D00B1C805 /* VerticalLabel.swift in Sources */,
 				3BAF036A2A2DCDB400E514E1 /* PanoramaData.swift in Sources */,
 				3BAF032D2A1CAF0200E514E1 /* MarineLife3DModel.swift in Sources */,
 				3BAF036D2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift in Sources */,
+				3B82F4B32A2F0C1D00B1C805 /* SkyLanternModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,7 +1071,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W76A8S87YJ;
+				DEVELOPMENT_TEAM = 5R5U2V4497;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -965,7 +1101,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W76A8S87YJ;
+				DEVELOPMENT_TEAM = 5R5U2V4497;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

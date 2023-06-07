@@ -36,4 +36,9 @@ import UIKit
         arMenuVC.type = type
         vc.navigationController?.pushViewController(arMenuVC, animated: true)
     }
+    
+    func navigateToSkyLantern(_ vc: UIViewController) {
+        let skyLanternVC = UIStoryboard(name: "SkyLantern", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "SkyLanternVC")
+        vc.navigationController?.pushViewController(skyLanternVC, animated: true)
+    }
 }
