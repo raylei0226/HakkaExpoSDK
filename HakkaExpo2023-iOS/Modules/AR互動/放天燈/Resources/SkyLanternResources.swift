@@ -19,11 +19,11 @@ class SkyLanternResources {
     static var firePathUrl: URL?
     static var materialPath: String?
     
-    private let domainName = "https://omnig-test01.omniguider.com/"
+    private let domainName = "https://omnig-test01.omniguider.com/hakkaexpoARFile/"
     private let fontFileName = "calligraphy.ttc"
-    private let fireFileName = "TaipeiSkyLamp_Fire_v1.png"
-    private let materialFileName = "SKyLamp.jpg"
-    private let modelFileName = "TaipeiSkyLamp_v2.glb"
+    private let fireFileName = "SkyLantern_Fire.png"
+    private let materialFileName = "SkyLantern_Texture.jpg"
+    private let modelFileName = "SkyLantern.glb"
     
     private let folderName = "Omni_AR_SkyLantern"
     private let customFontName = "DFLungMen-W9-WIN-BF"

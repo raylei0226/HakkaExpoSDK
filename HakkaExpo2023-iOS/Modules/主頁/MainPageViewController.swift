@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SVProgressHUD
 import SDWebImage
 import SDWebImageWebPCoder
 import Alamofire
@@ -31,8 +30,8 @@ import Alamofire
         super.viewDidLoad()
         
         //取得裝置DeviceID
-        let deviceID = DeviceIDManager.getDeviceID()
-        print("裝置ID: \(deviceID)")
+        let uuid = DeviceIDManager.shared.getDeviceID()
+        print("裝置ID: \(uuid)")
         
         SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
         
@@ -100,7 +99,8 @@ import Alamofire
         switch sender.tag {
             
         case 1: showWebView(Configs.Network.officialWebsite)
-        case 2: print(sender.tag)
+        case 2: Router.shared.navigationToMission(self)
+//        case 2: Router.shared.navigationToMissionLevel(self)
         case 3: Router.shared.navigateToPanorama(self)
         case 4: Router.shared.navigateToArMenu(self, .arNavigation)
         case 5: Router.shared.navigateToArMenu(self, .arInteraction)
@@ -108,11 +108,9 @@ import Alamofire
         case 7: showWebView(Configs.Network.mapWebsite)
         default:
             break
-            
         }
     }
 }
-
 
 //ViewModel Protocol
 extension MainPageViewController: MainPageViewModelObserver {

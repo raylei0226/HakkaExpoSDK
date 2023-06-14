@@ -53,4 +53,23 @@ class RestAPI {
             }
         }
     }
+    
+    func getMission(completion: @escaping(MissionData?) -> Void) {
+        
+        var parameters = HttpsParameters().getTimeStampAndDevice()
+        parameters["type"] = "mission"
+        
+        print(#function,"-Parameters: \(parameters)")
+        
+        NetworkManager.shared.request(endpoint: APIEndPoint.getMissionOrReward, method: .post, parameters: parameters) { (result: Result<MissionData, Error>) in
+            switch result {
+            case .success(let decodedData):
+                completion(decodedData)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
 }

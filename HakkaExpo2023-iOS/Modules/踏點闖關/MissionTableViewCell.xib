@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="missionTableViewCell" rowHeight="250" id="ACs-kX-QGo" customClass="MissionTableViewCell" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ACs-kX-QGo" id="L2H-pL-wan">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TRL-rI-vRw">
+                        <rect key="frame" x="20" y="15" width="280" height="220"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="WfW-su-Ooa">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="On5-CE-qI1"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7d-0g-qxz">
+                                <rect key="frame" x="0.0" y="160" width="280" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pattenPink" translatesAutoresizingMaskIntoConstraints="NO" id="Xnn-78-21Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-cv-35T">
+                                        <rect key="frame" x="10" y="6" width="157.33333333333334" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文化之旅闖關活動" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2G-Mg-0IR">
+                                                <rect key="frame" x="0.0" y="0.0" width="130.66666666666666" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="2023/08/11 ~ 2023/10/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-rV-VmH">
+                                                <rect key="frame" x="0.0" y="22" width="157.33333333333334" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Azj-cv-35T" firstAttribute="top" secondItem="H7d-0g-qxz" secondAttribute="top" constant="6" id="EcF-XI-i2s"/>
+                                    <constraint firstAttribute="bottom" secondItem="Azj-cv-35T" secondAttribute="bottom" constant="15" id="Fdw-Xm-vx4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xnn-78-21Z" secondAttribute="bottom" id="G62-Ew-z2d"/>
+                                    <constraint firstItem="Azj-cv-35T" firstAttribute="leading" secondItem="H7d-0g-qxz" secondAttribute="leading" constant="10" id="GdF-gR-hVe"/>
+                                    <constraint firstItem="Xnn-78-21Z" firstAttribute="leading" secondItem="H7d-0g-qxz" secondAttribute="leading" id="MGM-cr-czR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xnn-78-21Z" secondAttribute="trailing" id="X89-Ip-xHt"/>
+                                    <constraint firstItem="Xnn-78-21Z" firstAttribute="top" secondItem="H7d-0g-qxz" secondAttribute="top" id="ynu-Xr-HcA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="TRL-rI-vRw" firstAttribute="leading" secondItem="L2H-pL-wan" secondAttribute="leading" constant="20" id="MIa-Wx-vjf"/>
+                    <constraint firstAttribute="trailing" secondItem="TRL-rI-vRw" secondAttribute="trailing" constant="20" id="WbD-VG-Cs0"/>
+                    <constraint firstItem="TRL-rI-vRw" firstAttribute="top" secondItem="L2H-pL-wan" secondAttribute="top" constant="15" id="juh-EE-7CQ"/>
+                    <constraint firstAttribute="bottom" secondItem="TRL-rI-vRw" secondAttribute="bottom" constant="15" id="q4D-o7-3yT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="VMX-ZE-DEO"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bottomView" destination="H7d-0g-qxz" id="Yfq-Uo-fzj"/>
+                <outlet property="missionCellStackView" destination="TRL-rI-vRw" id="R2t-IS-xWO"/>
+                <outlet property="missionEndTimeLabel" destination="UQL-rV-VmH" id="Vra-s6-4m9"/>
+                <outlet property="missionImageView" destination="WfW-su-Ooa" id="XpY-if-M8g"/>
+                <outlet property="missionTitlerLabel" destination="l2G-Mg-0IR" id="Iwv-go-xPE"/>
+            </connections>
+            <point key="canvasLocation" x="296" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pattenPink" width="335" height="58"/>
+        <image name="pic1" width="2160" height="1080"/>
+    </resources>
+</document>

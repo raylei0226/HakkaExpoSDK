@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissionAlertView" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="mlAlertInfoStackView" destination="XJu-2f-YKI" id="c6h-mC-HRm"/>
+                <outlet property="mlColseButton" destination="BEa-Zl-cGH" id="HXM-SX-gXr"/>
+                <outlet property="mlConfirmButton" destination="KOC-0A-FgW" id="JlA-LF-CLT"/>
+                <outlet property="mlImageView" destination="XAL-NM-Z8L" id="Tf3-XS-WEh"/>
+                <outlet property="mlLayerView" destination="4Of-FV-qGs" id="yg4-0U-dab"/>
+                <outlet property="mlMessageLabel" destination="WF2-FR-3uE" id="Jrt-Bb-Sbt"/>
+                <outlet property="mlParentView" destination="iN0-l3-epB" id="f7H-NB-fCe"/>
+                <outlet property="mlSuccessLabel" destination="Qb8-yf-Mtv" id="o1E-7B-rBD"/>
+                <outlet property="mlTitleLabel" destination="S8F-QP-eBo" id="HBU-tF-wKu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-FV-qGs">
+                    <rect key="frame" x="59" y="202" width="275" height="448"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEa-Zl-cGH">
+                            <rect key="frame" x="239" y="15" width="21" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="qA3-KQ-w3m"/>
+                                <constraint firstAttribute="height" constant="21" id="rgq-dW-KCI"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="close"/>
+                            <connections>
+                                <action selector="closeAlert:" destination="-1" eventType="touchUpInside" id="QOw-EQ-hZm"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="XJu-2f-YKI">
+                            <rect key="frame" x="35.333333333333329" y="58" width="204.33333333333337" height="332"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵達關卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8F-QP-eBo">
+                                    <rect key="frame" x="61.333333333333321" y="0.0" width="81.666666666666686" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜答對過關" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF2-FR-3uE">
+                                    <rect key="frame" x="56.333333333333329" y="46" width="91.999999999999986" height="18"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftBox" translatesAutoresizingMaskIntoConstraints="NO" id="XAL-NM-Z8L">
+                                    <rect key="frame" x="0.0" y="86" width="204.33333333333334" height="134"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="領取成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb8-yf-Mtv">
+                                    <rect key="frame" x="61.333333333333321" y="242" width="81.666666666666686" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOC-0A-FgW">
+                                    <rect key="frame" x="0.0" y="288" width="204.33333333333334" height="44"/>
+                                    <color key="backgroundColor" name="buttonOrange"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="WzS-Tl-NlY"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="確定"/>
+                                    <connections>
+                                        <action selector="confirmButtonClicked:" destination="-1" eventType="touchUpInside" id="l5g-9p-znK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="KOC-0A-FgW" firstAttribute="leading" secondItem="XJu-2f-YKI" secondAttribute="leading" id="QPu-Pz-rVD"/>
+                                <constraint firstAttribute="trailing" secondItem="KOC-0A-FgW" secondAttribute="trailing" id="uzk-VP-ZrK"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="BEa-Zl-cGH" secondAttribute="trailing" constant="15" id="1Lo-s7-gWq"/>
+                        <constraint firstItem="XJu-2f-YKI" firstAttribute="centerX" secondItem="4Of-FV-qGs" secondAttribute="centerX" id="BfV-Ey-dCJ"/>
+                        <constraint firstAttribute="height" secondItem="XJu-2f-YKI" secondAttribute="height" multiplier="1.35" id="PRd-cO-eLV"/>
+                        <constraint firstItem="XJu-2f-YKI" firstAttribute="centerY" secondItem="4Of-FV-qGs" secondAttribute="centerY" id="Qyp-mh-Wr6"/>
+                        <constraint firstItem="XJu-2f-YKI" firstAttribute="width" secondItem="4Of-FV-qGs" secondAttribute="width" multiplier="0.742373" id="XoW-3H-56w"/>
+                        <constraint firstItem="BEa-Zl-cGH" firstAttribute="top" secondItem="4Of-FV-qGs" secondAttribute="top" constant="15" id="ca9-Yi-6ru"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Of-FV-qGs" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="11R-3p-vth"/>
+                <constraint firstItem="4Of-FV-qGs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DlD-Ta-dn2"/>
+                <constraint firstItem="4Of-FV-qGs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fY8-sY-gf7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="102" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="15" height="15"/>
+        <image name="giftBox" width="219" height="134"/>
+        <namedColor name="buttonOrange">
+            <color red="0.93599998950958252" green="0.4699999988079071" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

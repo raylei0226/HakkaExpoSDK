@@ -29,6 +29,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TzR-W1-P4y">
                                 <rect key="frame" x="0.0" y="195" width="280" height="55"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pattenGreen" translatesAutoresizingMaskIntoConstraints="NO" id="nhp-QB-isR">
+                                        <rect key="frame" x="112" y="0.0" width="168" height="55"/>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-q3-JJr">
                                         <rect key="frame" x="15" y="5.6666666666666572" width="250" height="44"/>
                                         <subviews>
@@ -50,7 +53,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ISh-Il-ml5" firstAttribute="centerY" secondItem="b0d-4o-3Q2" secondAttribute="centerY" id="gS0-1R-Kys"/>
                                         </constraints>
@@ -60,8 +63,12 @@
                                 <constraints>
                                     <constraint firstItem="MBw-q3-JJr" firstAttribute="centerY" secondItem="TzR-W1-P4y" secondAttribute="centerY" id="0XF-pB-plW"/>
                                     <constraint firstItem="MBw-q3-JJr" firstAttribute="leading" secondItem="TzR-W1-P4y" secondAttribute="leading" constant="15" id="12L-Qt-lrC"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhp-QB-isR" secondAttribute="bottom" id="2VO-i8-Bsb"/>
                                     <constraint firstAttribute="height" constant="55" id="CUv-8S-sfN"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhp-QB-isR" secondAttribute="trailing" id="NgM-i8-CIy"/>
+                                    <constraint firstItem="nhp-QB-isR" firstAttribute="top" secondItem="TzR-W1-P4y" secondAttribute="top" id="eYO-Fb-VqF"/>
                                     <constraint firstAttribute="trailing" secondItem="MBw-q3-JJr" secondAttribute="trailing" constant="15" id="oWe-hs-TKq"/>
+                                    <constraint firstItem="nhp-QB-isR" firstAttribute="width" secondItem="TzR-W1-P4y" secondAttribute="width" multiplier="0.6" id="xZb-9d-xjb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -88,6 +95,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="pattenGreen" width="190" height="33"/>
         <image name="pic1" width="2160" height="1080"/>
         <image name="purpleNarrowArrow" width="15" height="16"/>
     </resources>

@@ -6,22 +6,40 @@
 //
 
 import UIKit
+import Security
 
-
-//取得裝置UUID
-struct DeviceIDManager {
+class DeviceIDManager {
     
-    static func getDeviceID() -> String {
-        
-        let deviceIDKey = Configs.UserDefaultsKeys.deviceUUID
-        
-        if let storedDeviceID = UserDefaults.standard.string(forKey: deviceIDKey) {
-            return storedDeviceID
-        } else {
-            let newDebiceID = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-            UserDefaults.standard.set(newDebiceID, forKey: deviceIDKey)
-            return newDebiceID
-            
+    static let shared = DeviceIDManager()
+    
+    private init() {}
+    
+    let deviceIDKey = "deviceUUID"
+    
+    func getDeviceID() -> String {
+        if let deviceID = loadDeviceID() {
+            return deviceID
         }
+        
+        let newDeviceID = UUID().uuidString
+        saveDeviceID(newDeviceID)
+        return newDeviceID
+    }
+    
+    private func saveDeviceID(_ deviceID: String) {
+        if let data = deviceID.data(using: .utf8) {
+            _ = KeychainManager.shared.save(key: deviceIDKey, data: data)
+        }
+    }
+    
+    private func loadDeviceID() -> String? {
+        if let data = KeychainManager.shared.load(key: deviceIDKey) {
+            return String(data: data, encoding: .utf8)
+        }
+        return nil
+    }
+    
+    func deleteDeviceID() {
+        _ = KeychainManager.shared.delete(key: deviceIDKey)
     }
 }

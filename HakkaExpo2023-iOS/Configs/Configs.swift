@@ -25,12 +25,20 @@ enum Asset: String {
     }
 }
 
+enum MLAlertViewType {
+    case arrival
+    case notYeyArrived
+    case correctAnswer
+    case receivedTheReward
+}
+
+enum MissionApiType: String {
+    case mission = "mission"
+    case reward = "reward"
+}
 
 struct Configs {
     
-    struct UserDefaultsKeys {
-        static let deviceUUID = "DeviceUUID"
-    }
     
     struct BoundleID{
         static let id = "omniguider.HakkaExpo2023-iOS.com"
@@ -49,6 +57,8 @@ struct Configs {
         static let buttonOrange = #colorLiteral(red: 0.9343007803, green: 0.4688757658, blue: 0.210223943, alpha: 1)
         static let notEnabledGray = #colorLiteral(red: 0.8666666746, green: 0.8666666746, blue: 0.8666666746, alpha: 1)
         static let lightOrange = #colorLiteral(red: 0.9850116372, green: 0.9355557561, blue: 0.9105494022, alpha: 1)
+        static let missionBlue = #colorLiteral(red: 0.1137254902, green: 0.3137254902, blue: 0.6352941176, alpha: 1)
+        static let disableViewGray = #colorLiteral(red: 0.9529411765, green: 0.968627451, blue: 0.9882352941, alpha: 1)
         
     }
 
@@ -79,10 +89,12 @@ struct Configs {
     //cell name
     
     struct CellNames {
-        
         static let carouselCollectionViewCell = "carouselCollectionViewCell"
         static let panoramaTableViewCell = "panoramaTableViewCell"
         static let arMenuTableViewCell = "arMenuTableViewCell"
+        static let awardTicketTableViewCell = "awardTicketTableViewCell"
+        static let missionLevleCollectionViewCell = "missionLevleCollectionViewCell"
+        static let missionTableViewCell = "missionTableViewCell"
     }
     
     struct Network {

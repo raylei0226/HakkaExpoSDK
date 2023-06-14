@@ -143,6 +143,7 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
     }
     /**設置GARSession*/
     private func setupGARSession() {
+        
         guard garSession == nil else {return}
         do {
             garSession = try GARSession(apiKey: garSession_APIKey, bundleIdentifier: nil)
@@ -239,7 +240,7 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
         let currentBundle = Bundle(for: SkyLanternARServiceByARCore.self)
         guard
             FirebaseApp.app(name: "HakkaExop") == nil,
-            let filePath = currentBundle.path(forResource: "HakkaExpoGoogleService-Info", ofType: "plist"),
+            let filePath = currentBundle.path(forResource: "Hakka-GoogleService-Info", ofType: "plist"),
             let fileopts = FirebaseOptions(contentsOfFile: filePath)
         else {
             return

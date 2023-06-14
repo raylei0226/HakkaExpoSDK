@@ -19,12 +19,9 @@ struct HttpsParameters {
     
     func getTimeStampAndDevice() -> Parameters
     {
-        let identifierForVendor = UIDevice.current.identifierForVendor
-        let deviceId = (identifierForVendor?.uuidString)!
-        let uuid = "&device_id=\(deviceId)"
-        
+        let deviceID = DeviceIDManager.shared.getDeviceID()
         var parameters: Parameters = getTimeStamp()
-        parameters["device_id"] = deviceId
+        parameters["u_id"] = deviceID
         
         return parameters
     }

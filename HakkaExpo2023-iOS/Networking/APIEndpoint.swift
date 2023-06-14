@@ -10,6 +10,7 @@ import Foundation
 enum APIEndPoint {
     case getTopBanner
     case getPano360
+    case getMissionOrReward
     
     
     var baseURL: String {
@@ -20,6 +21,7 @@ enum APIEndPoint {
         switch self {
         case .getTopBanner: return "/webapi/get_top_banner"
         case .getPano360: return "/api/get_pano360"
+        case .getMissionOrReward: return "/api/get_mission"
         }
     }
     
