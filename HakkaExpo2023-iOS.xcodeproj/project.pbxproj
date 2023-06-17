@@ -21,6 +21,12 @@
 		3B238FCE2A395EF200881BBC /* MissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FCD2A395EF200881BBC /* MissionViewModel.swift */; };
 		3B238FD02A3971AB00881BBC /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FCF2A3971AB00881BBC /* KeychainManager.swift */; };
 		3B238FD22A39912900881BBC /* MissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FD12A39912900881BBC /* MissionData.swift */; };
+		3B238FD42A3AB22500881BBC /* NineGridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FD32A3AB22500881BBC /* NineGridData.swift */; };
+		3B238FD62A3AF43600881BBC /* MissionLevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FD52A3AF43600881BBC /* MissionLevelViewModel.swift */; };
+		3B238FD82A3C2DBB00881BBC /* AwardTicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FD72A3C2DBA00881BBC /* AwardTicketData.swift */; };
+		3B238FDA2A3D3F6B00881BBC /* QRCodeScannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */; };
+		3B238FDD2A3D41E900881BBC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B238FDC2A3D41E900881BBC /* SnapKit */; };
+		3B238FE12A3D8EF800881BBC /* CustomMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */; };
 		3B80C2FA2A3083DD008A12E2 /* Mission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B80C2F92A3083DD008A12E2 /* Mission.storyboard */; };
 		3B80C2FE2A308846008A12E2 /* MissionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80C2FD2A308846008A12E2 /* MissionAlertView.swift */; };
 		3B80C3002A308854008A12E2 /* MissionAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B80C2FF2A308854008A12E2 /* MissionAlertView.xib */; };
@@ -139,6 +145,11 @@
 		3B238FCD2A395EF200881BBC /* MissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewModel.swift; sourceTree = "<group>"; };
 		3B238FCF2A3971AB00881BBC /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		3B238FD12A39912900881BBC /* MissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionData.swift; sourceTree = "<group>"; };
+		3B238FD32A3AB22500881BBC /* NineGridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGridData.swift; sourceTree = "<group>"; };
+		3B238FD52A3AF43600881BBC /* MissionLevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionLevelViewModel.swift; sourceTree = "<group>"; };
+		3B238FD72A3C2DBA00881BBC /* AwardTicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTicketData.swift; sourceTree = "<group>"; };
+		3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerManager.swift; sourceTree = "<group>"; };
+		3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskView.swift; sourceTree = "<group>"; };
 		3B80C2F92A3083DD008A12E2 /* Mission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mission.storyboard; sourceTree = "<group>"; };
 		3B80C2FD2A308846008A12E2 /* MissionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAlertView.swift; sourceTree = "<group>"; };
 		3B80C2FF2A308854008A12E2 /* MissionAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissionAlertView.xib; sourceTree = "<group>"; };
@@ -230,6 +241,7 @@
 				13EAD37FC369BCAB9B5A511A /* Pods_HakkaExpo2023_iOS.framework in Frameworks */,
 				3BAF02CA2A170DF100E514E1 /* Alamofire in Frameworks */,
 				3BAF03582A27232400E514E1 /* CryptoSwift in Frameworks */,
+				3B238FDD2A3D41E900881BBC /* SnapKit in Frameworks */,
 				3B80C3082A31D4A3008A12E2 /* JXSegmentedView in Frameworks */,
 				3BAF03382A20437E00E514E1 /* GLTFSceneKit in Frameworks */,
 			);
@@ -396,6 +408,7 @@
 				3B82F4B82A2F150E00B1C805 /* AlertManager.swift */,
 				3B82F4BD2A2F20C700B1C805 /* LocationService.swift */,
 				3B238FCF2A3971AB00881BBC /* KeychainManager.swift */,
+				3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -404,11 +417,14 @@
 			isa = PBXGroup;
 			children = (
 				3B80C3012A31AC1B008A12E2 /* MissionAlertView */,
+				3B238FD32A3AB22500881BBC /* NineGridData.swift */,
 				3BAF032C2A1CAF0200E514E1 /* MarineLife3DModel.swift */,
 				3BAF03672A28A09D00E514E1 /* BannerData.swift */,
 				3BAF03692A2DCDB400E514E1 /* PanoramaData.swift */,
 				3B80C30B2A32B965008A12E2 /* CustomSegmentedControl.swift */,
 				3B238FD12A39912900881BBC /* MissionData.swift */,
+				3B238FD72A3C2DBA00881BBC /* AwardTicketData.swift */,
+				3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -522,6 +538,7 @@
 				3B238FC32A38492200881BBC /* MissionLevelViewController.swift */,
 				3B238FC52A385E5800881BBC /* MissionLevleCollectionViewCell.swift */,
 				3B238FC62A385E5800881BBC /* MissionLevleCollectionViewCell.xib */,
+				3B238FD52A3AF43600881BBC /* MissionLevelViewModel.swift */,
 			);
 			path = "踏點闖關";
 			sourceTree = "<group>";
@@ -646,6 +663,7 @@
 				3BAF03372A20437E00E514E1 /* GLTFSceneKit */,
 				3BAF03572A27232400E514E1 /* CryptoSwift */,
 				3B80C3072A31D4A3008A12E2 /* JXSegmentedView */,
+				3B238FDC2A3D41E900881BBC /* SnapKit */,
 			);
 			productName = "HakkaExpo2023-iOS";
 			productReference = 3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */;
@@ -706,6 +724,7 @@
 				3BAF03362A20437E00E514E1 /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
 				3BAF03562A27232400E514E1 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				3B80C3062A31D4A3008A12E2 /* XCRemoteSwiftPackageReference "JXSegmentedView" */,
+				3B238FDB2A3D41E900881BBC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 3BAF02B72A1706B300E514E1 /* Products */;
 			projectDirPath = "";
@@ -861,10 +880,12 @@
 				3BAF03552A27228400E514E1 /* String + sha1.swift in Sources */,
 				3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */,
 				3B82F4A92A2F0C1D00B1C805 /* SkyLanternCanvasView.swift in Sources */,
+				3B238FD82A3C2DBB00881BBC /* AwardTicketData.swift in Sources */,
 				3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */,
 				3B238FC02A36CD1000881BBC /* AwardInfoViewController.swift in Sources */,
 				3B238FCE2A395EF200881BBC /* MissionViewModel.swift in Sources */,
 				3B80C30A2A31D5E8008A12E2 /* MissionViewController.swift in Sources */,
+				3B238FD62A3AF43600881BBC /* MissionLevelViewModel.swift in Sources */,
 				3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */,
 				3BAF035C2A272A9500E514E1 /* HttpsParameters.swift in Sources */,
 				3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */,
@@ -879,6 +900,7 @@
 				3B238FC72A385E5800881BBC /* MissionLevleCollectionViewCell.swift in Sources */,
 				3B82F4B92A2F150E00B1C805 /* AlertManager.swift in Sources */,
 				3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */,
+				3B238FDA2A3D3F6B00881BBC /* QRCodeScannerManager.swift in Sources */,
 				3BAF03462A25C7FD00E514E1 /* Router.swift in Sources */,
 				3B82F4B12A2F0C1D00B1C805 /* SkyLanternARService.swift in Sources */,
 				3B82F4AD2A2F0C1D00B1C805 /* SkyLanternARVC.swift in Sources */,
@@ -895,6 +917,7 @@
 				3B82F4BE2A2F20C700B1C805 /* LocationService.swift in Sources */,
 				3B82F4AA2A2F0C1D00B1C805 /* SkyLanternResources.swift in Sources */,
 				3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */,
+				3B238FE12A3D8EF800881BBC /* CustomMaskView.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
 				3BAF031D2A1C646F00E514E1 /* ARInteraction.swift in Sources */,
 				3B82F4B42A2F0C1D00B1C805 /* SkyLanternNode.swift in Sources */,
@@ -916,6 +939,7 @@
 				3B80C3032A31AC3D008A12E2 /* MissionAlertViewModel.swift in Sources */,
 				3BAF032D2A1CAF0200E514E1 /* MarineLife3DModel.swift in Sources */,
 				3BAF036D2A2DE7AE00E514E1 /* UIView + RoundedCorners.swift in Sources */,
+				3B238FD42A3AB22500881BBC /* NineGridData.swift in Sources */,
 				3B82F4B32A2F0C1D00B1C805 /* SkyLanternModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1244,6 +1268,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B238FDB2A3D41E900881BBC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		3B80C3062A31D4A3008A12E2 /* XCRemoteSwiftPackageReference "JXSegmentedView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pujiaxin33/JXSegmentedView.git";
@@ -1279,6 +1311,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B238FDC2A3D41E900881BBC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B238FDB2A3D41E900881BBC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		3B80C3072A31D4A3008A12E2 /* JXSegmentedView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B80C3062A31D4A3008A12E2 /* XCRemoteSwiftPackageReference "JXSegmentedView" */;

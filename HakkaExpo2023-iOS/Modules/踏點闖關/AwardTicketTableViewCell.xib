@@ -10,62 +10,70 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="awardTicketTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="AwardTicketTableViewCell" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="awardTicketTableViewCell" rowHeight="102" id="KGk-i7-Jjw" customClass="AwardTicketTableViewCell" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awardTicket" translatesAutoresizingMaskIntoConstraints="NO" id="7IQ-I7-q6R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                        <rect key="frame" x="0.0" y="10" width="320" height="92"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken.png" translatesAutoresizingMaskIntoConstraints="NO" id="apo-tx-MOB">
-                        <rect key="frame" x="21" y="12" width="68" height="68"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="68" id="9op-pP-RbZ"/>
-                            <constraint firstAttribute="height" constant="68" id="MgO-eG-Tkh"/>
-                        </constraints>
-                    </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="KGC-AM-QmB">
-                        <rect key="frame" x="96.999999999999986" y="32.333333333333336" width="132.66666666666663" height="27.666666666666664"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0T5-y2-7Gh">
+                        <rect key="frame" x="29.999999999999986" y="32" width="205.66666666666663" height="48"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文化之旅闖關活動禮物" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-ky-Nwi">
-                                <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="15.666666666666666"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="領取期限：2023/08/11~10/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9No-NY-FQJ">
-                                <rect key="frame" x="0.0" y="16.666666666666664" width="132.66666666666666" height="11"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken.png" translatesAutoresizingMaskIntoConstraints="NO" id="apo-tx-MOB">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="apo-tx-MOB" secondAttribute="height" multiplier="1:1" id="dh0-Tg-bNt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Hs-fm8">
+                                <rect key="frame" x="52.999999999999986" y="0.0" width="152.66666666666663" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文化之旅闖關活動禮物" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-ky-Nwi">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="31.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="領取期限：2023/08/11~10/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9No-NY-FQJ">
+                                        <rect key="frame" x="0.0" y="16.666666666666664" width="152.66666666666666" height="31.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="apo-tx-MOB" firstAttribute="width" secondItem="0T5-y2-7Gh" secondAttribute="width" multiplier="0.233387" id="UM9-uK-hnd"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="KGC-AM-QmB" firstAttribute="centerY" secondItem="apo-tx-MOB" secondAttribute="centerY" id="1SH-95-ZoS"/>
+                    <constraint firstItem="0T5-y2-7Gh" firstAttribute="height" secondItem="7IQ-I7-q6R" secondAttribute="height" multiplier="0.521739" id="3il-HG-2O3"/>
                     <constraint firstItem="7IQ-I7-q6R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5i1-bv-tyX"/>
                     <constraint firstAttribute="bottom" secondItem="7IQ-I7-q6R" secondAttribute="bottom" id="Jmy-dT-ukk"/>
-                    <constraint firstItem="KGC-AM-QmB" firstAttribute="leading" secondItem="apo-tx-MOB" secondAttribute="trailing" constant="8" symbolic="YES" id="QRz-hQ-ZYX"/>
-                    <constraint firstItem="apo-tx-MOB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="TQi-0h-UuF"/>
-                    <constraint firstItem="apo-tx-MOB" firstAttribute="centerY" secondItem="7IQ-I7-q6R" secondAttribute="centerY" id="YMO-da-AJY"/>
+                    <constraint firstItem="0T5-y2-7Gh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Tkk-sS-SwO"/>
                     <constraint firstAttribute="trailing" secondItem="7IQ-I7-q6R" secondAttribute="trailing" id="YZQ-f0-5uE"/>
-                    <constraint firstItem="7IQ-I7-q6R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kjd-3a-cXf"/>
+                    <constraint firstItem="0T5-y2-7Gh" firstAttribute="centerY" secondItem="7IQ-I7-q6R" secondAttribute="centerY" id="cJK-Pk-Grt"/>
+                    <constraint firstItem="7IQ-I7-q6R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kjd-3a-cXf"/>
+                    <constraint firstItem="0T5-y2-7Gh" firstAttribute="width" secondItem="7IQ-I7-q6R" secondAttribute="width" multiplier="0.642708" id="w1B-G8-UxC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="awardTicketImageView" destination="7IQ-I7-q6R" id="N2X-e0-0bb"/>
                 <outlet property="awardTitleLabel" destination="2oF-ky-Nwi" id="yOH-4d-jmu"/>
                 <outlet property="deadLineLabel" destination="9No-NY-FQJ" id="ddN-aW-kNE"/>
                 <outlet property="giftImageView" destination="apo-tx-MOB" id="uaK-mC-TZ9"/>
             </connections>
-            <point key="canvasLocation" x="127" y="21"/>
+            <point key="canvasLocation" x="126.71755725190839" y="20.422535211267608"/>
         </tableViewCell>
     </objects>
     <resources>

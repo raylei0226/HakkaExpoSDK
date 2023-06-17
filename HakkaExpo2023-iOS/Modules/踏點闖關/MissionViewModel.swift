@@ -28,7 +28,7 @@ class MissionViewModel {
     }
     
     func fetchData() {
-        RestAPI.shared.getMission { data in
+        RestAPI.shared.getMission(MissionApiType.mission.rawValue) { data in
             guard let data = data else { return }
             self.itemsData = data
             self.updataMissionItems()
@@ -59,4 +59,11 @@ class MissionViewModel {
         return(missionItems[index], missionEndTime, imageURL)
     }
     
+    func getModel(at index: Int) -> MissionInfoData {
+        
+        guard index >= 0 && index < missionItems.count else { return MissionInfoData()}
+        
+        return (itemsData?.data?[index])!
+        
+    }
 }

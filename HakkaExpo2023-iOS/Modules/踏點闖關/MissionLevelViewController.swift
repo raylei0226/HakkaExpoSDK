@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImage
+import Alamofire
 
 class MissionLevelViewController: BasicViewController {
     
@@ -18,8 +20,12 @@ class MissionLevelViewController: BasicViewController {
     @IBOutlet weak var missionBackgroundView: UIView!
     @IBOutlet weak var missionLevelScrollView: UIScrollView!
     
+    var missoinInfoData: MissionInfoData?
     
-    private let numberOfItemsPerRow = [1,2,3,4,5,6,7,8,9]
+    var missionLevelViewModel: MissionLevelViewModel?
+    
+    var nineGridData: NineGrid?
+
     private let spacing: CGFloat = 10.0
     private let cellIdentifier = Configs.CellNames.missionLevleCollectionViewCell
  
@@ -34,8 +40,10 @@ class MissionLevelViewController: BasicViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-//        let bottomOffset = CGPoint(x: 0, y: missionLevelScrollView.contentSize.height - missionLevelScrollView.bounds.size.height)
-//        missionLevelScrollView.setContentOffset(bottomOffset, animated: true)
+        guard let data = missoinInfoData else { return }
+        self.setupTitleView(with: data)
+        missionLevelViewModel = MissionLevelViewModel(missionID: data.mID!)
+        missionLevelViewModel?.observers.append(self)
     }
     
     private func setupUI() {
@@ -45,7 +53,14 @@ class MissionLevelViewController: BasicViewController {
         self.missionBackgroundView.clipsToBounds = true
         self.missionBackgroundView.layer.cornerRadius = 20
         self.confirmButton.layer.cornerRadius = 12
+        self.navigationItem.title = "任務關卡"
        
+    }
+    
+    private func setupTitleView(with data: MissionInfoData) {
+        self.missionTitleLabel.text = data.mTitle
+        self.missionInfoLabel.text = data.mDescribe
+        self.missionImageView.sd_setImage(with: URL(string: (data.mImg ?? "")), placeholderImage: UIImage(named: "pic1", in:  Bundle(for: MissionLevelViewController.self), compatibleWith: nil))
     }
     
     private func setupCollectionView() {
@@ -60,22 +75,39 @@ class MissionLevelViewController: BasicViewController {
     }
 }
 
+extension MissionLevelViewController: MissionLevelViewModelObserver {
+    
+    func missionLevelItemsUpdated(_ levelItems: [String], _ isFinshed: Bool) {
+        DispatchQueue.main.async {
+            self.missionLevelCollectionView.reloadData()
+            self.confirmButton.backgroundColor = isFinshed ? Configs.Colors.buttonOrange : UIColor.lightGray
+        }
+    }
+}
 
 extension MissionLevelViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberOfItemsPerRow.count
+        return missionLevelViewModel?.numberOfItems ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! MissionLevleCollectionViewCell
         
-        cell.configure(with: numberOfItemsPerRow[indexPath.row])
+        guard let nineGridData = missionLevelViewModel?.getModel(at: indexPath.item) else { return UICollectionViewCell() }
         
+        self.nineGridData = nineGridData
+            
+        cell.configure(with: self.nineGridData!)
+            
         return cell 
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let nineGrid = missionLevelViewModel?.getModel(at: indexPath.item) else { return }
+        Router.shared.navigationToAwardInfo(self, infoType: .levelIntroduction, gridData: nineGrid, ticketData: nil)
+    }
 }
 
 extension MissionLevelViewController: UICollectionViewDelegateFlowLayout {

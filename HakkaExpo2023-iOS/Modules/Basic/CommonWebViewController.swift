@@ -51,11 +51,13 @@ class CommonWebViewController: UIViewController {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithOpaqueBackground()
             navigationBarAppearance.backgroundColor = Configs.Colors.themePurple
+            navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
             navigationController?.navigationBar.standardAppearance = navigationBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
             
         } else {
-            // Fallback on earlier versions
+
         }
         
         self.navigationController?.navigationBar.isHidden = false

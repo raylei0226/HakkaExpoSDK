@@ -14,6 +14,7 @@ class MissionAlertView: UIView {
     var onClickConfirm: (() -> Void)?
     
     var alertType: MLAlertViewType!
+    
     var viewModel: MissionAlertViewModel!
       
     @IBOutlet var mlParentView: UIView!
@@ -69,7 +70,7 @@ class MissionAlertView: UIView {
           }
       }
     
-      func showAlert() {
+    func showAlert(with type: MLAlertViewType) {
           UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(mlParentView)
       }
           

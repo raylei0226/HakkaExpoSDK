@@ -11,6 +11,7 @@ enum APIEndPoint {
     case getTopBanner
     case getPano360
     case getMissionOrReward
+    case getNineGrid
     
     
     var baseURL: String {
@@ -22,6 +23,8 @@ enum APIEndPoint {
         case .getTopBanner: return "/webapi/get_top_banner"
         case .getPano360: return "/api/get_pano360"
         case .getMissionOrReward: return "/api/get_mission"
+        case .getNineGrid: return "/api/get_nine_grid"
+
         }
     }
     

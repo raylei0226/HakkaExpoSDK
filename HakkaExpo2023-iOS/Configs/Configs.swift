@@ -16,6 +16,10 @@ enum ARMenuType {
     case arInteraction, arNavigation
 }
 
+enum AwardInfoType {
+    case levelIntroduction, awardInformation
+}
+
 enum Asset: String {
     case back = "back"
     case userLocation = "user_location"

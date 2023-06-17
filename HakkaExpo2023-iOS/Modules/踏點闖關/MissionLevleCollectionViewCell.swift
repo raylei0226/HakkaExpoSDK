@@ -17,11 +17,13 @@ class MissionLevleCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configure(with number: Int) {
+    func configure(with nineGrid: NineGrid) {
         let bundle = Bundle(for: MissionLevleCollectionViewCell.self)
-        bitmapImageView.image = UIImage(named: "bitmap\(number)", bundle: bundle)
-       
-        let randomInt = [3, 5, 6, 7, 9].randomElement()
-        finishImageView.isHidden = (number == randomInt) ? true : false
+        
+        guard let levelID = nineGrid.id else { return }
+        bitmapImageView.image = UIImage(named: "bitmap\(levelID)", bundle: bundle)
+        
+        guard let isFinshed = nineGrid.isComplete else { return }
+        finishImageView.isHidden = !isFinshed ? true : false
     }
 }

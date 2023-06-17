@@ -16,9 +16,7 @@ class MissionViewController: BasicViewController {
     
     var awardTicketViewModel = AwardTicketViewModel()
     var missionViewModel = MissionViewModel()
-    var missionApiType: MissionApiType!
-    
-    
+
     @IBOutlet weak var missionSegment: CustomSegmentedControl!
     @IBOutlet weak var awardContainerView: UIView!
     @IBOutlet weak var missionTableView: UITableView!
@@ -31,9 +29,10 @@ class MissionViewController: BasicViewController {
         
         //註冊cell
         missionTableView.register(UINib(nibName: "AwardTicketTableViewCell", bundle: Bundle(for: MissionViewController.self)), forCellReuseIdentifier: awardTicketTableViewCell)
-        awardTicketViewModel.observers.append(self)
+       
         missionTableView.register(UINib(nibName: "MissionTableViewCell", bundle: Bundle(for: MissionViewController.self)), forCellReuseIdentifier: missionTableViewCell)
         missionViewModel.observers.append(self)
+        awardTicketViewModel.observers.append(self)
     }
     
     private func setupSegment() {
@@ -56,12 +55,14 @@ class MissionViewController: BasicViewController {
     
     private func configDataOfIndex(index: Int) {
         segmentIndex = index
-        awardContainerView.isHidden = (index == 0 ? true : false)
-        self.view.bringSubviewToFront(awardContainerView)
+        DispatchQueue.main.async {
+            self.missionTableView.reloadData()
+        }
     }
     
     private func showZeroAwardTicketView() {
-        
+        awardContainerView.isHidden = false
+        self.view.bringSubviewToFront(awardContainerView)
     }
 }
 
@@ -71,11 +72,14 @@ extension MissionViewController: CustomSegmentedControlDelegate {
     }
 }
 
-
 extension MissionViewController: AwardTicketViewModelObserver, MissionViewModelObserver {
     
     func awardTicketUpdated(_ tickets: [String]) {
-        print("Tickets:\(tickets)")
+        if tickets.count > 0 {
+            DispatchQueue.main.async {
+                self.missionTableView.reloadData()
+            }
+        }
     }
     
     func missionItemsUpdated(_ missions: [String]) {
@@ -90,7 +94,7 @@ extension MissionViewController: AwardTicketViewModelObserver, MissionViewModelO
 extension MissionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (segmentIndex == 0) ? missionViewModel.numberOfItems : 0
+        return (segmentIndex == 0) ? missionViewModel.numberOfItems : awardTicketViewModel.numberOfItems
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,8 +107,30 @@ extension MissionViewController: UITableViewDelegate, UITableViewDataSource {
             missionCell.cofigure(title: missionCellInfoData.0, endTime: missionCellInfoData.1, imgURL: missionCellInfoData.2)
             
             return missionCell
+            
+        } else if segmentIndex == 1 {
+            
+            guard let awardCell = tableView.dequeueReusableCell(withIdentifier: awardTicketTableViewCell, for: indexPath) as? AwardTicketTableViewCell else { return UITableViewCell() }
+            
+            let ticketData = awardTicketViewModel.getItem(at: indexPath.item)
+            
+            awardCell.configure(with: ticketData)
+            
+            return awardCell
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if segmentIndex == 0 {
+            
+            let infoData = missionViewModel.getModel(at: indexPath.item)
+            Router.shared.navigationToMissionLevel(self, itemData: infoData)
+        } else {
+            let ticketData = awardTicketViewModel.getItem(at: indexPath.item)
+            Router.shared.navigationToAwardInfo(self, infoType: .awardInformation, gridData: nil, ticketData: ticketData)
+        }
     }
 }

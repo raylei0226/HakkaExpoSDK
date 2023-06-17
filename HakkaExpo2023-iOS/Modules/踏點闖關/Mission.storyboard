@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="60" id="Ncb-dw-2cI"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t98-aY-f3t">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t98-aY-f3t">
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -171,7 +171,7 @@
                                                     </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-L9-aKg">
                                                         <rect key="frame" x="0.0" y="433" width="315" height="45"/>
-                                                        <color key="backgroundColor" name="buttonOrange"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="gGZ-w7-Je9"/>
                                                         </constraints>
@@ -257,7 +257,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-Nw-HRH">
-                                        <rect key="frame" x="16" y="30" width="337.5" height="601"/>
+                                        <rect key="frame" x="16" y="30" width="337.5" height="709"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="yxx-qU-la3">
                                                 <rect key="frame" x="0.0" y="0.0" width="337.5" height="38"/>
@@ -281,7 +281,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vrJ-fe-gZC">
-                                                <rect key="frame" x="0.0" y="64" width="337.5" height="39"/>
+                                                <rect key="frame" x="0.0" y="64" width="337.5" height="19.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任務期限 : 2023/08/11 ~ 2023/10/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="la9-Xj-dyu">
                                                         <rect key="frame" x="0.0" y="0.0" width="258.5" height="19.5"/>
@@ -289,16 +289,10 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每日兌換時間：9：00 ~ 18：00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFN-0r-wmA">
-                                                        <rect key="frame" x="0.0" y="19.5" width="231" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="活動期間前500位完成任務者，即可至" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyY-ba-WOh">
-                                                <rect key="frame" x="0.0" y="129" width="337.5" height="80"/>
+                                                <rect key="frame" x="0.0" y="109.5" width="337.5" height="80"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="Zmh-zo-KXu"/>
@@ -308,13 +302,19 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic3" translatesAutoresizingMaskIntoConstraints="NO" id="WBO-d3-CKT">
-                                                <rect key="frame" x="0.0" y="235" width="337.5" height="194"/>
+                                                <rect key="frame" x="0.0" y="215.5" width="337.5" height="194"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="194" id="Lws-Aa-Y83"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="展示世界8個區域，20個國家的客家文化．以主題的方式介紹在地發展與現況，講述在經歷過與不同的族群融合，不同的政治，與當地的文化競合後，各地客家描繪出自我論述的方式，呈顯明日客家的多元面貌．" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0c-qe-k0U">
+                                                <rect key="frame" x="4" y="435.5" width="329.5" height="101.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-cl-5Im">
-                                                <rect key="frame" x="0.0" y="455" width="337.5" height="75"/>
+                                                <rect key="frame" x="0.0" y="563" width="337.5" height="75"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pCJ-SE-o55">
                                                         <rect key="frame" x="12.5" y="13.5" width="92.5" height="21"/>
@@ -346,7 +346,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I60-E3-OTw">
-                                                <rect key="frame" x="0.0" y="556" width="337.5" height="45"/>
+                                                <rect key="frame" x="0.0" y="664" width="337.5" height="45"/>
                                                 <color key="backgroundColor" name="buttonOrange"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="wgW-5Z-6W9"/>
@@ -392,13 +392,14 @@
                     <connections>
                         <outlet property="awardImageView" destination="WBO-d3-CKT" id="DBZ-MB-2ri"/>
                         <outlet property="awardInfoTextView" destination="VyY-ba-WOh" id="wJG-KY-izf"/>
-                        <outlet property="dailyRedeemTimeLabel" destination="QFN-0r-wmA" id="8Q5-pB-2za"/>
+                        <outlet property="levelInfoLabel" destination="Y0c-qe-k0U" id="UDS-wm-Yfq"/>
                         <outlet property="missionDataLabel" destination="la9-Xj-dyu" id="b74-Mr-AV7"/>
                         <outlet property="noticeContainerView" destination="zZs-cl-5Im" id="vg9-6D-1L2"/>
                         <outlet property="noticeImageView" destination="TZG-LS-EHI" id="FIO-iJ-hpc"/>
                         <outlet property="noticeLabel" destination="dcd-H0-RQR" id="8fm-Bf-OK9"/>
                         <outlet property="noticeTitleLabel" destination="D2E-gv-hsA" id="i8D-Bl-a3O"/>
                         <outlet property="receiveAwardButton" destination="I60-E3-OTw" id="EuG-qS-cK1"/>
+                        <outlet property="titleLabel" destination="TW7-LP-Fpr" id="xCT-XQ-R7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9M-D8-k80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

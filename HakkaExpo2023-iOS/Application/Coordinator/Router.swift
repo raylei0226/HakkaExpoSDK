@@ -50,8 +50,26 @@ import UIKit
         vc.navigationController?.pushViewController(awardInfoVC, animated: true)
     }
     
-    func navigationToMissionLevel(_ vc: UIViewController) {
-        let missionLevleVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "MissionLevelVC")
+    func navigationToMissionLevel(_ vc: UIViewController, itemData: MissionInfoData?) {
+        let missionLevleVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "MissionLevelVC") as! MissionLevelViewController
+        missionLevleVC.missoinInfoData = itemData
         vc.navigationController?.pushViewController(missionLevleVC, animated: true)
+        
+    }
+    
+    func navigationToAwardInfo(_ vc: UIViewController, infoType: AwardInfoType, gridData: NineGrid?, ticketData: TicketData?) {
+        
+        let awardInfoVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "AwardInfoVC") as! AwardInfoViewController
+        
+        switch infoType {
+        case .levelIntroduction:
+            awardInfoVC.awardInfoType = infoType
+            awardInfoVC.gridData = gridData
+            
+        case .awardInformation:
+            awardInfoVC.awardInfoType = infoType
+            awardInfoVC.ticketData = ticketData
+        }
+        vc.navigationController?.pushViewController(awardInfoVC, animated: true)
     }
 }

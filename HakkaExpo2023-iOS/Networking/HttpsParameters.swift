@@ -17,6 +17,23 @@ struct HttpsParameters {
         return [:]
     }
     
+    
+    func getTimeStampWithoutLang() -> Parameters
+    {
+        let now = Date()
+        let timeInterval: TimeInterval = now.timeIntervalSince1970
+        let timeStamp = Int(timeInterval)
+        let time = "\(Configs.encryptToken)" + "\(timeStamp)"
+        
+        if let mac = time.sha1 {
+            let parameters: Parameters = ["timestamp": timeStamp, "mac": mac]
+            return parameters
+        }
+        return [:]
+    }
+    
+    
+    
     func getTimeStampAndDevice() -> Parameters
     {
         let deviceID = DeviceIDManager.shared.getDeviceID()
@@ -25,5 +42,14 @@ struct HttpsParameters {
         
         return parameters
     }
+    
+    func getTimeStampAndDeviceWithoutLang() -> Parameters {
+        let deviceID = DeviceIDManager.shared.getDeviceID()
+        var parameters: Parameters = getTimeStampWithoutLang()
+        parameters["u_id"] = deviceID
+        
+        return parameters
+    }
+    
 }
 
