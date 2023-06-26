@@ -12,7 +12,7 @@ class MissionViewController: BasicViewController {
     private var selectedIndexPath: IndexPath?
     private let awardTicketTableViewCell = Configs.CellNames.awardTicketTableViewCell
     private let missionTableViewCell = Configs.CellNames.missionTableViewCell
-    private var segmentIndex: Int = 0
+    private var segmentIndex: Int!
     
     var awardTicketViewModel = AwardTicketViewModel()
     var missionViewModel = MissionViewModel()
@@ -46,15 +46,15 @@ class MissionViewController: BasicViewController {
                 buttonImages.append(image)
             }
         }
-        
-        missionSegment.delegate = self
-        missionSegment.setButtons(buttonTitles: buttonTitles, buttonImages: buttonImages)
-        awardContainerView.isHidden = true
+        self.missionSegment.delegate = self
+        self.missionSegment.setButtons(buttonTitles: buttonTitles, buttonImages: buttonImages)
+        self.awardContainerView.isHidden = true
+        self.segmentIndex = 0
     }
     
     
     private func configDataOfIndex(index: Int) {
-        segmentIndex = index
+        self.segmentIndex = index
         DispatchQueue.main.async {
             self.missionTableView.reloadData()
         }
@@ -67,6 +67,7 @@ class MissionViewController: BasicViewController {
 }
 
 extension MissionViewController: CustomSegmentedControlDelegate {
+    
     func changeToIndex(index: Int) {
         self.configDataOfIndex(index: index)
     }
@@ -104,7 +105,7 @@ extension MissionViewController: UITableViewDelegate, UITableViewDataSource {
             
             let missionCellInfoData = missionViewModel.getItems(at: indexPath.item)
             
-            missionCell.cofigure(title: missionCellInfoData.0, endTime: missionCellInfoData.1, imgURL: missionCellInfoData.2)
+            missionCell.cofigure(title: missionCellInfoData.title, endTime: missionCellInfoData.endTime, imgURL: missionCellInfoData.imgURL)
             
             return missionCell
             

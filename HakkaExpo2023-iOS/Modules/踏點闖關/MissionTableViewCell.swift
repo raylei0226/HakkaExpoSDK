@@ -37,7 +37,7 @@ class MissionTableViewCell: UITableViewCell {
     
     func cofigure(title: String, endTime: String, imgURL: String ) {
         let url = URL(string: imgURL)
-        missionImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "pic2", in:  Bundle(for: MainPageViewController.self), compatibleWith: nil))
+        missionImageView.sd_setImage(with: url, placeholderImage: Configs.setupPlaceholderImage(in: MainPageViewController.self))
         missionTitlerLabel.text = title
         missionEndTimeLabel.text = endTime
     }

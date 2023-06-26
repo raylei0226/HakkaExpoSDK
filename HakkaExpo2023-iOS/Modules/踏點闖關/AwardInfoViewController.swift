@@ -64,7 +64,7 @@ class AwardInfoViewController: BasicViewController {
             guard let gridData = gridData else { return }
             
             titleLabel.text = gridData.title
-            awardImageView.sd_setImage(with: URL(string: gridData.image ?? ""), placeholderImage: UIImage(named: "pic1", in: bundle, compatibleWith: nil))
+            awardImageView.sd_setImage(with: URL(string: gridData.image ?? ""), placeholderImage: Configs.setupPlaceholderImage(in: AwardInfoViewController.self))
             levelInfoLabel.text = gridData.description
             noticeImageView.image = isAwardInformation ? warningImage : lightBallImage
             noticeLabel.text = gridData.question?.tip
@@ -74,7 +74,7 @@ class AwardInfoViewController: BasicViewController {
             
             missionDataLabel.text = "任務期限：\(ticketData.rwExpiredStartTime!) ~ \(ticketData.rwExpiredEndTime!)"
             titleLabel.text = ticketData.mTitle
-            awardImageView.sd_setImage(with: URL(string: ticketData.mImg ?? ""), placeholderImage: UIImage(named: "pic1", in: bundle, compatibleWith: nil))
+            awardImageView.sd_setImage(with: URL(string: ticketData.mImg ?? ""), placeholderImage: Configs.setupPlaceholderImage(in: AwardInfoViewController.self))
             noticeLabel.text = ticketData.rwNotice
             awardInfoTextView.text = ticketData.rwDescribe
         }

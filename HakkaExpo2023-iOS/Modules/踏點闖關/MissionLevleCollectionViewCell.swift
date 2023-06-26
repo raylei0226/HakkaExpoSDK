@@ -17,11 +17,14 @@ class MissionLevleCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configure(with nineGrid: NineGrid) {
+    func configure(with nineGrid: NineGrid, levelNumber: Int) {
+        
+        print("關卡數:\(levelNumber)")
+        
         let bundle = Bundle(for: MissionLevleCollectionViewCell.self)
         
-        guard let levelID = nineGrid.id else { return }
-        bitmapImageView.image = UIImage(named: "bitmap\(levelID)", bundle: bundle)
+//        guard let levelID = nineGrid.id else { return }
+        bitmapImageView.image = UIImage(named: "bitmap\(levelNumber)", bundle: bundle)
         
         guard let isFinshed = nineGrid.isComplete else { return }
         finishImageView.isHidden = !isFinshed ? true : false

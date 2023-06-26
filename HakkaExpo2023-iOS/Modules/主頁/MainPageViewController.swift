@@ -100,7 +100,6 @@ import Alamofire
             
         case 1: showWebView(Configs.Network.officialWebsite)
         case 2: Router.shared.navigationToMission(self)
-//        case 2: Router.shared.navigationToMissionLevel(self)
         case 3: Router.shared.navigateToPanorama(self)
         case 4: Router.shared.navigateToArMenu(self, .arNavigation)
         case 5: Router.shared.navigateToArMenu(self, .arInteraction)

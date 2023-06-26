@@ -28,10 +28,14 @@ class PanoramaViewModle {
     }
 
     func fetchData() {
+        HudManager.shared.showProgress()
         RestAPI.shared.getPano360 { data in
-            guard let data = data else { return }
+            guard let data = data else {
+                HudManager.shared.showError(withMessage: K.errorMessage)
+                return }
             self.itemsData = data
             self.updataPanoramaItems()
+            HudManager.shared.hide()
         }
     }
     

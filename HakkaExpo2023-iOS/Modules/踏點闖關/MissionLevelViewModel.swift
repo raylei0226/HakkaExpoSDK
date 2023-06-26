@@ -33,12 +33,24 @@ class MissionLevelViewModel {
     }
     
     func fetchData() {
+        HudManager.shared.showProgress()
         guard let mid = mID else { return }
         RestAPI.shared.getNineGrid(mid) { data in
-            guard let data = data else { return }
+            guard let data = data else {
+                HudManager.shared.showError(withMessage: K.errorMessage)
+                return }
             self.levelItemsData = data
             self.updatedMissionLevel()
+            HudManager.shared.hide()
         }
+    }
+    
+    func convertSequence() -> [Int] {
+        var numberSequence: [Int] = []
+        for i in 1...numberOfItems {
+            numberSequence.append(i)
+        }
+        return numberSequence
     }
     
     private func updatedMissionLevel() {

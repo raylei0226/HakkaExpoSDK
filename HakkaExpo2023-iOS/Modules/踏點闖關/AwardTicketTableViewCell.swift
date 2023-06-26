@@ -15,6 +15,7 @@ class AwardTicketTableViewCell: UITableViewCell {
             awardTicketImageView.dropShadow()
         }
     }
+
     
     @IBOutlet weak var giftImageView: UIImageView! {
         didSet {
@@ -29,11 +30,11 @@ class AwardTicketTableViewCell: UITableViewCell {
         let bundle = Bundle(for: MissionViewController.self)
         let url = URL(string: data.mImg!)
         let image = (data.rwsEnabled == "Done") ? UIImage(named: "awardTicket", in:  bundle, compatibleWith: nil) : UIImage(named: "awardTicket_gray", in:  bundle, compatibleWith: nil)
-        awardTicketImageView.image = image
+//        awardTicketImageView.image = image
 //        self.isUserInteractionEnabled = (data.rwsEnabled == "Done") ? true : false
         awardTitleLabel.text = data.rwTitle
         deadLineLabel.text = "領取期限:\(data.rwExpiredStartTime!) ~ \(data.rwExpiredEndTime!)"
-        giftImageView.sd_setImage(with: url , placeholderImage: UIImage(named: "pic2", in:  Bundle(for: MissionViewController.self), compatibleWith: nil))
+        giftImageView.sd_setImage(with: url , placeholderImage: Configs.setupPlaceholderImage(in: MissionViewController.self))
     }
     
     override func awakeFromNib() {

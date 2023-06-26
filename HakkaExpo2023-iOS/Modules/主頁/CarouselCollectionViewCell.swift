@@ -14,7 +14,8 @@ class CarouselCollectionViewCell: UICollectionViewCell {
    
     func cofigure(with imageURL: String) {
         let url = URL(string: imageURL)
-        imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "pic1", in:  Bundle(for: MainPageViewController.self), compatibleWith: nil))
+        imageView.sd_setImage(with: url, placeholderImage: Configs.setupPlaceholderImage(in: MainPageViewController.self))
+        imageView.contentMode = .scaleAspectFill
     }
     
     override func awakeFromNib() {

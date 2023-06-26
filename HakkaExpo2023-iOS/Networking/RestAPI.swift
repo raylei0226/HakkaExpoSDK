@@ -19,7 +19,7 @@ class RestAPI {
         
         let parameters = HttpsParameters().getTimeStamp()
         
-        print(#function,"-Parameters: \(parameters)")
+        logParameters(functionName: #function, parameters: parameters)
         
         NetworkManager.shared.request(endpoint: APIEndPoint.getTopBanner, method: .post, parameters: parameters) { (result: Result<BannerData, Error>) in
             
@@ -39,7 +39,7 @@ class RestAPI {
         
         let parameters = HttpsParameters().getTimeStamp()
         
-        print(#function,"-Parameters: \(parameters)")
+        logParameters(functionName: #function, parameters: parameters)
         
         NetworkManager.shared.request(endpoint: APIEndPoint.getPano360, method: .post, parameters: parameters) { (result: Result<PanoramaData, Error>) in
             
@@ -59,7 +59,7 @@ class RestAPI {
         var parameters = HttpsParameters().getTimeStampAndDeviceWithoutLang()
         parameters["type"] = apiType
         
-        print(#function,"-Parameters: \(parameters)")
+        logParameters(functionName: #function, parameters: parameters)
         
         NetworkManager.shared.request(endpoint: APIEndPoint.getMissionOrReward, method: .post, parameters: parameters) { (result: Result<MissionData, Error>) in
             switch result {
@@ -78,7 +78,7 @@ class RestAPI {
         var parameters = HttpsParameters().getTimeStampAndDeviceWithoutLang()
         parameters["type"] = apiType
         
-        print(#function,"-Parameters: \(parameters)")
+        logParameters(functionName: #function, parameters: parameters)
         
         NetworkManager.shared.request(endpoint: APIEndPoint.getMissionOrReward, method: .post, parameters: parameters) { (result: Result<AwardTicketData, Error>) in
             switch result {
@@ -95,9 +95,9 @@ class RestAPI {
     func getNineGrid(_ missionID: String, completion: @escaping(NineGridData?) -> Void)  {
         
         var parameters = HttpsParameters().getTimeStampAndDeviceWithoutLang()
-        parameters["m_id"] = missionID
+        parameters[K.missionID] = missionID
         
-        print(#function,"-Parameters: \(parameters)")
+        logParameters(functionName: #function, parameters: parameters)
         
         NetworkManager.shared.request(endpoint: APIEndPoint.getNineGrid, method: .post, parameters: parameters) { (result: Result<NineGridData, Error>) in
             switch result {
@@ -109,5 +109,46 @@ class RestAPI {
                 completion(nil)
             }
         }
+    }
+    
+    func getMissionComplete(_ missionID: String, _ gridID: String, completion: @escaping(MissionStatusData?) -> Void) {
+        
+        var parameters = HttpsParameters().getTimeStampAndDeviceWithoutLang()
+        parameters[K.missionID] = missionID
+        parameters[K.gridID] = gridID
+        
+        logParameters(functionName: #function, parameters: parameters)
+        
+        NetworkManager.shared.request(endpoint: APIEndPoint.getMissionComplete, method: .post, parameters: parameters) { (result: Result<MissionStatusData, Error>) in
+            switch result {
+            case .success(let decodedData):
+                completion(decodedData)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
+    func getMissionReward(_ missionID: String, completion:@escaping(ResponseData?) -> Void) {
+        
+        var parameters = HttpsParameters().getTimeStampAndDeviceWithoutLang()
+        parameters[K.missionID] = missionID
+        
+        logParameters(functionName: #function, parameters: parameters)
+        
+        NetworkManager.shared.request(endpoint: APIEndPoint.getMisionReward, method: .post, parameters: parameters) { (result: Result< ResponseData, Error>) in
+            switch result {
+            case .success(let decodedData):
+                completion(decodedData)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
+    private func logParameters(functionName: String, parameters: [String: Any]) {
+        print(functionName, "-Parameters: \(parameters)")
     }
 }

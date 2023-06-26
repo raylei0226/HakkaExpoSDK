@@ -28,11 +28,15 @@ class AwardTicketViewModel {
     }
     
     func fetchData() {
+        HudManager.shared.showProgress()
         RestAPI.shared.getAward(MissionApiType.reward.rawValue) { data in
-            guard let data = data else { return }
+            guard let data = data else {
+                HudManager.shared.showError(withMessage: K.errorMessage)
+                return }
             print("獎勵:\(data)")
             self.itemsData = data
             self.updateAwardItems()
+            HudManager.shared.hide()
         }
     }
     

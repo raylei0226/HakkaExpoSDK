@@ -28,10 +28,14 @@ class MainPageViewModel {
     }
     
     func fetchData() {
+        HudManager.shared.showProgress()
         RestAPI.shared.getTopBanner { data in
-            guard let data = data else { return }
+            guard let data = data else {
+                HudManager.shared.showError(withMessage: K.errorMessage)
+                return }
             self.itemsData = data
             self.updateCarouselItems()
+            HudManager.shared.hide()
         }
     }
     

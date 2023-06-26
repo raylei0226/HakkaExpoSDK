@@ -72,4 +72,10 @@ import UIKit
         }
         vc.navigationController?.pushViewController(awardInfoVC, animated: true)
     }
+    
+    func navigationToQusetion(_ vc: UIViewController) {
+        let questionVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "QuestionVC") as! QuestionViewControler
+        vc.navigationController?.pushViewController(questionVC, animated: true)
+        
+    }
 }

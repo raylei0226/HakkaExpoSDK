@@ -28,10 +28,14 @@ class MissionViewModel {
     }
     
     func fetchData() {
+        HudManager.shared.showProgress()
         RestAPI.shared.getMission(MissionApiType.mission.rawValue) { data in
-            guard let data = data else { return }
+            guard let data = data else {
+                HudManager.shared.showError(withMessage: K.errorMessage)
+                return }
             self.itemsData = data
             self.updataMissionItems()
+            HudManager.shared.hide()
         }
     }
     
@@ -48,7 +52,7 @@ class MissionViewModel {
         }
     }
     
-    func getItems(at index: Int) -> (String, String, String) {
+    func getItems(at index: Int) -> (title: String, endTime: String, imgURL: String) {
         
         guard index >= 0 && index < missionItems.count else { return ("", "", "")}
         

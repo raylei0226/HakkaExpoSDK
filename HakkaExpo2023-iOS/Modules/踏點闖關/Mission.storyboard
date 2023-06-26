@@ -33,7 +33,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t98-aY-f3t">
-                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="pUh-et-w19"/>
@@ -53,7 +53,7 @@
                             <constraint firstItem="FQE-zZ-ILa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ak3-tN-isJ"/>
                             <constraint firstItem="jol-zD-Gyk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="c33-Z2-5WH"/>
                             <constraint firstItem="jol-zD-Gyk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cny-bY-4uR"/>
-                            <constraint firstItem="t98-aY-f3t" firstAttribute="top" secondItem="jol-zD-Gyk" secondAttribute="bottom" id="d9r-nn-yhX"/>
+                            <constraint firstItem="t98-aY-f3t" firstAttribute="top" secondItem="jol-zD-Gyk" secondAttribute="bottom" constant="15" id="d9r-nn-yhX"/>
                             <constraint firstAttribute="bottom" secondItem="FQE-zZ-ILa" secondAttribute="bottom" id="uyS-vn-w1j"/>
                         </constraints>
                     </view>
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2j-4o-9EV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916.79389312977094" y="673.94366197183103"/>
+            <point key="canvasLocation" x="910" y="700"/>
         </scene>
         <!--Award Info View Controller-->
         <scene sceneID="d4I-gl-RiZ">
@@ -406,12 +406,150 @@
             </objects>
             <point key="canvasLocation" x="910.68702290076328" y="-2.1126760563380285"/>
         </scene>
+        <!--Question View Controler-->
+        <scene sceneID="JzK-P6-cbJ">
+            <objects>
+                <viewController storyboardIdentifier="QuestionVC" id="aiM-TE-6pk" customClass="QuestionViewControler" customModule="HakkaExpo2023_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnX-y5-8dT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Lc-MA-0xy">
+                                <rect key="frame" x="20" y="40" width="335" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第二展區 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOF-CJ-0AL">
+                                        <rect key="frame" x="25" y="-7.5" width="102.5" height="65"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="yfi-1R-rEp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                        <color key="textColor" name="themePurple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cOF-CJ-0AL" firstAttribute="centerY" secondItem="2Lc-MA-0xy" secondAttribute="centerY" id="IWg-uw-Q7c"/>
+                                    <constraint firstItem="cOF-CJ-0AL" firstAttribute="leading" secondItem="2Lc-MA-0xy" secondAttribute="leading" constant="25" id="V51-Bu-qEO"/>
+                                    <constraint firstAttribute="height" constant="50" id="dtf-B8-1Bp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MF0-KL-aBI">
+                                <rect key="frame" x="20" y="115" width="335" height="267"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請問下列何者不是第一展區展覽的主軸元素之一？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-2Z-VaU">
+                                        <rect key="frame" x="15" y="20" width="312" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sQP-Bd-4mr">
+                                        <rect key="frame" x="28" y="85.5" width="61" height="156"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evo-Gw-G4F" customClass="CustomToggleButton" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="離鄉" image="unselectCircle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionsClicked:" destination="aiM-TE-6pk" eventType="touchUpInside" id="hDO-ud-6J9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvZ-oe-3bB" customClass="CustomToggleButton" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44" width="61" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="融合" image="unselectCircle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionsClicked:" destination="aiM-TE-6pk" eventType="touchUpInside" id="K6Z-rb-PDR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3x-7u-1Zo" customClass="CustomToggleButton" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="88" width="61" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="排斥" image="unselectCircle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionsClicked:" destination="aiM-TE-6pk" eventType="touchUpInside" id="USD-vP-alf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-cZ-oAA" customClass="CustomToggleButton" customModule="HakkaExpo2023_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="132" width="61" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="獨特" image="unselectCircle">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionsClicked:" destination="aiM-TE-6pk" eventType="touchUpInside" id="3wC-hm-RdU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sQP-Bd-4mr" firstAttribute="height" secondItem="MF0-KL-aBI" secondAttribute="height" multiplier="0.58427" id="6xH-T2-alr"/>
+                                    <constraint firstItem="YgY-2Z-VaU" firstAttribute="top" secondItem="MF0-KL-aBI" secondAttribute="top" constant="20" id="UHk-Se-QcE"/>
+                                    <constraint firstItem="sQP-Bd-4mr" firstAttribute="centerY" secondItem="MF0-KL-aBI" secondAttribute="centerY" constant="30" id="aNK-fb-7kx"/>
+                                    <constraint firstAttribute="trailing" secondItem="YgY-2Z-VaU" secondAttribute="trailing" constant="8" id="d8e-So-PdS"/>
+                                    <constraint firstItem="YgY-2Z-VaU" firstAttribute="leading" secondItem="MF0-KL-aBI" secondAttribute="leading" constant="15" id="kpF-L8-8EW"/>
+                                    <constraint firstItem="sQP-Bd-4mr" firstAttribute="leading" secondItem="MF0-KL-aBI" secondAttribute="leading" constant="28" id="nZn-UZ-rHb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Hd-fgK">
+                                <rect key="frame" x="20" y="422" width="335" height="44"/>
+                                <color key="backgroundColor" name="buttonOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ko2-UM-1X8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="確定答案">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pFX-Io-JHr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Lc-MA-0xy" firstAttribute="top" secondItem="pFX-Io-JHr" secondAttribute="top" constant="20" id="9Wd-mg-FOu"/>
+                            <constraint firstItem="2Lc-MA-0xy" firstAttribute="leading" secondItem="pFX-Io-JHr" secondAttribute="leading" constant="20" id="Fb7-RG-lto"/>
+                            <constraint firstItem="MF0-KL-aBI" firstAttribute="leading" secondItem="pFX-Io-JHr" secondAttribute="leading" constant="20" id="Fz5-Ax-1aT"/>
+                            <constraint firstItem="7fj-Hd-fgK" firstAttribute="top" secondItem="MF0-KL-aBI" secondAttribute="bottom" constant="40" id="KVJ-G3-GVJ"/>
+                            <constraint firstItem="pFX-Io-JHr" firstAttribute="trailing" secondItem="2Lc-MA-0xy" secondAttribute="trailing" constant="20" id="X95-b4-Xta"/>
+                            <constraint firstItem="MF0-KL-aBI" firstAttribute="height" secondItem="cnX-y5-8dT" secondAttribute="height" multiplier="0.4" id="cdk-IZ-rvn"/>
+                            <constraint firstItem="7fj-Hd-fgK" firstAttribute="leading" secondItem="pFX-Io-JHr" secondAttribute="leading" constant="20" id="cyl-bM-Xwa"/>
+                            <constraint firstItem="MF0-KL-aBI" firstAttribute="top" secondItem="2Lc-MA-0xy" secondAttribute="bottom" constant="25" id="d8X-hr-3ph"/>
+                            <constraint firstItem="pFX-Io-JHr" firstAttribute="trailing" secondItem="7fj-Hd-fgK" secondAttribute="trailing" constant="20" id="hqk-Ri-KOY"/>
+                            <constraint firstItem="pFX-Io-JHr" firstAttribute="trailing" secondItem="MF0-KL-aBI" secondAttribute="trailing" constant="20" id="o7Y-b4-Ujr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="7fj-Hd-fgK" id="6B8-Eo-Gdp"/>
+                        <outlet property="optionFour" destination="2Xe-cZ-oAA" id="nbN-rS-OoT"/>
+                        <outlet property="optionOne" destination="evo-Gw-G4F" id="a7k-G3-D13"/>
+                        <outlet property="optionThree" destination="g3x-7u-1Zo" id="M0t-sx-OE0"/>
+                        <outlet property="optionTwo" destination="GvZ-oe-3bB" id="COf-7B-u4R"/>
+                        <outlet property="optionsView" destination="MF0-KL-aBI" id="7cC-mG-vAA"/>
+                        <outlet property="titleLabel" destination="cOF-CJ-0AL" id="GpZ-mX-mIS"/>
+                        <outlet property="titleView" destination="2Lc-MA-0xy" id="wjY-fD-H0x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKG-fL-y5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <image name="giftBox" width="219" height="134"/>
         <image name="navigation" width="60" height="60"/>
         <image name="pic1" width="2160" height="1080"/>
         <image name="pic3" width="1920" height="1080"/>
+        <image name="unselectCircle" width="24" height="24"/>
         <image name="warning" width="20" height="21"/>
         <namedColor name="buttonOrange">
             <color red="0.93599998950958252" green="0.4699999988079071" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

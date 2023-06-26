@@ -25,6 +25,8 @@ class MissionLevelViewController: BasicViewController {
     var missionLevelViewModel: MissionLevelViewModel?
     
     var nineGridData: NineGrid?
+    
+    var numberSequence: [Int] = []
 
     private let spacing: CGFloat = 10.0
     private let cellIdentifier = Configs.CellNames.missionLevleCollectionViewCell
@@ -60,7 +62,7 @@ class MissionLevelViewController: BasicViewController {
     private func setupTitleView(with data: MissionInfoData) {
         self.missionTitleLabel.text = data.mTitle
         self.missionInfoLabel.text = data.mDescribe
-        self.missionImageView.sd_setImage(with: URL(string: (data.mImg ?? "")), placeholderImage: UIImage(named: "pic1", in:  Bundle(for: MissionLevelViewController.self), compatibleWith: nil))
+        self.missionImageView.sd_setImage(with: URL(string: (data.mImg ?? "")), placeholderImage: Configs.setupPlaceholderImage(in: MissionLevelViewController.self))
     }
     
     private func setupCollectionView() {
@@ -97,11 +99,15 @@ extension MissionLevelViewController: UICollectionViewDelegate, UICollectionView
         
         guard let nineGridData = missionLevelViewModel?.getModel(at: indexPath.item) else { return UICollectionViewCell() }
         
+        guard let numberSequence = missionLevelViewModel?.convertSequence() else { return UICollectionViewCell() }
+        
+        self.numberSequence = numberSequence
+        
         self.nineGridData = nineGridData
+        
+        cell.configure(with: self.nineGridData!, levelNumber: self.numberSequence[indexPath.row])
             
-        cell.configure(with: self.nineGridData!)
-            
-        return cell 
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

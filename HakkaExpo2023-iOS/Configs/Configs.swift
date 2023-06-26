@@ -54,6 +54,10 @@ struct Configs {
     
     static var encryptToken = "hakkaapp://"
     
+    static func setupPlaceholderImage(in vcClass: AnyClass) -> UIImage {
+        return UIImage(named: "pic2", in: Bundle(for: vcClass), compatibleWith: nil)!
+    }
+    
     //專案配色
     struct Colors {
         
@@ -66,7 +70,6 @@ struct Configs {
         
     }
 
-    
     //3DModel名稱
     struct ModelNames {
         static let angelfish = "angelfish"
@@ -110,4 +113,7 @@ struct Configs {
 
 struct K {
     static let processing = "處理中"
+    static let errorMessage = "處理時發生錯誤，請重新嘗試"
+    static let missionID = "m_id"
+    static let gridID = "ng_id"
 }
