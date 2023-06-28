@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import NAVISDK
 
 class ARMenuViewController: BasicViewController {
     
@@ -66,11 +67,18 @@ extension ARMenuViewController: UITableViewDelegate, UITableViewDataSource {
         case .arInteraction:
             if indexPath.row == 0 {
                 Router.shared.navigateToSkyLantern(self)
+            } else if indexPath.row == 1 {
+                Router.shared.navigationToaAuarium(self)
             }
         case .none:
             break
         case .arNavigation:
             print("前往導航:\(indexPath.row)")
+//            if indexPath.row == 0 {
+//                NAVIFlow().start(target: self, id: "0")
+//            } else {
+//                NAVIFlow().start(target: self, id: "1")
+//            }
         }
     }
     

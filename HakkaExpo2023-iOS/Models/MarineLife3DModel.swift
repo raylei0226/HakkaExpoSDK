@@ -15,7 +15,12 @@ class MarineLife3DModel {
     
     init(modelName: String) {
         
-        guard let url = Bundle.main.url(forResource: modelName, withExtension: "glb", subdirectory: "art.scnassets") else {
+        
+        guard let bundle = Bundle(identifier: "omniguider.HakkaExpo2023-iOS.com") else {
+            fatalError("無法找到指定的bundle")
+        }
+        
+        guard let url = bundle.url(forResource: modelName, withExtension: "glb", subdirectory: "art.scnassets") else {
             fatalError("讀取GLB檔案時出錯: \(modelName)")
         }
         

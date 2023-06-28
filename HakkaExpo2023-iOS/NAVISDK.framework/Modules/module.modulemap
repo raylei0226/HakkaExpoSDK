@@ -1,0 +1,11 @@
+framework module NAVISDK {
+  umbrella header "NAVISDK.h"
+
+  export *
+  module * { export * }
+}
+
+module NAVISDK.Swift {
+  header "NAVISDK-Swift.h"
+  requires objc
+}

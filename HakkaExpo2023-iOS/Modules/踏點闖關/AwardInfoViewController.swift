@@ -83,7 +83,9 @@ class AwardInfoViewController: BasicViewController {
     
     @IBAction func receiveAwardButtinClicked(_ sender: UIButton) {
         if sender.titleLabel?.text == "領取獎勵" {
+            HudManager.shared.showProgressWithMessage("正在啟用相機", seconds: 1.0)
             scannerManager.startScan(in: view)
+
         }
     }
 }

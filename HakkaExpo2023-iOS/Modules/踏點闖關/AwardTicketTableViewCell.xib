@@ -80,6 +80,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="awardStatusLabel" destination="n62-oF-uLI" id="W6N-58-Tn6"/>
                 <outlet property="awardTicketImageView" destination="17B-O8-vTI" id="Oo5-EX-589"/>
                 <outlet property="awardTitleLabel" destination="2oF-ky-Nwi" id="yOH-4d-jmu"/>
                 <outlet property="deadLineLabel" destination="9No-NY-FQJ" id="ddN-aW-kNE"/>

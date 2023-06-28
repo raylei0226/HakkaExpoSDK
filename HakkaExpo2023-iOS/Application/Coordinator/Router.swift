@@ -78,4 +78,10 @@ import UIKit
         vc.navigationController?.pushViewController(questionVC, animated: true)
         
     }
+    
+    func navigationToaAuarium(_ vc: UIViewController) {
+        let aquariumVC = UIStoryboard(name: "Aquarium", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "aquariumVC")
+        as! AquariumViewController
+        vc.navigationController?.pushViewController(aquariumVC, animated: true)
+    }
 }

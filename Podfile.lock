@@ -8,6 +8,9 @@ PODS:
     - nanopb (< 2.30910.0, >= 2.30908.0)
   - ARCore/Geospatial (1.37.0):
     - ARCore/GARSession (~> 1.37)
+  - ClusterKit (0.5.0):
+    - ClusterKit/Core (= 0.5.0)
+  - ClusterKit/Core (0.5.0)
   - Firebase (10.8.0):
     - Firebase/Core (= 10.8.0)
   - Firebase/Core (10.8.0):
@@ -74,6 +77,7 @@ PODS:
     - FirebaseCore (~> 10.0)
     - FirebaseCoreExtension (~> 10.0)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
+  - GeoJSONSerialization (0.0.4)
   - GoogleAppMeasurement (10.8.0):
     - GoogleAppMeasurement/AdIdSupport (= 10.8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
@@ -142,15 +146,18 @@ PODS:
 
 DEPENDENCIES:
   - ARCore/Geospatial
+  - ClusterKit
   - Firebase
   - Firebase/Database
   - Firebase/Storage
+  - GeoJSONSerialization
   - IndoorAtlas
   - SDWebImageWebPCoder
 
 SPEC REPOS:
   trunk:
     - ARCore
+    - ClusterKit
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -163,6 +170,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseRemoteConfig
     - FirebaseStorage
+    - GeoJSONSerialization
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -177,6 +185,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ARCore: 2523ac0c3ceffef4284188f5a19c8ce31c055c5f
+  ClusterKit: 6d4b2fdfdd2a74a386fd67dd60a29a69851745e0
   Firebase: b49ef44e5ec9a3d0c1f6450f410337e97872279c
   FirebaseABTesting: b2a87808d90f02766fcffb3957d3e397e7accc15
   FirebaseAnalytics: e1fc758bd5d71823bba970c076abee4b2450a5f4
@@ -189,6 +198,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: b2a05a3fe707df764345d68685534d07d0664af3
   FirebaseRemoteConfig: ffd8c40611809c92526783da146be93a15cc3f00
   FirebaseStorage: f3b5085c577880d8eb25f9cf08385d487adc31e5
+  GeoJSONSerialization: 55a3d24fe9af26508e3af76873114b39b13ba479
   GoogleAppMeasurement: 0ba93018e916f7badf915c2337d43cc1fa96b3f9
   GoogleDataTransport: 8378d1fa8ac49753ea6ce70d65a7cb70ce5f66e6
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
@@ -201,6 +211,6 @@ SPEC CHECKSUMS:
   SDWebImage: d47d81bea8a77187896b620dc79c3c528e8906b9
   SDWebImageWebPCoder: 295a6573c512f54ad2dd58098e64e17dcf008499
 
-PODFILE CHECKSUM: 3a9fc6e5bbdf274fc32dc2d8c3340c432a7ae23e
+PODFILE CHECKSUM: 3d72555e920bedc7a62efd746ae26e70c342d20c
 
 COCOAPODS: 1.11.3

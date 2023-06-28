@@ -36,6 +36,12 @@ enum MLAlertViewType {
     case receivedTheReward
 }
 
+enum RwsEnabledStates: String {
+    case done = "Done"
+    case none = "None"
+    case expired = "Expired"
+}
+
 enum MissionApiType: String {
     case mission = "mission"
     case reward = "reward"
@@ -86,6 +92,7 @@ struct Configs {
         static let whaleBlue = "whale_blue"
         static let whaleSwim = "whale_swim"
         static let yellowTang = "yellowTang"
+        static let whaleSwinNew = "whale_blue_new"
     }
     
     

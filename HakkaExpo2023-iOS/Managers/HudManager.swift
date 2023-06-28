@@ -47,6 +47,12 @@ class HudManager {
         progressHUD.dismiss(afterDelay: 2.0)
     }
     
+    func showProgressWithMessage(_ message: String, seconds: TimeInterval?) {
+        progressHUD.textLabel.text = message
+        progressHUD.show(in: UIApplication.shared.keyWindow!)
+        progressHUD.dismiss(afterDelay: seconds ?? 0.0)
+    }
+    
     func hide() {
         progressHUD.dismiss()
     }

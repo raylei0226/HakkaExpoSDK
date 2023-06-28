@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Aquarium View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aquariumVC" id="Y6W-OH-hqX" customClass="AquariumViewController" customModule="HakkaExpo2023_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-no-bDP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJO-38-3i1">
+                                <rect key="frame" x="162.66666666666666" y="705" width="68" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Djh-Aq-PR5"/>
+                                    <constraint firstAttribute="width" constant="68" id="YKd-uX-2Kt"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="fishButton"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BoE-NR-PVL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GbY-no-bDP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1Lw-XD-SC6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GbY-no-bDP" secondAttribute="trailing" id="2IL-WP-DKx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WJO-38-3i1" secondAttribute="bottom" constant="45" id="2yd-fo-Shh"/>
+                            <constraint firstAttribute="bottom" secondItem="GbY-no-bDP" secondAttribute="bottom" id="CFI-j8-RWV"/>
+                            <constraint firstItem="GbY-no-bDP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="CsK-d7-9np"/>
+                            <constraint firstItem="WJO-38-3i1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zKZ-2O-1a1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arView" destination="GbY-no-bDP" id="do9-W6-un7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="fishButton" width="74" height="74"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
