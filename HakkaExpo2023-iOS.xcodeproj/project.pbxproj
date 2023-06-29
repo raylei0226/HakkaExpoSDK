@@ -30,6 +30,8 @@
 		3B281A3B2A4C3A0B00166E15 /* NAVISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */; platformFilter = ios; };
 		3B281A3D2A4C3A1500166E15 /* NAVISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */; };
 		3B281A3E2A4C3A1500166E15 /* NAVISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B281A412A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
+		3B281A422A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
 		3B43CBE42A3FFDE6000D06FE /* MissionStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */; };
 		3B43CBE62A4025DE000D06FE /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE52A4025DD000D06FE /* ResponseData.swift */; };
 		3B43CC122A41AF99000D06FE /* CustomToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */; };
@@ -162,6 +164,7 @@
 		3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerManager.swift; sourceTree = "<group>"; };
 		3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskView.swift; sourceTree = "<group>"; };
 		3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NAVISDK.framework; sourceTree = "<group>"; };
+		3B281A402A4C446B00166E15 /* Data + HexParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data + HexParse.swift"; sourceTree = "<group>"; };
 		3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStatusData.swift; sourceTree = "<group>"; };
 		3B43CBE52A4025DD000D06FE /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToogleButton.swift; sourceTree = "<group>"; };
@@ -280,6 +283,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B281A3F2A4C444F00166E15 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B281A402A4C446B00166E15 /* Data + HexParse.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		3B80C3012A31AC1B008A12E2 /* MissionAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +408,7 @@
 		3BAF02C12A1708F800E514E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3B281A3F2A4C444F00166E15 /* Data */,
 				3B82F4BA2A2F206000B1C805 /* Notification */,
 				3B82F4B52A2F0FDC00B1C805 /* UIColor */,
 				3B82F48B2A2EE6DC00B1C805 /* UIImage */,
@@ -951,6 +963,7 @@
 				3BAF03622A28375700E514E1 /* CommonWebViewController.swift in Sources */,
 				3B238FE12A3D8EF800881BBC /* CustomMaskView.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
+				3B281A412A4C446B00166E15 /* Data + HexParse.swift in Sources */,
 				3BAF031D2A1C646F00E514E1 /* ARInteraction.swift in Sources */,
 				3B82F4B42A2F0C1D00B1C805 /* SkyLanternNode.swift in Sources */,
 				3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */,
@@ -985,6 +998,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BAF02E42A174A0A00E514E1 /* ViewController.swift in Sources */,
+				3B281A422A4C446B00166E15 /* Data + HexParse.swift in Sources */,
 				3BAF02E02A174A0A00E514E1 /* AppDelegate.swift in Sources */,
 				3BAF02E22A174A0A00E514E1 /* SceneDelegate.swift in Sources */,
 			);

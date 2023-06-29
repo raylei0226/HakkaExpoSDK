@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreBluetooth
 
 enum Keys {
     case wikitude, googleMap
@@ -49,6 +50,9 @@ enum MissionApiType: String {
 
 struct Configs {
     
+    static var LineBeaconServiceUUID: CBUUID = {
+        CBUUID(string: "FE6F")
+    }()
     
     struct BoundleID{
         static let id = "omniguider.HakkaExpo2023-iOS.com"
