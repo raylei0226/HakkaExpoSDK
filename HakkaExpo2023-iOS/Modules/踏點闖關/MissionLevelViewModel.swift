@@ -76,4 +76,11 @@ class MissionLevelViewModel {
         
         return (levelItemsData?.data?.nineGrid?[index])!
     }
+    
+    func getGridInfo() -> GridInfoData {
+        
+        guard let data = levelItemsData?.data else { return GridInfoData() }
+        
+        return data
+    }
 }

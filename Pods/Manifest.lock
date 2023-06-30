@@ -102,6 +102,11 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMaps (5.2.0):
+    - GoogleMaps/Maps (= 5.2.0)
+  - GoogleMaps/Base (5.2.0)
+  - GoogleMaps/Maps (5.2.0):
+    - GoogleMaps/Base
   - GoogleUtilities/AppDelegateSwizzler (7.11.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -151,6 +156,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - GeoJSONSerialization
+  - GoogleMaps
   - IndoorAtlas
   - SDWebImageWebPCoder
 
@@ -173,6 +179,7 @@ SPEC REPOS:
     - GeoJSONSerialization
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleMaps
     - GoogleUtilities
     - GTMSessionFetcher
     - IndoorAtlas
@@ -201,6 +208,7 @@ SPEC CHECKSUMS:
   GeoJSONSerialization: 55a3d24fe9af26508e3af76873114b39b13ba479
   GoogleAppMeasurement: 0ba93018e916f7badf915c2337d43cc1fa96b3f9
   GoogleDataTransport: 8378d1fa8ac49753ea6ce70d65a7cb70ce5f66e6
+  GoogleMaps: 025272d5876d3b32604e5c080dc25eaf68764693
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
   IndoorAtlas: 8da6339bac1923d92e7546865a85834de17f4b48
@@ -211,6 +219,6 @@ SPEC CHECKSUMS:
   SDWebImage: d47d81bea8a77187896b620dc79c3c528e8906b9
   SDWebImageWebPCoder: 295a6573c512f54ad2dd58098e64e17dcf008499
 
-PODFILE CHECKSUM: 3d72555e920bedc7a62efd746ae26e70c342d20c
+PODFILE CHECKSUM: 3be64fec969f5dae784bfa5a6b45be6037b0dd89
 
 COCOAPODS: 1.11.3

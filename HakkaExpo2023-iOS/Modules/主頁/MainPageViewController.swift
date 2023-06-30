@@ -11,6 +11,7 @@ import SDWebImage
 import SDWebImageWebPCoder
 import Alamofire
 
+
 @objc public class MainPageViewController: UIViewController {
 
     @IBOutlet weak var carouselCollectionView: UICollectionView!

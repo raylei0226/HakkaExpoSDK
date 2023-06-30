@@ -24,12 +24,11 @@ class BLEManager: NSObject {
     
     private override init() {
         super.init()
-        
+
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
     func startScan() {
-        centralManager.delegate = self
         let options: [String: Any] = [CBCentralManagerScanOptionAllowDuplicatesKey: true]
         centralManager.scanForPeripherals(withServices: nil, options: options)
         HudManager.shared.showSuccess(withMessage: "開始掃描")
@@ -44,6 +43,8 @@ class BLEManager: NSObject {
         centralManager.stopScan()
     }
     
+    
+    //前往設定開啟藍芽
     func toSetting() {
         let alert = UIAlertController(title: "藍牙未開啟", message: "是否更改設定?", preferredStyle: .alert)
         let settingAction = UIAlertAction(title: "設定", style: .default) { (_) -> Void in
@@ -100,6 +101,7 @@ extension BLEManager: CBCentralManagerDelegate {
             HudManager.shared.showError(withMessage: "不支援該裝置")
         case .poweredOn:
             print("BT On")
+            startScan()
             
         @unknown default:
             break
@@ -108,10 +110,11 @@ extension BLEManager: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
+//        guard peripheral.name == "ATM tag" else { return }
+        
         if let serviceData = advertisementData[CBAdvertisementDataServiceDataKey] as? [CBUUID: Data] {
             for (serviceUUID, data) in serviceData {
                 if serviceUUID == Configs.LineBeaconServiceUUID {
-                        let hexString = data.map { String(format: "%02X", $0) }.joined()
                         let hwID = data[1...5].hexString()
                         delegate?.didDiscoverServiceData(hwID)
                 }

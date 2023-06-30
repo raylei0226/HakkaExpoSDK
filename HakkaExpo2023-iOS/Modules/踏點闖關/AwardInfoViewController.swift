@@ -48,7 +48,7 @@ class AwardInfoViewController: BasicViewController {
         let warningImage = UIImage(named: "warning", bundle: bundle)
         let lightBallImage = UIImage(named: "lightBall", bundle: bundle)
         
-        let buttonTitle = isAwardInformation ? "領取獎勵" : "關卡位置"
+        let buttonTitle = isAwardInformation ? "領取獎勵" : "開始闖關"
         navigationItem.title = isAwardInformation ? "踏點闖關" : "關卡介紹"
         awardInfoTextView.isHidden = !isAwardInformation
         levelInfoLabel.isHidden = isAwardInformation

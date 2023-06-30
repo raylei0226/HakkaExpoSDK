@@ -4,6 +4,7 @@
 //
 //  Created by 雷承宇 on 2023/6/28.
 //
+import Foundation
 
 extension Data {
     func hexParse() -> Int {

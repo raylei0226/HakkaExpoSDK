@@ -93,10 +93,8 @@ struct Configs {
         static let moonJellyfish = "moonJellyfish"
         static let powBTang = "powBTang"
         static let stingray = "stingray"
-        static let whaleBlue = "whale_blue"
         static let whaleSwim = "whale_swim"
         static let yellowTang = "yellowTang"
-        static let whaleSwinNew = "whale_blue_new"
     }
     
     
@@ -120,6 +118,62 @@ struct Configs {
         static let officialWebsite = "https://www.hakkaexpo2023.tw/"
         static let mapWebsite = "https://www.hakkaexpo2023.tw/facility/fourPlace"
     }
+    
+    static let kMapStyle = "[" +
+      "{" +
+      "  \"featureType\": \"administrative.land_parcel\"," +
+      "  \"elementType\": \"labels\"," +
+      "  \"stylers\": [" +
+      "    {" +
+      "      \"visibility\": \"off\"" +
+      "    }" +
+      "  ]" +
+      "}," +
+      "{" +
+      "  \"featureType\": \"poi\"," +
+      "  \"elementType\": \"labels.text\"," +
+      "  \"stylers\": [" +
+      "    {" +
+      "      \"visibility\": \"off\"" +
+      "    }" +
+      "  ]" +
+      "}," +
+      "{" +
+      "  \"featureType\": \"poi.business\"," +
+      "  \"stylers\": [" +
+      "    {" +
+      "      \"visibility\": \"off\"" +
+      "    }" +
+      "  ]" +
+      "}," +
+      "{" +
+      "  \"featureType\": \"road\"," +
+      "  \"elementType\": \"labels.icon\"," +
+      "  \"stylers\": [" +
+      "    {" +
+      "      \"visibility\": \"off\"" +
+      "    }" +
+      "  ]" +
+      "}," +
+      "{" +
+      "  \"featureType\": \"road.local\"," +
+      "  \"elementType\": \"labels\"," +
+      "  \"stylers\": [" +
+      "    {" +
+      "      \"visibility\": \"off\"" +
+      "    }" +
+      "  ]" +
+      "}," +
+      "{" +
+      "  \"featureType\": \"transit\"," +
+      "  \"stylers\": [" +
+      "    {" +
+      "      \"visibility\": \"off\"" +
+      "    }" +
+      "  ]" +
+      "}" +
+    "]"
+    
 }
 
 struct K {

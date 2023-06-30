@@ -15,8 +15,9 @@ target 'HakkaExpo2023-iOS' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'GeoJSONSerialization'
-#  pod 'GoogleMaps'
+  pod 'GoogleMaps'
   pod 'ClusterKit'
+  pod 'IndoorAtlas'
   
 end
 

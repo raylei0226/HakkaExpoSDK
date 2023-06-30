@@ -24,6 +24,8 @@ class MissionLevelViewController: BasicViewController {
     
     var missionLevelViewModel: MissionLevelViewModel?
     
+    var gridInfoData: GridInfoData?
+    
     var nineGridData: NineGrid?
     
     var numberSequence: [Int] = []
@@ -74,6 +76,11 @@ class MissionLevelViewController: BasicViewController {
         missionLevelCollectionView.delegate = self
         //註冊cell
         missionLevelCollectionView.register(UINib(nibName: "MissionLevleCollectionViewCell", bundle: Bundle(for: MissionLevelViewController.self)), forCellWithReuseIdentifier: cellIdentifier)
+    }
+    
+    @IBAction func mapButtonClicked(_ sender: UIButton) {
+        guard let data = missionLevelViewModel?.getGridInfo() else { return }
+        Router.shared.navigationToMissionMap(self, gridInfoData: data)
     }
 }
 

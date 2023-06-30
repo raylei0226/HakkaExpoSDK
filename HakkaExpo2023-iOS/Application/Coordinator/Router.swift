@@ -84,4 +84,10 @@ import UIKit
         as! AquariumViewController
         vc.navigationController?.pushViewController(aquariumVC, animated: true)
     }
+    
+    func navigationToMissionMap(_ vc: UIViewController, gridInfoData: GridInfoData) {
+        let missionMapVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "MissionMapVC") as! MissionMapViewController
+        missionMapVC.gridInfoData = gridInfoData
+        vc.navigationController?.pushViewController(missionMapVC, animated: true)
+    }
 }

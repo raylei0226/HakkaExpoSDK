@@ -27,11 +27,9 @@
 		3B238FDA2A3D3F6B00881BBC /* QRCodeScannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */; };
 		3B238FDD2A3D41E900881BBC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B238FDC2A3D41E900881BBC /* SnapKit */; };
 		3B238FE12A3D8EF800881BBC /* CustomMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */; };
-		3B281A3B2A4C3A0B00166E15 /* NAVISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */; platformFilter = ios; };
-		3B281A3D2A4C3A1500166E15 /* NAVISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */; };
-		3B281A3E2A4C3A1500166E15 /* NAVISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B281A412A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
 		3B281A422A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
+		3B2DEF0B2A4EA712006F7321 /* MissionMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */; };
 		3B43CBE42A3FFDE6000D06FE /* MissionStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */; };
 		3B43CBE62A4025DE000D06FE /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE52A4025DD000D06FE /* ResponseData.swift */; };
 		3B43CC122A41AF99000D06FE /* CustomToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */; };
@@ -137,7 +135,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3BAF02F22A174AD800E514E1 /* HakkaExpo2023_iOS.framework in Embed Frameworks */,
-				3B281A3E2A4C3A1500166E15 /* NAVISDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,8 +160,8 @@
 		3B238FD72A3C2DBA00881BBC /* AwardTicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTicketData.swift; sourceTree = "<group>"; };
 		3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerManager.swift; sourceTree = "<group>"; };
 		3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskView.swift; sourceTree = "<group>"; };
-		3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NAVISDK.framework; sourceTree = "<group>"; };
 		3B281A402A4C446B00166E15 /* Data + HexParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data + HexParse.swift"; sourceTree = "<group>"; };
+		3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapViewController.swift; sourceTree = "<group>"; };
 		3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStatusData.swift; sourceTree = "<group>"; };
 		3B43CBE52A4025DD000D06FE /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToogleButton.swift; sourceTree = "<group>"; };
@@ -264,7 +261,6 @@
 				3BAF03582A27232400E514E1 /* CryptoSwift in Frameworks */,
 				3B238FDD2A3D41E900881BBC /* SnapKit in Frameworks */,
 				3BC58FB22A497CF700882BEB /* JGProgressHUD in Frameworks */,
-				3B281A3B2A4C3A0B00166E15 /* NAVISDK.framework in Frameworks */,
 				3B80C3082A31D4A3008A12E2 /* JXSegmentedView in Frameworks */,
 				3BAF03382A20437E00E514E1 /* GLTFSceneKit in Frameworks */,
 			);
@@ -276,7 +272,6 @@
 			files = (
 				3BAF02F12A174AD800E514E1 /* HakkaExpo2023_iOS.framework in Frameworks */,
 				D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */,
-				3B281A3D2A4C3A1500166E15 /* NAVISDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +378,6 @@
 		3BAF02B82A1706B300E514E1 /* HakkaExpo2023-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3B281A3A2A4C3A0B00166E15 /* NAVISDK.framework */,
 				3BAF02FB2A174EBD00E514E1 /* Configs */,
 				3BAF02CF2A171BFF00E514E1 /* Application */,
 				3BAF02C62A170BA600E514E1 /* Resources */,
@@ -579,6 +573,7 @@
 				3B238FC62A385E5800881BBC /* MissionLevleCollectionViewCell.xib */,
 				3B238FD52A3AF43600881BBC /* MissionLevelViewModel.swift */,
 				3B43CC132A429068000D06FE /* QuestionViewController.swift */,
+				3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */,
 			);
 			path = "踏點闖關";
 			sourceTree = "<group>";
@@ -923,6 +918,7 @@
 				3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */,
 				3B82F4A92A2F0C1D00B1C805 /* SkyLanternCanvasView.swift in Sources */,
 				3B238FD82A3C2DBB00881BBC /* AwardTicketData.swift in Sources */,
+				3B2DEF0B2A4EA712006F7321 /* MissionMapViewController.swift in Sources */,
 				3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */,
 				3B238FC02A36CD1000881BBC /* AwardInfoViewController.swift in Sources */,
 				3B238FCE2A395EF200881BBC /* MissionViewModel.swift in Sources */,
