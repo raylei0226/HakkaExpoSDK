@@ -29,6 +29,8 @@ class MissionLevelViewController: BasicViewController {
     var nineGridData: NineGrid?
     
     var numberSequence: [Int] = []
+    
+    var markerNumber: Int?
 
     private let spacing: CGFloat = 10.0
     private let cellIdentifier = Configs.CellNames.missionLevleCollectionViewCell
@@ -48,6 +50,7 @@ class MissionLevelViewController: BasicViewController {
         self.setupTitleView(with: data)
         missionLevelViewModel = MissionLevelViewModel(missionID: data.mID!)
         missionLevelViewModel?.observers.append(self)
+        UserDefaults.standard.set(data.mID, forKey: K.missionID)
     }
     
     private func setupUI() {
@@ -80,7 +83,7 @@ class MissionLevelViewController: BasicViewController {
     
     @IBAction func mapButtonClicked(_ sender: UIButton) {
         guard let data = missionLevelViewModel?.getGridInfo() else { return }
-        Router.shared.navigationToMissionMap(self, gridInfoData: data)
+        Router.shared.navigationToMissionMap(self, gridInfoData: data, gridData: nil, isFinding: false, markerNumber: markerNumber ?? 1)
     }
 }
 
@@ -111,7 +114,7 @@ extension MissionLevelViewController: UICollectionViewDelegate, UICollectionView
         self.numberSequence = numberSequence
         
         self.nineGridData = nineGridData
-        
+    
         cell.configure(with: self.nineGridData!, levelNumber: self.numberSequence[indexPath.row])
             
         return cell
@@ -119,7 +122,8 @@ extension MissionLevelViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let nineGrid = missionLevelViewModel?.getModel(at: indexPath.item) else { return }
-        Router.shared.navigationToAwardInfo(self, infoType: .levelIntroduction, gridData: nineGrid, ticketData: nil)
+        self.markerNumber = indexPath.row + 1
+        Router.shared.navigationToAwardInfo(self, infoType: .levelIntroduction, gridData: nineGrid, ticketData: nil, numberIndex: markerNumber)
     }
 }
 

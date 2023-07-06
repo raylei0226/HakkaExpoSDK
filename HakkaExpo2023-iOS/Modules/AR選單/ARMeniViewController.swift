@@ -74,11 +74,11 @@ extension ARMenuViewController: UITableViewDelegate, UITableViewDataSource {
             break
         case .arNavigation:
             print("前往導航:\(indexPath.row)")
-//            if indexPath.row == 0 {
-//                NAVIFlow().start(target: self, id: "0")
-//            } else {
-//                NAVIFlow().start(target: self, id: "1")
-//            }
+            if indexPath.row == 0 {
+                NAVIFlow().start(target: self, id: "0")
+            } else {
+                NAVIFlow().start(target: self, id: "1")
+            }
         }
     }
     

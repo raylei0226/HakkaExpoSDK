@@ -14,6 +14,7 @@ enum APIEndPoint {
     case getNineGrid
     case getMissionComplete
     case getMisionReward
+    case getFloor
     
     
     var baseURL: String {
@@ -28,6 +29,7 @@ enum APIEndPoint {
         case .getNineGrid: return "/api/get_nine_grid"
         case .getMissionComplete: return "/api/get_mission_complete"
         case .getMisionReward: return "/api/get_mission_reward"
+        case .getFloor: return "/api/get_floor?"
         }
     }
     

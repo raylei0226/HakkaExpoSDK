@@ -17,7 +17,7 @@ target 'HakkaExpo2023-iOS' do
   pod 'GeoJSONSerialization'
   pod 'GoogleMaps'
   pod 'ClusterKit'
-  pod 'IndoorAtlas'
+  
   
 end
 

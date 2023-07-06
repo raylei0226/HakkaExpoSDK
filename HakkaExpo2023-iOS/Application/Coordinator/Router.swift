@@ -57,7 +57,7 @@ import UIKit
         
     }
     
-    func navigationToAwardInfo(_ vc: UIViewController, infoType: AwardInfoType, gridData: NineGrid?, ticketData: TicketData?) {
+    func navigationToAwardInfo(_ vc: UIViewController, infoType: AwardInfoType, gridData: NineGrid?, ticketData: TicketData?, numberIndex: Int?) {
         
         let awardInfoVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "AwardInfoVC") as! AwardInfoViewController
         
@@ -65,6 +65,7 @@ import UIKit
         case .levelIntroduction:
             awardInfoVC.awardInfoType = infoType
             awardInfoVC.gridData = gridData
+            awardInfoVC.markerIndex = numberIndex
             
         case .awardInformation:
             awardInfoVC.awardInfoType = infoType
@@ -73,8 +74,9 @@ import UIKit
         vc.navigationController?.pushViewController(awardInfoVC, animated: true)
     }
     
-    func navigationToQusetion(_ vc: UIViewController) {
+    func navigationToQusetion(_ vc: UIViewController, data: NineGrid) {
         let questionVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "QuestionVC") as! QuestionViewControler
+        questionVC.nineGrid = data
         vc.navigationController?.pushViewController(questionVC, animated: true)
         
     }
@@ -85,9 +87,18 @@ import UIKit
         vc.navigationController?.pushViewController(aquariumVC, animated: true)
     }
     
-    func navigationToMissionMap(_ vc: UIViewController, gridInfoData: GridInfoData) {
+    func navigationToMissionMap(_ vc: UIViewController, gridInfoData: GridInfoData?, gridData: NineGrid?, isFinding: Bool, markerNumber: Int) {
         let missionMapVC = UIStoryboard(name: "Mission", bundle: Configs.Bunlde()).instantiateViewController(withIdentifier: "MissionMapVC") as! MissionMapViewController
         missionMapVC.gridInfoData = gridInfoData
+        missionMapVC.gridData = gridData
+        missionMapVC.isFinding = isFinding
+        missionMapVC.markerIndex = markerNumber
         vc.navigationController?.pushViewController(missionMapVC, animated: true)
+    }
+    
+    func backToMissionLevel(_ vc: UIViewController) {
+        if let missionLevleVC = vc.navigationController?.viewControllers.first(where: { $0 is MissionLevelViewController }) {
+            vc.navigationController?.popToViewController(missionLevleVC, animated: true)
+        }
     }
 }

@@ -17,6 +17,8 @@ class AwardInfoViewController: BasicViewController {
     
     var ticketData: TicketData?
     
+    var markerIndex: Int?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var missionDataLabel: UILabel!
     @IBOutlet weak var awardInfoTextView: UITextView!
@@ -85,7 +87,8 @@ class AwardInfoViewController: BasicViewController {
         if sender.titleLabel?.text == "領取獎勵" {
             HudManager.shared.showProgressWithMessage("正在啟用相機", seconds: 1.0)
             scannerManager.startScan(in: view)
-
+        } else {
+            Router.shared.navigationToMissionMap(self, gridInfoData: nil, gridData: gridData, isFinding: true, markerNumber: self.markerIndex ?? 1)
         }
     }
 }

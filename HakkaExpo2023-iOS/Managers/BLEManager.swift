@@ -29,9 +29,11 @@ class BLEManager: NSObject {
     }
     
     func startScan() {
-        let options: [String: Any] = [CBCentralManagerScanOptionAllowDuplicatesKey: true]
-        centralManager.scanForPeripherals(withServices: nil, options: options)
-        HudManager.shared.showSuccess(withMessage: "開始掃描")
+        if !centralManager.isScanning {
+            let options: [String: Any] = [CBCentralManagerScanOptionAllowDuplicatesKey: true]
+            centralManager.scanForPeripherals(withServices: nil, options: options)
+            HudManager.shared.showProgressWithMessage("開始掃描", seconds: 1.0)
+        }
     }
     
     func connect(peropheral: CBPeripheral) {
@@ -40,7 +42,9 @@ class BLEManager: NSObject {
     }
     
     func stopScan() {
-        centralManager.stopScan()
+        if centralManager.isScanning {
+            centralManager.stopScan()
+        }
     }
     
     

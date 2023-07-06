@@ -8,6 +8,8 @@
 import UIKit
 import ARKit
 import SceneKit
+import SceneKit.ModelIO
+import GLTFSceneKit
 
 
 class AquariumViewController: UIViewController {
@@ -19,7 +21,6 @@ class AquariumViewController: UIViewController {
     private var model1: SCNNode!
     private var model2: SCNNode!
     private var clockwise: Bool = true
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +45,18 @@ class AquariumViewController: UIViewController {
         let configuration = ARWorldTrackingConfiguration()
         arView.session.run(configuration)
         arView.delegate = self
-        arView.automaticallyUpdatesLighting = true
-        arView.antialiasingMode = .multisampling4X
+//        arView.automaticallyUpdatesLighting = true
+        arView.autoenablesDefaultLighting = true
+//        arView.antialiasingMode = .multisampling4X
     }
     
     private func loadAndPlace3dModel() {
         HudManager.shared.showProgressWithMessage("海洋生物抵達中", seconds: 3.0)
         startRandomlyPlacingModels()
+        let jellyFish = createTaiangleNode()
+        arView.scene.rootNode.addChildNode(jellyFish)
+        moveNodeRandomly(node: jellyFish, distancePerSecond: 0.5)
+        placeWhales()
         }
     
     
@@ -58,6 +64,27 @@ class AquariumViewController: UIViewController {
         for _ in 0..<maxBubbleCount {
             placeBubbleModel()
         }
+        
+        for _ in 0..<3 {
+            placeTurtleNode()
+        }
+    }
+    
+    private func placUsdzModel() {
+        
+        guard let bundle = Bundle(identifier: "omniguider.HakkaExpo2023-iOS.com") else {
+            fatalError("無法找到指定的bundle")
+        }
+        
+        guard let url = bundle.url(forResource: "Giant_Manta_Ray", withExtension: "usdz", subdirectory: "art.scnassets/under_the_sea") else {
+            fatalError("讀取檔案時出錯")
+        }
+        
+        let mdlAsset = MDLAsset(url: url)
+        mdlAsset.loadTextures()
+        let sceneNode = SCNScene(mdlAsset: mdlAsset).rootNode
+        sceneNode.position = SCNVector3(0, 0, -1)
+        arView.scene.rootNode.addChildNode(sceneNode)
     }
     
     private func placeBubbleModel() {
@@ -84,6 +111,24 @@ class AquariumViewController: UIViewController {
         //           }
     }
     
+    private func placeTurtleNode() {
+        let distance = Float.random(in: 0...10)
+        let angle = Float.random(in: 0...(2 * Float.pi))
+        let x = distance * cos(angle)
+        let z = distance * sin(angle)
+        let y = Float.random(in: 0...0.5)
+        
+        guard let modelNode = MarineLife3DModel(modelName: Configs.ModelNames.greenSeaTurtle).getNode() else {
+            return
+        }
+        
+        let position = SCNVector3(x, y, z)
+        modelNode.position = position
+        
+        arView.scene.rootNode.addChildNode(modelNode)
+        self.moveNodeRandomly(node: modelNode, distancePerSecond: 0.2)
+    }
+    
     
     private func placeWhales() {
         
@@ -95,10 +140,10 @@ class AquariumViewController: UIViewController {
         let y = Float.random(in: 1...3)
         let positionBW = SCNVector3(x, y, z)
         blueWhale?.position = positionBW
-        let scale = SCNVector3(x: 0.1, y: 0.1, z: 0.1)
+        let scale = SCNVector3(x: 0.5, y: 0.5, z: 0.5)
         blueWhale?.scale = scale
         arView.scene.rootNode.addChildNode(blueWhale!)
-        
+       
         let swimWhale = MarineLife3DModel(modelName: Configs.ModelNames.whaleSwim).getNode()
         let positionSW = SCNVector3(0, 0, 20)
         swimWhale?.position = positionSW
@@ -110,9 +155,9 @@ class AquariumViewController: UIViewController {
     func createTaiangleNode() -> SCNNode {
         let triangleNode = SCNNode()
         
-        guard let model1 = MarineLife3DModel(modelName: Configs.ModelNames.bubble).getNode(),
-              let model2 = MarineLife3DModel(modelName: Configs.ModelNames.bubble).getNode(),
-              let model3 = MarineLife3DModel(modelName: Configs.ModelNames.bubble).getNode() else {
+        guard let model1 = MarineLife3DModel(modelName: Configs.ModelNames.moonJellyfish).getNode(),
+              let model2 = MarineLife3DModel(modelName: Configs.ModelNames.moonJellyfish).getNode(),
+              let model3 = MarineLife3DModel(modelName: Configs.ModelNames.moonJellyfish).getNode() else {
             return triangleNode
         }
         
@@ -120,9 +165,9 @@ class AquariumViewController: UIViewController {
         
         model1.position = SCNVector3(x: 0, y: 0, z: 0)
         model1.scale = scale
-        model2.position = SCNVector3(x: 1, y: 0, z: 0)
+        model2.position = SCNVector3(x: 2, y: 0, z: 0)
         model2.scale = scale
-        model3.position = SCNVector3(x: 0.5, y: 1, z: 0)
+        model3.position = SCNVector3(x: 1, y: 2, z: 0)
         model3.scale = scale
         
         triangleNode.addChildNode(model1)
@@ -144,7 +189,6 @@ class AquariumViewController: UIViewController {
     }
 
    
-    
     func createRandomNodes(count: Int, originalNode: SCNNode) -> [SCNNode] {
         var nodes: [SCNNode] = []
         

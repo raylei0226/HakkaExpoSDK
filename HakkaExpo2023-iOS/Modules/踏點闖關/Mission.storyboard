@@ -538,6 +538,7 @@
                         <outlet property="optionThree" destination="g3x-7u-1Zo" id="M0t-sx-OE0"/>
                         <outlet property="optionTwo" destination="GvZ-oe-3bB" id="COf-7B-u4R"/>
                         <outlet property="optionsView" destination="MF0-KL-aBI" id="7cC-mG-vAA"/>
+                        <outlet property="questionLabel" destination="YgY-2Z-VaU" id="S4F-48-KCc"/>
                         <outlet property="titleLabel" destination="cOF-CJ-0AL" id="GpZ-mX-mIS"/>
                         <outlet property="titleView" destination="2Lc-MA-0xy" id="wjY-fD-H0x"/>
                     </connections>

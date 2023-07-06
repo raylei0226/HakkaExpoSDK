@@ -35,7 +35,7 @@ class MarineLife3DModel {
     
     func getNode() -> SCNNode? {
         
-        let node = scene.rootNode.clone()
+        let node = scene.rootNode
         
         let lightNode = SCNNode()
         lightNode.light = SCNLight()

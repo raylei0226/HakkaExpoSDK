@@ -30,6 +30,8 @@
 		3B281A412A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
 		3B281A422A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
 		3B2DEF0B2A4EA712006F7321 /* MissionMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */; };
+		3B2DEF0D2A5267A9006F7321 /* GetFloorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0C2A5267A9006F7321 /* GetFloorData.swift */; };
+		3B2DEF0F2A5299F0006F7321 /* VibrationFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0E2A5299F0006F7321 /* VibrationFeedbackManager.swift */; };
 		3B43CBE42A3FFDE6000D06FE /* MissionStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */; };
 		3B43CBE62A4025DE000D06FE /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE52A4025DD000D06FE /* ResponseData.swift */; };
 		3B43CC122A41AF99000D06FE /* CustomToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */; };
@@ -114,6 +116,64 @@
 		3BC58FAC2A49708F00882BEB /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC58FAB2A49708F00882BEB /* HudManager.swift */; };
 		3BC58FB22A497CF700882BEB /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC58FB12A497CF700882BEB /* JGProgressHUD */; };
 		3BC828C52A4C31320076BD88 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC828C42A4C31320076BD88 /* BLEManager.swift */; };
+		3BE290552A54FAAC00C522B0 /* Build Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290142A54FAAC00C522B0 /* Build Settings.png */; };
+		3BE290562A54FAAC00C522B0 /* CKGeoPointOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290162A54FAAC00C522B0 /* CKGeoPointOperation.m */; };
+		3BE290572A54FAAC00C522B0 /* GMSMapView+ClusterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290172A54FAAC00C522B0 /* GMSMapView+ClusterKit.m */; };
+		3BE290582A54FAAC00C522B0 /* GMSMapView+ClusterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE290182A54FAAC00C522B0 /* GMSMapView+ClusterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE290592A54FAAC00C522B0 /* CKGeoPointOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE290192A54FAAC00C522B0 /* CKGeoPointOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE2905A2A54FAAC00C522B0 /* NavigationStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2901D2A54FAAC00C522B0 /* NavigationStateView.xib */; };
+		3BE2905B2A54FAAC00C522B0 /* NaviMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2901E2A54FAAC00C522B0 /* NaviMain.storyboard */; };
+		3BE2905C2A54FAAC00C522B0 /* NavigationGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2901F2A54FAAC00C522B0 /* NavigationGuide.storyboard */; };
+		3BE2905D2A54FAAC00C522B0 /* HakkaSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290202A54FAAC00C522B0 /* HakkaSearch.storyboard */; };
+		3BE2905E2A54FAAC00C522B0 /* NavigationSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290212A54FAAC00C522B0 /* NavigationSearch.storyboard */; };
+		3BE2905F2A54FAAC00C522B0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290222A54FAAC00C522B0 /* Map.storyboard */; };
+		3BE290602A54FAAC00C522B0 /* PoiDetailTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290232A54FAAC00C522B0 /* PoiDetailTitleView.xib */; };
+		3BE290612A54FAAC00C522B0 /* PoiDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290242A54FAAC00C522B0 /* PoiDetail.storyboard */; };
+		3BE290622A54FAAC00C522B0 /* PoiDetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290252A54FAAC00C522B0 /* PoiDetailInfoView.xib */; };
+		3BE290632A54FAAC00C522B0 /* NavGuideTrafficVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290272A54FAAC00C522B0 /* NavGuideTrafficVC.swift */; };
+		3BE290642A54FAAC00C522B0 /* PoiDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290282A54FAAC00C522B0 /* PoiDetailInfoView.swift */; };
+		3BE290652A54FAAC00C522B0 /* NavigationGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290292A54FAAC00C522B0 /* NavigationGuideVC.swift */; };
+		3BE290662A54FAAC00C522B0 /* PoiDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2902A2A54FAAC00C522B0 /* PoiDetailVC.swift */; };
+		3BE290672A54FAAC00C522B0 /* NavigationMapSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2902B2A54FAAC00C522B0 /* NavigationMapSearchVC.swift */; };
+		3BE290682A54FAAC00C522B0 /* NavigationStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2902C2A54FAAC00C522B0 /* NavigationStateView.swift */; };
+		3BE290692A54FAAC00C522B0 /* HakkaSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2902D2A54FAAC00C522B0 /* HakkaSearchCell.swift */; };
+		3BE2906A2A54FAAC00C522B0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2902E2A54FAAC00C522B0 /* TableViewCell.swift */; };
+		3BE2906B2A54FAAC00C522B0 /* NaviMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2902F2A54FAAC00C522B0 /* NaviMainVC.swift */; };
+		3BE2906C2A54FAAC00C522B0 /* NavigationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290302A54FAAC00C522B0 /* NavigationSearchCell.swift */; };
+		3BE2906D2A54FAAC00C522B0 /* NavigationBottomGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290312A54FAAC00C522B0 /* NavigationBottomGuideVC.swift */; };
+		3BE2906E2A54FAAC00C522B0 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290322A54FAAC00C522B0 /* MapVC.swift */; };
+		3BE2906F2A54FAAC00C522B0 /* HakkaSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290332A54FAAC00C522B0 /* HakkaSearchVC.swift */; };
+		3BE290702A54FAAC00C522B0 /* FloorMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290342A54FAAC00C522B0 /* FloorMenuVC.swift */; };
+		3BE290712A54FAAC00C522B0 /* NavGuideInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290352A54FAAC00C522B0 /* NavGuideInfoVC.swift */; };
+		3BE290722A54FAAC00C522B0 /* PoiDetailTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290362A54FAAC00C522B0 /* PoiDetailTitleView.swift */; };
+		3BE290732A54FAAC00C522B0 /* Paras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290382A54FAAC00C522B0 /* Paras.swift */; };
+		3BE290742A54FAAC00C522B0 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290392A54FAAC00C522B0 /* GlobalState.swift */; };
+		3BE290752A54FAAC00C522B0 /* JSONEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2903A2A54FAAC00C522B0 /* JSONEnable.swift */; };
+		3BE290762A54FAAC00C522B0 /* OGGlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2903B2A54FAAC00C522B0 /* OGGlobalData.swift */; };
+		3BE290772A54FAAC00C522B0 /* NaviProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2903C2A54FAAC00C522B0 /* NaviProject.swift */; };
+		3BE290782A54FAAC00C522B0 /* LocationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2903D2A54FAAC00C522B0 /* LocationBase.swift */; };
+		3BE290792A54FAAC00C522B0 /* ExtensionForMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2903E2A54FAAC00C522B0 /* ExtensionForMap.swift */; };
+		3BE2907A2A54FAAC00C522B0 /* OGPointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2903F2A54FAAC00C522B0 /* OGPointProvider.swift */; };
+		3BE2907B2A54FAAC00C522B0 /* PoiDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290402A54FAAC00C522B0 /* PoiDetailPresenter.swift */; };
+		3BE2907C2A54FAAC00C522B0 /* NaviUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290412A54FAAC00C522B0 /* NaviUtility.swift */; };
+		3BE2907D2A54FAAC00C522B0 /* HTTPSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290422A54FAAC00C522B0 /* HTTPSClient.swift */; };
+		3BE2907E2A54FAAC00C522B0 /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290432A54FAAC00C522B0 /* LoadingAnimation.swift */; };
+		3BE2907F2A54FAAC00C522B0 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290442A54FAAC00C522B0 /* Localizer.swift */; };
+		3BE290802A54FAAC00C522B0 /* NavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290452A54FAAC00C522B0 /* NavigationPresenter.swift */; };
+		3BE290812A54FAAC00C522B0 /* OGFloorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290462A54FAAC00C522B0 /* OGFloorProvider.swift */; };
+		3BE290822A54FAAC00C522B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE290472A54FAAC00C522B0 /* Assets.xcassets */; };
+		3BE290832A54FAAC00C522B0 /* NAVIFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290482A54FAAC00C522B0 /* NAVIFlow.swift */; };
+		3BE290842A54FAAC00C522B0 /* OGMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2904A2A54FAAC00C522B0 /* OGMapModel.swift */; };
+		3BE290852A54FAAC00C522B0 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2904B2A54FAAC00C522B0 /* ProjectModel.swift */; };
+		3BE290862A54FAAC00C522B0 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2904C2A54FAAC00C522B0 /* NavigationModel.swift */; };
+		3BE290872A54FAAC00C522B0 /* AacCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2904D2A54FAAC00C522B0 /* AacCategoryModel.swift */; };
+		3BE290882A54FAAC00C522B0 /* InfoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2904E2A54FAAC00C522B0 /* InfoModels.swift */; };
+		3BE290892A54FAAC00C522B0 /* AcCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2904F2A54FAAC00C522B0 /* AcCategoryModel.swift */; };
+		3BE2908A2A54FAAC00C522B0 /* ProjectModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290502A54FAAC00C522B0 /* ProjectModelList.swift */; };
+		3BE2908B2A54FAAC00C522B0 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290512A54FAAC00C522B0 /* PlanModel.swift */; };
+		3BE2908C2A54FAAC00C522B0 /* OGMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290522A54FAAC00C522B0 /* OGMarker.swift */; };
+		3BE2908D2A54FAAC00C522B0 /* GMSMarkerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290532A54FAAC00C522B0 /* GMSMarkerAnnotation.swift */; };
+		3BE2908E2A54FAAC00C522B0 /* DirectionMarkersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290542A54FAAC00C522B0 /* DirectionMarkersListModel.swift */; };
 		D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +222,8 @@
 		3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskView.swift; sourceTree = "<group>"; };
 		3B281A402A4C446B00166E15 /* Data + HexParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data + HexParse.swift"; sourceTree = "<group>"; };
 		3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapViewController.swift; sourceTree = "<group>"; };
+		3B2DEF0C2A5267A9006F7321 /* GetFloorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFloorData.swift; sourceTree = "<group>"; };
+		3B2DEF0E2A5299F0006F7321 /* VibrationFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationFeedbackManager.swift; sourceTree = "<group>"; };
 		3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStatusData.swift; sourceTree = "<group>"; };
 		3B43CBE52A4025DD000D06FE /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToogleButton.swift; sourceTree = "<group>"; };
@@ -243,6 +305,64 @@
 		3BAF03752A2EDD9A00E514E1 /* ARMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMenuTableViewCell.swift; sourceTree = "<group>"; };
 		3BC58FAB2A49708F00882BEB /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
 		3BC828C42A4C31320076BD88 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		3BE290142A54FAAC00C522B0 /* Build Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Build Settings.png"; sourceTree = "<group>"; };
+		3BE290162A54FAAC00C522B0 /* CKGeoPointOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKGeoPointOperation.m; sourceTree = "<group>"; };
+		3BE290172A54FAAC00C522B0 /* GMSMapView+ClusterKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMSMapView+ClusterKit.m"; sourceTree = "<group>"; };
+		3BE290182A54FAAC00C522B0 /* GMSMapView+ClusterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMSMapView+ClusterKit.h"; sourceTree = "<group>"; };
+		3BE290192A54FAAC00C522B0 /* CKGeoPointOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKGeoPointOperation.h; sourceTree = "<group>"; };
+		3BE2901D2A54FAAC00C522B0 /* NavigationStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationStateView.xib; sourceTree = "<group>"; };
+		3BE2901E2A54FAAC00C522B0 /* NaviMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NaviMain.storyboard; sourceTree = "<group>"; };
+		3BE2901F2A54FAAC00C522B0 /* NavigationGuide.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavigationGuide.storyboard; sourceTree = "<group>"; };
+		3BE290202A54FAAC00C522B0 /* HakkaSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HakkaSearch.storyboard; sourceTree = "<group>"; };
+		3BE290212A54FAAC00C522B0 /* NavigationSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavigationSearch.storyboard; sourceTree = "<group>"; };
+		3BE290222A54FAAC00C522B0 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		3BE290232A54FAAC00C522B0 /* PoiDetailTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoiDetailTitleView.xib; sourceTree = "<group>"; };
+		3BE290242A54FAAC00C522B0 /* PoiDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PoiDetail.storyboard; sourceTree = "<group>"; };
+		3BE290252A54FAAC00C522B0 /* PoiDetailInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoiDetailInfoView.xib; sourceTree = "<group>"; };
+		3BE290272A54FAAC00C522B0 /* NavGuideTrafficVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavGuideTrafficVC.swift; sourceTree = "<group>"; };
+		3BE290282A54FAAC00C522B0 /* PoiDetailInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDetailInfoView.swift; sourceTree = "<group>"; };
+		3BE290292A54FAAC00C522B0 /* NavigationGuideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationGuideVC.swift; sourceTree = "<group>"; };
+		3BE2902A2A54FAAC00C522B0 /* PoiDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDetailVC.swift; sourceTree = "<group>"; };
+		3BE2902B2A54FAAC00C522B0 /* NavigationMapSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMapSearchVC.swift; sourceTree = "<group>"; };
+		3BE2902C2A54FAAC00C522B0 /* NavigationStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateView.swift; sourceTree = "<group>"; };
+		3BE2902D2A54FAAC00C522B0 /* HakkaSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HakkaSearchCell.swift; sourceTree = "<group>"; };
+		3BE2902E2A54FAAC00C522B0 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3BE2902F2A54FAAC00C522B0 /* NaviMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviMainVC.swift; sourceTree = "<group>"; };
+		3BE290302A54FAAC00C522B0 /* NavigationSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSearchCell.swift; sourceTree = "<group>"; };
+		3BE290312A54FAAC00C522B0 /* NavigationBottomGuideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBottomGuideVC.swift; sourceTree = "<group>"; };
+		3BE290322A54FAAC00C522B0 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		3BE290332A54FAAC00C522B0 /* HakkaSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HakkaSearchVC.swift; sourceTree = "<group>"; };
+		3BE290342A54FAAC00C522B0 /* FloorMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMenuVC.swift; sourceTree = "<group>"; };
+		3BE290352A54FAAC00C522B0 /* NavGuideInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavGuideInfoVC.swift; sourceTree = "<group>"; };
+		3BE290362A54FAAC00C522B0 /* PoiDetailTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDetailTitleView.swift; sourceTree = "<group>"; };
+		3BE290382A54FAAC00C522B0 /* Paras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paras.swift; sourceTree = "<group>"; };
+		3BE290392A54FAAC00C522B0 /* GlobalState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		3BE2903A2A54FAAC00C522B0 /* JSONEnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEnable.swift; sourceTree = "<group>"; };
+		3BE2903B2A54FAAC00C522B0 /* OGGlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGGlobalData.swift; sourceTree = "<group>"; };
+		3BE2903C2A54FAAC00C522B0 /* NaviProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviProject.swift; sourceTree = "<group>"; };
+		3BE2903D2A54FAAC00C522B0 /* LocationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationBase.swift; sourceTree = "<group>"; };
+		3BE2903E2A54FAAC00C522B0 /* ExtensionForMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionForMap.swift; sourceTree = "<group>"; };
+		3BE2903F2A54FAAC00C522B0 /* OGPointProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPointProvider.swift; sourceTree = "<group>"; };
+		3BE290402A54FAAC00C522B0 /* PoiDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDetailPresenter.swift; sourceTree = "<group>"; };
+		3BE290412A54FAAC00C522B0 /* NaviUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviUtility.swift; sourceTree = "<group>"; };
+		3BE290422A54FAAC00C522B0 /* HTTPSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSClient.swift; sourceTree = "<group>"; };
+		3BE290432A54FAAC00C522B0 /* LoadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
+		3BE290442A54FAAC00C522B0 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
+		3BE290452A54FAAC00C522B0 /* NavigationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
+		3BE290462A54FAAC00C522B0 /* OGFloorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFloorProvider.swift; sourceTree = "<group>"; };
+		3BE290472A54FAAC00C522B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BE290482A54FAAC00C522B0 /* NAVIFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NAVIFlow.swift; sourceTree = "<group>"; };
+		3BE2904A2A54FAAC00C522B0 /* OGMapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMapModel.swift; sourceTree = "<group>"; };
+		3BE2904B2A54FAAC00C522B0 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		3BE2904C2A54FAAC00C522B0 /* NavigationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		3BE2904D2A54FAAC00C522B0 /* AacCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AacCategoryModel.swift; sourceTree = "<group>"; };
+		3BE2904E2A54FAAC00C522B0 /* InfoModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoModels.swift; sourceTree = "<group>"; };
+		3BE2904F2A54FAAC00C522B0 /* AcCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcCategoryModel.swift; sourceTree = "<group>"; };
+		3BE290502A54FAAC00C522B0 /* ProjectModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModelList.swift; sourceTree = "<group>"; };
+		3BE290512A54FAAC00C522B0 /* PlanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		3BE290522A54FAAC00C522B0 /* OGMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMarker.swift; sourceTree = "<group>"; };
+		3BE290532A54FAAC00C522B0 /* GMSMarkerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMarkerAnnotation.swift; sourceTree = "<group>"; };
+		3BE290542A54FAAC00C522B0 /* DirectionMarkersListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionMarkersListModel.swift; sourceTree = "<group>"; };
 		631FB878049E7B63F5C9DC5C /* Pods_HakkaExpo2023_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HakkaExpo2023_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FAFC231239541F503F75B2 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -439,6 +559,7 @@
 				3B238FD92A3D3F6B00881BBC /* QRCodeScannerManager.swift */,
 				3BC58FAB2A49708F00882BEB /* HudManager.swift */,
 				3BC828C42A4C31320076BD88 /* BLEManager.swift */,
+				3B2DEF0E2A5299F0006F7321 /* VibrationFeedbackManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -458,6 +579,7 @@
 				3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */,
 				3B43CBE52A4025DD000D06FE /* ResponseData.swift */,
 				3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */,
+				3B2DEF0C2A5267A9006F7321 /* GetFloorData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -581,6 +703,7 @@
 		3BAF030D2A1C4FBC00E514E1 /* 智慧導引 */ = {
 			isa = PBXGroup;
 			children = (
+				3BE290132A54FAAC00C522B0 /* Hakka-Map */,
 			);
 			path = "智慧導引";
 			sourceTree = "<group>";
@@ -642,6 +765,127 @@
 			path = "AR選單";
 			sourceTree = "<group>";
 		};
+		3BE290132A54FAAC00C522B0 /* Hakka-Map */ = {
+			isa = PBXGroup;
+			children = (
+				3BE290142A54FAAC00C522B0 /* Build Settings.png */,
+				3BE290152A54FAAC00C522B0 /* ClusterKit */,
+				3BE2901A2A54FAAC00C522B0 /* 地圖 */,
+			);
+			path = "Hakka-Map";
+			sourceTree = "<group>";
+		};
+		3BE290152A54FAAC00C522B0 /* ClusterKit */ = {
+			isa = PBXGroup;
+			children = (
+				3BE290162A54FAAC00C522B0 /* CKGeoPointOperation.m */,
+				3BE290172A54FAAC00C522B0 /* GMSMapView+ClusterKit.m */,
+				3BE290182A54FAAC00C522B0 /* GMSMapView+ClusterKit.h */,
+				3BE290192A54FAAC00C522B0 /* CKGeoPointOperation.h */,
+			);
+			path = ClusterKit;
+			sourceTree = "<group>";
+		};
+		3BE2901A2A54FAAC00C522B0 /* 地圖 */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2901B2A54FAAC00C522B0 /* UI */,
+				3BE290372A54FAAC00C522B0 /* Other */,
+				3BE290472A54FAAC00C522B0 /* Assets.xcassets */,
+				3BE290482A54FAAC00C522B0 /* NAVIFlow.swift */,
+				3BE290492A54FAAC00C522B0 /* Model */,
+			);
+			path = "地圖";
+			sourceTree = "<group>";
+		};
+		3BE2901B2A54FAAC00C522B0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2901C2A54FAAC00C522B0 /* Xib */,
+				3BE290262A54FAAC00C522B0 /* Class */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3BE2901C2A54FAAC00C522B0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2901D2A54FAAC00C522B0 /* NavigationStateView.xib */,
+				3BE2901E2A54FAAC00C522B0 /* NaviMain.storyboard */,
+				3BE2901F2A54FAAC00C522B0 /* NavigationGuide.storyboard */,
+				3BE290202A54FAAC00C522B0 /* HakkaSearch.storyboard */,
+				3BE290212A54FAAC00C522B0 /* NavigationSearch.storyboard */,
+				3BE290222A54FAAC00C522B0 /* Map.storyboard */,
+				3BE290232A54FAAC00C522B0 /* PoiDetailTitleView.xib */,
+				3BE290242A54FAAC00C522B0 /* PoiDetail.storyboard */,
+				3BE290252A54FAAC00C522B0 /* PoiDetailInfoView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		3BE290262A54FAAC00C522B0 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3BE290272A54FAAC00C522B0 /* NavGuideTrafficVC.swift */,
+				3BE290282A54FAAC00C522B0 /* PoiDetailInfoView.swift */,
+				3BE290292A54FAAC00C522B0 /* NavigationGuideVC.swift */,
+				3BE2902A2A54FAAC00C522B0 /* PoiDetailVC.swift */,
+				3BE2902B2A54FAAC00C522B0 /* NavigationMapSearchVC.swift */,
+				3BE2902C2A54FAAC00C522B0 /* NavigationStateView.swift */,
+				3BE2902D2A54FAAC00C522B0 /* HakkaSearchCell.swift */,
+				3BE2902E2A54FAAC00C522B0 /* TableViewCell.swift */,
+				3BE2902F2A54FAAC00C522B0 /* NaviMainVC.swift */,
+				3BE290302A54FAAC00C522B0 /* NavigationSearchCell.swift */,
+				3BE290312A54FAAC00C522B0 /* NavigationBottomGuideVC.swift */,
+				3BE290322A54FAAC00C522B0 /* MapVC.swift */,
+				3BE290332A54FAAC00C522B0 /* HakkaSearchVC.swift */,
+				3BE290342A54FAAC00C522B0 /* FloorMenuVC.swift */,
+				3BE290352A54FAAC00C522B0 /* NavGuideInfoVC.swift */,
+				3BE290362A54FAAC00C522B0 /* PoiDetailTitleView.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		3BE290372A54FAAC00C522B0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3BE290382A54FAAC00C522B0 /* Paras.swift */,
+				3BE290392A54FAAC00C522B0 /* GlobalState.swift */,
+				3BE2903A2A54FAAC00C522B0 /* JSONEnable.swift */,
+				3BE2903B2A54FAAC00C522B0 /* OGGlobalData.swift */,
+				3BE2903C2A54FAAC00C522B0 /* NaviProject.swift */,
+				3BE2903D2A54FAAC00C522B0 /* LocationBase.swift */,
+				3BE2903E2A54FAAC00C522B0 /* ExtensionForMap.swift */,
+				3BE2903F2A54FAAC00C522B0 /* OGPointProvider.swift */,
+				3BE290402A54FAAC00C522B0 /* PoiDetailPresenter.swift */,
+				3BE290412A54FAAC00C522B0 /* NaviUtility.swift */,
+				3BE290422A54FAAC00C522B0 /* HTTPSClient.swift */,
+				3BE290432A54FAAC00C522B0 /* LoadingAnimation.swift */,
+				3BE290442A54FAAC00C522B0 /* Localizer.swift */,
+				3BE290452A54FAAC00C522B0 /* NavigationPresenter.swift */,
+				3BE290462A54FAAC00C522B0 /* OGFloorProvider.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		3BE290492A54FAAC00C522B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2904A2A54FAAC00C522B0 /* OGMapModel.swift */,
+				3BE2904B2A54FAAC00C522B0 /* ProjectModel.swift */,
+				3BE2904C2A54FAAC00C522B0 /* NavigationModel.swift */,
+				3BE2904D2A54FAAC00C522B0 /* AacCategoryModel.swift */,
+				3BE2904E2A54FAAC00C522B0 /* InfoModels.swift */,
+				3BE2904F2A54FAAC00C522B0 /* AcCategoryModel.swift */,
+				3BE290502A54FAAC00C522B0 /* ProjectModelList.swift */,
+				3BE290512A54FAAC00C522B0 /* PlanModel.swift */,
+				3BE290522A54FAAC00C522B0 /* OGMarker.swift */,
+				3BE290532A54FAAC00C522B0 /* GMSMarkerAnnotation.swift */,
+				3BE290542A54FAAC00C522B0 /* DirectionMarkersListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		59D31F6C84B1FC177623D8A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +914,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE290592A54FAAC00C522B0 /* CKGeoPointOperation.h in Headers */,
+				3BE290582A54FAAC00C522B0 /* GMSMapView+ClusterKit.h in Headers */,
 				3BAF02BA2A1706B300E514E1 /* HakkaExpo2023_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,20 +1024,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE2905C2A54FAAC00C522B0 /* NavigationGuide.storyboard in Resources */,
 				3BAF02FA2A174CE700E514E1 /* MainPage.storyboard in Resources */,
 				3BAF03122A1C532F00E514E1 /* Panorama.storyboard in Resources */,
 				3B80C3002A308854008A12E2 /* MissionAlertView.xib in Resources */,
 				3BAF03272A1C8FCC00E514E1 /* art.scnassets in Resources */,
 				3B238FC82A385E5800881BBC /* MissionLevleCollectionViewCell.xib in Resources */,
+				3BE290622A54FAAC00C522B0 /* PoiDetailInfoView.xib in Resources */,
 				3BAF031B2A1C642200E514E1 /* ARInteraction.storyboard in Resources */,
+				3BE2905D2A54FAAC00C522B0 /* HakkaSearch.storyboard in Resources */,
 				3B80C30E2A32FF0E008A12E2 /* Hakka-GoogleService-Info.plist in Resources */,
 				3BAF03722A2ECD6600E514E1 /* ARMenu.storyboard in Resources */,
+				3BE2905A2A54FAAC00C522B0 /* NavigationStateView.xib in Resources */,
+				3BE2905F2A54FAAC00C522B0 /* Map.storyboard in Resources */,
+				3BE2905E2A54FAAC00C522B0 /* NavigationSearch.storyboard in Resources */,
+				3BE290552A54FAAC00C522B0 /* Build Settings.png in Resources */,
 				3BAF03332A1EFDAC00E514E1 /* CarouselCollectionViewCell.xib in Resources */,
 				3B238FCC2A394DCC00881BBC /* MissionTableViewCell.xib in Resources */,
 				3BAF03162A1C61DF00E514E1 /* VenueTableViewCell.xib in Resources */,
+				3BE290822A54FAAC00C522B0 /* Assets.xcassets in Resources */,
+				3BE2905B2A54FAAC00C522B0 /* NaviMain.storyboard in Resources */,
+				3BE290602A54FAAC00C522B0 /* PoiDetailTitleView.xib in Resources */,
 				3B82F4AE2A2F0C1D00B1C805 /* SkyLantern.storyboard in Resources */,
 				3B238FBC2A36B50E00881BBC /* AwardTicketTableViewCell.xib in Resources */,
 				3BAF03252A1C8FB400E514E1 /* Media.xcassets in Resources */,
+				3BE290612A54FAAC00C522B0 /* PoiDetail.storyboard in Resources */,
 				3BAF034F2A25FBFE00E514E1 /* PanoramaTableViewCell.xib in Resources */,
 				3BAF03212A1C8E9700E514E1 /* Aquarium.storyboard in Resources */,
 				3B80C2FA2A3083DD008A12E2 /* Mission.storyboard in Resources */,
@@ -915,6 +1172,7 @@
 			files = (
 				3B238FD22A39912900881BBC /* MissionData.swift in Sources */,
 				3BAF03552A27228400E514E1 /* String + sha1.swift in Sources */,
+				3BE2906E2A54FAAC00C522B0 /* MapVC.swift in Sources */,
 				3BAF03322A1EFDAC00E514E1 /* CarouselCollectionViewCell.swift in Sources */,
 				3B82F4A92A2F0C1D00B1C805 /* SkyLanternCanvasView.swift in Sources */,
 				3B238FD82A3C2DBB00881BBC /* AwardTicketData.swift in Sources */,
@@ -922,36 +1180,68 @@
 				3BAF035E2A2731C800E514E1 /* APIEndpoint.swift in Sources */,
 				3B238FC02A36CD1000881BBC /* AwardInfoViewController.swift in Sources */,
 				3B238FCE2A395EF200881BBC /* MissionViewModel.swift in Sources */,
+				3BE290652A54FAAC00C522B0 /* NavigationGuideVC.swift in Sources */,
+				3BE2908C2A54FAAC00C522B0 /* OGMarker.swift in Sources */,
 				3B80C30A2A31D5E8008A12E2 /* MissionViewController.swift in Sources */,
 				3B238FD62A3AF43600881BBC /* MissionLevelViewModel.swift in Sources */,
 				3B43CBE42A3FFDE6000D06FE /* MissionStatusData.swift in Sources */,
+				3BE290682A54FAAC00C522B0 /* NavigationStateView.swift in Sources */,
+				3BE290662A54FAAC00C522B0 /* PoiDetailVC.swift in Sources */,
 				3BAF033F2A24A0C500E514E1 /* BasicViewController.swift in Sources */,
 				3BAF035C2A272A9500E514E1 /* HttpsParameters.swift in Sources */,
 				3BAF03492A25F1B400E514E1 /* PanoramaViewModel.swift in Sources */,
 				3B238FBE2A36C91900881BBC /* AwardTicketViewModel.swift in Sources */,
 				3BAF036F2A2DEC7F00E514E1 /* UIStackView + Shadow.swift in Sources */,
+				3BE290742A54FAAC00C522B0 /* GlobalState.swift in Sources */,
+				3BE290892A54FAAC00C522B0 /* AcCategoryModel.swift in Sources */,
+				3BE290792A54FAAC00C522B0 /* ExtensionForMap.swift in Sources */,
+				3B2DEF0D2A5267A9006F7321 /* GetFloorData.swift in Sources */,
 				3B238FD02A3971AB00881BBC /* KeychainManager.swift in Sources */,
 				3BAF02FF2A17510C00E514E1 /* DeviceIDManager.swift in Sources */,
 				3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */,
+				3BE290732A54FAAC00C522B0 /* Paras.swift in Sources */,
+				3B2DEF0F2A5299F0006F7321 /* VibrationFeedbackManager.swift in Sources */,
+				3BE290852A54FAAC00C522B0 /* ProjectModel.swift in Sources */,
 				3BAF02F82A174CD600E514E1 /* MainPageViewController.swift in Sources */,
+				3BE2907E2A54FAAC00C522B0 /* LoadingAnimation.swift in Sources */,
+				3BE290802A54FAAC00C522B0 /* NavigationPresenter.swift in Sources */,
 				3B82F4BC2A2F207800B1C805 /* Notification.swift in Sources */,
 				3BAF02D62A17290A00E514E1 /* AppCoordinator.swift in Sources */,
 				3B238FC72A385E5800881BBC /* MissionLevleCollectionViewCell.swift in Sources */,
+				3BE2908A2A54FAAC00C522B0 /* ProjectModelList.swift in Sources */,
+				3BE290782A54FAAC00C522B0 /* LocationBase.swift in Sources */,
 				3B82F4B92A2F150E00B1C805 /* AlertManager.swift in Sources */,
 				3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */,
+				3BE290842A54FAAC00C522B0 /* OGMapModel.swift in Sources */,
+				3BE2907F2A54FAAC00C522B0 /* Localizer.swift in Sources */,
+				3BE2907B2A54FAAC00C522B0 /* PoiDetailPresenter.swift in Sources */,
+				3BE2906B2A54FAAC00C522B0 /* NaviMainVC.swift in Sources */,
 				3B238FDA2A3D3F6B00881BBC /* QRCodeScannerManager.swift in Sources */,
 				3BAF03462A25C7FD00E514E1 /* Router.swift in Sources */,
 				3B82F4B12A2F0C1D00B1C805 /* SkyLanternARService.swift in Sources */,
 				3B82F4AD2A2F0C1D00B1C805 /* SkyLanternARVC.swift in Sources */,
+				3BE2906F2A54FAAC00C522B0 /* HakkaSearchVC.swift in Sources */,
 				3B43CC142A429068000D06FE /* QuestionViewController.swift in Sources */,
 				3B82F4AF2A2F0C1D00B1C805 /* DebugTrackingView.swift in Sources */,
+				3BE290572A54FAAC00C522B0 /* GMSMapView+ClusterKit.m in Sources */,
+				3BE2908B2A54FAAC00C522B0 /* PlanModel.swift in Sources */,
 				3B82F4B02A2F0C1D00B1C805 /* SkyLanternNode+FireNode.swift in Sources */,
 				3BAF03742A2ECD7B00E514E1 /* ARMeniViewController.swift in Sources */,
+				3BE290812A54FAAC00C522B0 /* OGFloorProvider.swift in Sources */,
+				3BE2908D2A54FAAC00C522B0 /* GMSMarkerAnnotation.swift in Sources */,
 				3BAF034E2A25FBFE00E514E1 /* PanoramaTableViewCell.swift in Sources */,
+				3BE290642A54FAAC00C522B0 /* PoiDetailInfoView.swift in Sources */,
 				3B80C30C2A32B965008A12E2 /* CustomSegmentedControl.swift in Sources */,
+				3BE290832A54FAAC00C522B0 /* NAVIFlow.swift in Sources */,
+				3BE2907C2A54FAAC00C522B0 /* NaviUtility.swift in Sources */,
+				3BE2906D2A54FAAC00C522B0 /* NavigationBottomGuideVC.swift in Sources */,
 				3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */,
+				3BE2907D2A54FAAC00C522B0 /* HTTPSClient.swift in Sources */,
 				3BAF03762A2EDD9A00E514E1 /* ARMenuTableViewCell.swift in Sources */,
+				3BE290872A54FAAC00C522B0 /* AacCategoryModel.swift in Sources */,
+				3BE290562A54FAAC00C522B0 /* CKGeoPointOperation.m in Sources */,
 				3B82F4A82A2F0C1D00B1C805 /* SkyLanternVC.swift in Sources */,
+				3BE290772A54FAAC00C522B0 /* NaviProject.swift in Sources */,
 				3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */,
 				3B238FC22A37120300881BBC /* UIView + Shadow.swift in Sources */,
 				3B82F4BE2A2F20C700B1C805 /* LocationService.swift in Sources */,
@@ -960,20 +1250,34 @@
 				3B238FE12A3D8EF800881BBC /* CustomMaskView.swift in Sources */,
 				3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */,
 				3B281A412A4C446B00166E15 /* Data + HexParse.swift in Sources */,
+				3BE290712A54FAAC00C522B0 /* NavGuideInfoVC.swift in Sources */,
+				3BE2906C2A54FAAC00C522B0 /* NavigationSearchCell.swift in Sources */,
+				3BE290702A54FAAC00C522B0 /* FloorMenuVC.swift in Sources */,
 				3BAF031D2A1C646F00E514E1 /* ARInteraction.swift in Sources */,
+				3BE2907A2A54FAAC00C522B0 /* OGPointProvider.swift in Sources */,
 				3B82F4B42A2F0C1D00B1C805 /* SkyLanternNode.swift in Sources */,
 				3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */,
+				3BE290722A54FAAC00C522B0 /* PoiDetailTitleView.swift in Sources */,
 				3BAF03062A1B20A800E514E1 /* RestAPI.swift in Sources */,
 				3B43CC122A41AF99000D06FE /* CustomToogleButton.swift in Sources */,
 				3B238FCB2A394DCC00881BBC /* MissionTableViewCell.swift in Sources */,
 				3B43CBE62A4025DE000D06FE /* ResponseData.swift in Sources */,
 				3B82F4B22A2F0C1D00B1C805 /* SkyLanternARServiceByARCore.swift in Sources */,
+				3BE2908E2A54FAAC00C522B0 /* DirectionMarkersListModel.swift in Sources */,
 				3B238FBB2A36B50E00881BBC /* AwardTicketTableViewCell.swift in Sources */,
 				3B82F4B72A2F0FF800B1C805 /* UIColor + hex.swift in Sources */,
+				3BE2906A2A54FAAC00C522B0 /* TableViewCell.swift in Sources */,
+				3BE290752A54FAAC00C522B0 /* JSONEnable.swift in Sources */,
 				3BAF03032A1B1F0B00E514E1 /* NetworkManager.swift in Sources */,
+				3BE290692A54FAAC00C522B0 /* HakkaSearchCell.swift in Sources */,
 				3BC828C52A4C31320076BD88 /* BLEManager.swift in Sources */,
 				3BAF03232A1C8EBC00E514E1 /* AquariumViewController.swift in Sources */,
+				3BE290672A54FAAC00C522B0 /* NavigationMapSearchVC.swift in Sources */,
 				3BAF03192A1C621400E514E1 /* VenueViewModel.swift in Sources */,
+				3BE290862A54FAAC00C522B0 /* NavigationModel.swift in Sources */,
+				3BE290762A54FAAC00C522B0 /* OGGlobalData.swift in Sources */,
+				3BE290632A54FAAC00C522B0 /* NavGuideTrafficVC.swift in Sources */,
+				3BE290882A54FAAC00C522B0 /* InfoModels.swift in Sources */,
 				3B80C2FE2A308846008A12E2 /* MissionAlertView.swift in Sources */,
 				3BAF03152A1C61DF00E514E1 /* VenueTableViewCell.swift in Sources */,
 				3B238FC42A38492200881BBC /* MissionLevelViewController.swift in Sources */,
@@ -1162,7 +1466,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_MODULE_VERIFIER = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1177,8 +1481,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "omniguider.HakkaExpo2023-iOS.com";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1201,7 +1505,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_MODULE_VERIFIER = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1216,8 +1520,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "omniguider.HakkaExpo2023-iOS.com";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

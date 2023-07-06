@@ -148,6 +148,25 @@ class RestAPI {
         }
     }
     
+    
+    func getFloor(buildingID: Int, completion: @escaping(GetFloorData?) -> Void) {
+        
+        var parameters = ["ab_id" : "\(buildingID)"]
+        
+        NetworkManager.shared.request(endpoint: APIEndPoint.getFloor , method: .get, parameters: parameters) { (result: Result< GetFloorData, Error>)  in
+            switch result {
+            case .success(let decodedData):
+                completion(decodedData)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
+ 
+    
+    
     private func logParameters(functionName: String, parameters: [String: Any]) {
         print(functionName, "-Parameters: \(parameters)")
     }

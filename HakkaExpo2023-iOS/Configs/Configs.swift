@@ -30,11 +30,22 @@ enum Asset: String {
     }
 }
 
+enum LevelType: String {
+    case touchdown = "touchdown"
+    case qa = "QA"
+}
+
+enum MapDataType {
+    case nineGrid(data: NineGrid?)
+    case gridInfo(data: GridInfoData?)
+}
+
 enum MLAlertViewType {
     case arrival
     case notYeyArrived
     case correctAnswer
     case receivedTheReward
+    case touchdown
 }
 
 enum RwsEnabledStates: String {
@@ -117,6 +128,7 @@ struct Configs {
         static let domain = "https://hakkaexpo-test.omniguider.com"
         static let officialWebsite = "https://www.hakkaexpo2023.tw/"
         static let mapWebsite = "https://www.hakkaexpo2023.tw/facility/fourPlace"
+        static let anyplaceDomin = "https://omnig-anyplace.omniguider.com/"
     }
     
     static let kMapStyle = "[" +

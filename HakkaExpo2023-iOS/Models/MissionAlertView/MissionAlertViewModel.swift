@@ -31,6 +31,9 @@ class MissionAlertViewModel {
             message = "恭喜答對過關！\n"
         case .receivedTheReward:
             secondMessage = "領取成功\n\n"
+        case .touchdown:
+            title = "已抵達目的地"
+            message = "恭喜過關！"
         case .none:
             break
         }

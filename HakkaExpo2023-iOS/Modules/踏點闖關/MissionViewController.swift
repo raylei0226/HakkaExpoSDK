@@ -131,7 +131,7 @@ extension MissionViewController: UITableViewDelegate, UITableViewDataSource {
             Router.shared.navigationToMissionLevel(self, itemData: infoData)
         } else {
             let ticketData = awardTicketViewModel.getItem(at: indexPath.item)
-            Router.shared.navigationToAwardInfo(self, infoType: .awardInformation, gridData: nil, ticketData: ticketData)
+            Router.shared.navigationToAwardInfo(self, infoType: .awardInformation, gridData: nil, ticketData: ticketData, numberIndex: nil)
         }
     }
 }

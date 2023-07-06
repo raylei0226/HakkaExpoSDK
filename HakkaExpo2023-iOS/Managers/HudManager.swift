@@ -26,25 +26,31 @@ class HudManager {
         progressHUD.show(in: UIApplication.shared.keyWindow!)
     }
     
+    func showProgress(title: String ,with delay: TimeInterval) {
+        progressHUD.textLabel.text = title
+        progressHUD.show(in: UIApplication.shared.keyWindow!)
+        progressHUD.dismiss(afterDelay: delay)
+    }
+    
     func showInfo(withMessage message: String) {
         progressHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
         progressHUD.textLabel.text = message
         progressHUD.show(in: UIApplication.shared.keyWindow!)
-        progressHUD.dismiss(afterDelay: 2.0)
+        progressHUD.dismiss(afterDelay: 1.5)
     }
     
     func showSuccess(withMessage message: String) {
         progressHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
         progressHUD.textLabel.text = message
         progressHUD.show(in: UIApplication.shared.keyWindow!)
-        progressHUD.dismiss(afterDelay: 2.0)
+        progressHUD.dismiss(afterDelay: 1.5)
     }
     
     func showError(withMessage message: String) {
         progressHUD.indicatorView = JGProgressHUDErrorIndicatorView()
         progressHUD.textLabel.text = message
         progressHUD.show(in: UIApplication.shared.keyWindow!)
-        progressHUD.dismiss(afterDelay: 2.0)
+        progressHUD.dismiss(afterDelay: 1.5)
     }
     
     func showProgressWithMessage(_ message: String, seconds: TimeInterval?) {

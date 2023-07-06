@@ -47,6 +47,14 @@ class MissionAlertView: UIView {
           mlLayerView.layer.cornerRadius = 12
           mlConfirmButton.layer.cornerRadius = 12
       }
+    
+    func configure(with type: MLAlertViewType) {
+        let vm = MissionAlertViewModel(alertType: type)
+        self.viewModel = vm
+        setupUI()
+    }
+    
+    
       
       func configure(with viewModel: MissionAlertViewModel) {
           self.viewModel = viewModel
@@ -68,11 +76,17 @@ class MissionAlertView: UIView {
           case .none:
               break
           }
+          self.alertType = viewModel.alertType
+          self.showAlert(with: alertType)
       }
     
     func showAlert(with type: MLAlertViewType) {
           UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(mlParentView)
       }
+    
+    func showAlert() {
+        UIApplication.shared.windows.first { $0.isKeyWindow }?.addSubview(mlParentView)
+    }
           
       @IBAction func closeAlert(_ sender: UIButton) {
           mlParentView.removeFromSuperview()
