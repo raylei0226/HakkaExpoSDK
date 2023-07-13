@@ -23,9 +23,6 @@ class MissionAlertViewModel {
         case .arrival:
             title = "抵達關卡"
             message = "請答題過關！\n"
-        case .notYeyArrived:
-            title = "尚未抵達關卡"
-            message = "您尚未抵達關卡位置，\n請開啟GPS確認您的位置∙\n"
         case .correctAnswer:
             title = "答題正確"
             message = "恭喜答對過關！\n"

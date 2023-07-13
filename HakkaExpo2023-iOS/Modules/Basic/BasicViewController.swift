@@ -15,7 +15,8 @@ class BasicViewController: UIViewController {
         
        configureBackgroundImage()
         
-        GMSServices.provideAPIKey("AIzaSyCmLqkyCvz3QtQ-1uw7xPQX0TR1K71QZsA")
+//        GMSServices.provideAPIKey("AIzaSyCmLqkyCvz3QtQ-1uw7xPQX0TR1K71QZsA")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

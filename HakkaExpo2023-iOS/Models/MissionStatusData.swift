@@ -7,15 +7,14 @@
 
 struct MissionStatusData: Codable {
     var result, errorMessage: String?
-    var data: [StatusInfoData]?
-    
+    var data: StatusInfoData?
+
     enum CodingKeys: String, CodingKey {
         case result
         case errorMessage = "error_message"
         case data
     }
 }
- 
 
 struct StatusInfoData: Codable {
     var status: String?

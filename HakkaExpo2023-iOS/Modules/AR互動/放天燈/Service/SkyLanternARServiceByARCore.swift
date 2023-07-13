@@ -240,7 +240,7 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
         let currentBundle = Bundle(for: SkyLanternARServiceByARCore.self)
         guard
             FirebaseApp.app(name: "HakkaExop") == nil,
-            let filePath = currentBundle.path(forResource: "Hakka-GoogleService-Info", ofType: "plist"),
+            let filePath = currentBundle.path(forResource: "GoogleService-Info", ofType: "plist"),
             let fileopts = FirebaseOptions(contentsOfFile: filePath)
         else {
             return

@@ -22,21 +22,23 @@ class HudManager {
     }
     
     func showProgress() {
+        progressHUD.indicatorView = JGProgressHUDIndeterminateIndicatorView()
         progressHUD.textLabel.text = K.processing
         progressHUD.show(in: UIApplication.shared.keyWindow!)
     }
     
     func showProgress(title: String ,with delay: TimeInterval) {
+        progressHUD.indicatorView = JGProgressHUDIndeterminateIndicatorView()
         progressHUD.textLabel.text = title
         progressHUD.show(in: UIApplication.shared.keyWindow!)
         progressHUD.dismiss(afterDelay: delay)
     }
     
     func showInfo(withMessage message: String) {
-        progressHUD.indicatorView = JGProgressHUDSuccessIndicatorView()
+        progressHUD.indicatorView = JGProgressHUDIndicatorView()
         progressHUD.textLabel.text = message
         progressHUD.show(in: UIApplication.shared.keyWindow!)
-        progressHUD.dismiss(afterDelay: 1.5)
+        progressHUD.dismiss(afterDelay: 3.5)
     }
     
     func showSuccess(withMessage message: String) {
@@ -54,9 +56,20 @@ class HudManager {
     }
     
     func showProgressWithMessage(_ message: String, seconds: TimeInterval?) {
+        progressHUD.indicatorView = JGProgressHUDIndeterminateIndicatorView()
         progressHUD.textLabel.text = message
         progressHUD.show(in: UIApplication.shared.keyWindow!)
         progressHUD.dismiss(afterDelay: seconds ?? 0.0)
+    }
+    
+    func showProgressWithMessageAndDelay(_ message: String, seconds: TimeInterval?, completionHandler: (() -> Void)?) {
+        progressHUD.indicatorView = JGProgressHUDIndeterminateIndicatorView()
+        progressHUD.textLabel.text = message
+        progressHUD.show(in: UIApplication.shared.keyWindow!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + (seconds ?? 0.0)) {
+            self.progressHUD.dismiss()
+            completionHandler?()
+        }
     }
     
     func hide() {

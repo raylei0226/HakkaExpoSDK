@@ -22,7 +22,7 @@ class MissionMapViewController: BasicViewController {
     var tileLayer: GMSTileLayer?
     
     var markers: [GMSMarker] = []
-
+    
     var markerIndex: Int?
     
     private let locationManager = CLLocationManager()
@@ -53,7 +53,7 @@ class MissionMapViewController: BasicViewController {
             setupUI(.gridInfo(data: data))
             setupMarker(.gridInfo(data: data))
         }
-       
+        
         RestAPI.shared.getFloor(buildingID: 4) { data in
             print("Floor:\(String(describing: data))")
         }
@@ -71,7 +71,7 @@ class MissionMapViewController: BasicViewController {
     
     
     private func setupUI(_ mapData: MapDataType) {
-      
+        
         switch mapData {
             
         case .gridInfo(data: let data):
@@ -121,7 +121,7 @@ class MissionMapViewController: BasicViewController {
         
         let urls: GMSTileURLConstructor = { (x, y, zoom) in
             let url = "https://omnig-anyplace.omniguider.com/\(planID)/\(zoom)/\(x)/\(y).png"
-
+            
             return URL(string: url)
         }
         mapView.clear()
@@ -134,9 +134,13 @@ class MissionMapViewController: BasicViewController {
 extension MissionMapViewController: BLEManagerDelegate {
     
     func didDiscoverServiceData(_ hwid: String) {
+        
+        print("發現Beacon : \(hwid)")
+        
         guard let gridData = gridData else { return }
         
         if hwid.lowercased() == gridData.beacon?.hwid {
+            
             if gridData.passMethod == LevelType.qa.rawValue {
                 MissionAlertView.instance.configure(with: .arrival)
                 BLEManager.instance.stopScan()
@@ -149,23 +153,25 @@ extension MissionMapViewController: BLEManagerDelegate {
                     return
                 }
                 
-                MissionAlertView.instance.configure(with: .correctAnswer)
+                MissionAlertView.instance.configure(with: .touchdown)
                 BLEManager.instance.stopScan()
                 MissionAlertView.instance.onClickConfirm = {
+                    HudManager.shared.showProgress()
                     RestAPI.shared.getMissionComplete(mID, gID) { data in
                         print("結果:\(String(describing: data))")
-                        self.configAlertAction(.arrival)
+                        self.configAlertAction(.touchdown)
+                        HudManager.shared.hide()
                     }
                 }
             }
         }
     }
-
+    
     func configAlertAction(_ type: MLAlertViewType) {
+        
         MissionAlertView.instance.mlParentView.removeFromSuperview()
         
         if type == .arrival, let gridData = gridData {
-            print("抵達關卡")
             Router.shared.navigationToQusetion(self, data: gridData)
         } else {
             Router.shared.backToMissionLevel(self)
@@ -182,15 +188,15 @@ extension MissionMapViewController: CLLocationManagerDelegate {
         }
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locations.first else { return }
-//        let userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.latitude)
-//        let bundle = Bundle(for: MissionMapViewController.self)
-//        let marker = GMSMarker(position: userLocation)
-//        marker.icon = UIImage(named: "userLocation", bundle: bundle)
-//        marker.map = mapView
-//
-//    }
+    //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //        guard let location = locations.first else { return }
+    //        let userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.latitude)
+    //        let bundle = Bundle(for: MissionMapViewController.self)
+    //        let marker = GMSMarker(position: userLocation)
+    //        marker.icon = UIImage(named: "userLocation", bundle: bundle)
+    //        marker.map = mapView
+    //
+    //    }
 }
 
 extension MissionMapViewController: GMSMapViewDelegate {
@@ -198,7 +204,6 @@ extension MissionMapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         VibrationFeedbackManager.shared.playVibration()
-        
         
         if let data = gridData {
             Router.shared.navigationToAwardInfo(self, infoType: .levelIntroduction, gridData: data, ticketData: nil, numberIndex: markerIndex)

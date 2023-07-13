@@ -9,13 +9,13 @@ import UIKit
 
 @objc public class Router: NSObject {
     
-    public static let shared = Router()
+    @objc public static let shared = Router()
     
     private var window: UIWindow?
     
     private override init() {}
     
-    public func startApp(_ vc: UIViewController) {
+    @objc public func startApp(_ vc: UIViewController) {
         guard let mainVC = UIStoryboard(name: "MainPage", bundle: Configs.Bunlde()).instantiateInitialViewController() else {
             return
         }

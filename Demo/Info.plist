@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>取用藍牙進行掃描</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>HakaExpoApp相簿權限取用</string>
+	<key>NSCameraUsageDescription</key>
+	<string>HakaExpoApp相機權限取用</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

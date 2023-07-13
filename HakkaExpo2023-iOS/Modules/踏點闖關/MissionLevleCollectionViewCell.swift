@@ -19,8 +19,6 @@ class MissionLevleCollectionViewCell: UICollectionViewCell {
 
     func configure(with nineGrid: NineGrid, levelNumber: Int) {
         
-        print("關卡數:\(levelNumber)")
-        
         let bundle = Bundle(for: MissionLevleCollectionViewCell.self)
         
 //        guard let levelID = nineGrid.id else { return }

@@ -24,14 +24,20 @@ class MissionLevelViewController: BasicViewController {
     
     var missionLevelViewModel: MissionLevelViewModel?
     
+    var awardTicketViewModel: AwardTicketViewModel?
+    
     var gridInfoData: GridInfoData?
     
     var nineGridData: NineGrid?
     
+    var ticketData: TicketData?
+
     var numberSequence: [Int] = []
     
     var markerNumber: Int?
-
+    
+    lazy var dispatchGroup = DispatchGroup()
+    
     private let spacing: CGFloat = 10.0
     private let cellIdentifier = Configs.CellNames.missionLevleCollectionViewCell
  
@@ -40,17 +46,30 @@ class MissionLevelViewController: BasicViewController {
         super.viewDidLoad()
         
         setupUI()
-        setupCollectionView()
+        self.setupCollectionView()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        guard let data = missoinInfoData else { return }
-        self.setupTitleView(with: data)
-        missionLevelViewModel = MissionLevelViewModel(missionID: data.mID!)
+        var missionID = ""
+        
+        if let data = missoinInfoData {
+            missionID = data.mID!
+            UserDefaults.standard.set(missionID, forKey: K.missionID)
+            self.setupTitleView(with: data)
+        } else {
+            missionID = UserDefaults.standard.value(forKey: K.missionID) as! String
+        }
+        
+        missionLevelViewModel = MissionLevelViewModel(missionID: missionID)
         missionLevelViewModel?.observers.append(self)
-        UserDefaults.standard.set(data.mID, forKey: K.missionID)
+        //        awardTicketViewModel = AwardTicketViewModel()
+        //        awardTicketViewModel?.observers.append(self)
     }
     
     private func setupUI() {
@@ -61,7 +80,6 @@ class MissionLevelViewController: BasicViewController {
         self.missionBackgroundView.layer.cornerRadius = 20
         self.confirmButton.layer.cornerRadius = 12
         self.navigationItem.title = "任務關卡"
-       
     }
     
     private func setupTitleView(with data: MissionInfoData) {
@@ -85,17 +103,38 @@ class MissionLevelViewController: BasicViewController {
         guard let data = missionLevelViewModel?.getGridInfo() else { return }
         Router.shared.navigationToMissionMap(self, gridInfoData: data, gridData: nil, isFinding: false, markerNumber: markerNumber ?? 1)
     }
+    
+    @IBAction func confirmButtonClicked(_ sender: UIButton) {
+        Router.shared.navigationToAwardInfo(self, infoType: .awardInformation, gridData: nil, ticketData: ticketData, numberIndex: nil)
+    }
+}
+
+extension MissionLevelViewController: AwardTicketViewModelObserver {
+    
+    func awardTicketUpdated(_ tickets: [String]) {
+        guard let mID = UserDefaults.standard.value(forKey: K.missionID) else { return }
+        guard let ticketData = awardTicketViewModel?.getItem(with: mID as! String) else { return }
+        self.ticketData = ticketData
+        if ticketData.rwsEnabled == RwsEnabledStates.done.rawValue {
+            confirmButton.setTitle("獎勵已領取", for: .normal)
+            confirmButton.backgroundColor = .lightGray
+            confirmButton.isEnabled = false
+        }
+    }
 }
 
 extension MissionLevelViewController: MissionLevelViewModelObserver {
     
     func missionLevelItemsUpdated(_ levelItems: [String], _ isFinshed: Bool) {
-        DispatchQueue.main.async {
-            self.missionLevelCollectionView.reloadData()
-            self.confirmButton.backgroundColor = isFinshed ? Configs.Colors.buttonOrange : UIColor.lightGray
-        }
+        self.missionLevelCollectionView.reloadData()
+        self.confirmButton.setTitle("領取獎勵", for: .normal)
+        self.confirmButton.backgroundColor = isFinshed ? Configs.Colors.buttonOrange : UIColor.lightGray
+        self.confirmButton.isEnabled = isFinshed ? true : false
+        self.awardTicketViewModel = AwardTicketViewModel()
+        self.awardTicketViewModel?.observers.append(self)
     }
 }
+
 
 extension MissionLevelViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -139,10 +178,10 @@ extension MissionLevelViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5 //左右 中间间隙
+        return 5 //左右
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5 //上下 中间间隙
+        return 5 //上下 
     }
 }

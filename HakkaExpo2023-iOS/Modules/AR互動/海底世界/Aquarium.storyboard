@@ -46,6 +46,7 @@
                     </view>
                     <connections>
                         <outlet property="arView" destination="GbY-no-bDP" id="do9-W6-un7"/>
+                        <outlet property="fishButton" destination="WJO-38-3i1" id="bKe-kW-QF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

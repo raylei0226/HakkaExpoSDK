@@ -27,10 +27,10 @@ class AwardTicketTableViewCell: UITableViewCell {
     @IBOutlet weak var awardStatusLabel: UILabel!
     
     func configure(with data: TicketData) {
-        
+                
         let bundle = Bundle(for: MissionViewController.self)
         let url = URL(string: data.mImg!)
-        let image = (data.rwsEnabled != RwsEnabledStates.done.rawValue) ? UIImage(named: "awardTicket", in:  bundle, compatibleWith: nil) : UIImage(named: "awardTicket_gray", in:  bundle, compatibleWith: nil)
+        let image = (data.rwsEnabled == RwsEnabledStates.none.rawValue) ? UIImage(named: "awardTicket", in:  bundle, compatibleWith: nil) : UIImage(named: "awardTicket_gray", in:  bundle, compatibleWith: nil)
         
         awardTicketImageView.image = image
         self.isUserInteractionEnabled = (data.rwsEnabled == "Done") ? false : true

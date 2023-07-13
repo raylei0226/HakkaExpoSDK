@@ -42,7 +42,6 @@ enum MapDataType {
 
 enum MLAlertViewType {
     case arrival
-    case notYeyArrived
     case correctAnswer
     case receivedTheReward
     case touchdown
@@ -58,6 +57,12 @@ enum MissionApiType: String {
     case mission = "mission"
     case reward = "reward"
 }
+
+enum ModelFileFormat: String {
+    case scn = "scn"
+    case glb = "glb"
+}
+
 
 struct Configs {
     
@@ -100,14 +105,11 @@ struct Configs {
         static let clownfish = "clownfish"
         static let doubleSaddle = "doubleSaddle"
         static let greenSeaTurtle = "greenSeaTurtle"
-        static let mantaRay = "mantaRay"
         static let moonJellyfish = "moonJellyfish"
-        static let powBTang = "powBTang"
         static let stingray = "stingray"
         static let whaleSwim = "whale_swim"
         static let yellowTang = "yellowTang"
     }
-    
     
     struct Basic {
         static let backgroundImage = "themeBackground"
@@ -193,4 +195,6 @@ struct K {
     static let errorMessage = "處理時發生錯誤，請重新嘗試"
     static let missionID = "m_id"
     static let gridID = "ng_id"
+    static let camera = "camera"
+    static let fishButton = "fishButton"
 }

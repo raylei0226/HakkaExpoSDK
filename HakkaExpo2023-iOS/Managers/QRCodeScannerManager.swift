@@ -52,7 +52,7 @@ class QRCodeScannerManager: NSObject {
             
             self.setupBoxPic(at: view)
             self.setupLabel(at: view)
-//
+            //
             self.startSession()
             
         } catch {
@@ -67,9 +67,9 @@ class QRCodeScannerManager: NSObject {
     }
     
     func stopScan() {
-          captureSession?.stopRunning()
-          previewLayer?.removeFromSuperlayer()
-      }
+        captureSession?.stopRunning()
+        previewLayer?.removeFromSuperlayer()
+    }
     
     private func setupBoxPic(at view: UIView) {
         imageView.backgroundColor = .clear
@@ -108,13 +108,22 @@ class QRCodeScannerManager: NSObject {
 }
 
 extension QRCodeScannerManager: AVCaptureMetadataOutputObjectsDelegate {
-        
-        func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-            if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
-               let stringValue = metadataObject.stringValue {
-                delegate?.qrCodeScanned(result: stringValue)
-                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-                captureSession?.stopRunning()
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
+           let jsonString = metadataObject.stringValue {
+            if let jsonData = jsonString.data(using: .utf8) {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any],
+                       let verifyCode = json["verify_code"] as? String {
+                        delegate?.qrCodeScanned(result: verifyCode)
+                        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+                        captureSession?.stopRunning()
+                    }
+                } catch {
+                    print("QR解析失敗")
+                }
             }
         }
+    }
 }

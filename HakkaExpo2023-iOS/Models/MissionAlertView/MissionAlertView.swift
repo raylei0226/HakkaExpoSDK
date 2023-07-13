@@ -67,7 +67,7 @@ class MissionAlertView: UIView {
           mlSuccessLabel.text = viewModel.secondMessage ?? ""
           
           switch viewModel.alertType {
-          case .arrival, .notYeyArrived, .correctAnswer:
+          case .arrival, .correctAnswer, .touchdown:
               mlImageView.isHidden = true
               mlSuccessLabel.isHidden = true
           case .receivedTheReward:

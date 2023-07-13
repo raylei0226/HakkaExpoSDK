@@ -33,7 +33,6 @@ class AwardTicketViewModel {
             guard let data = data else {
                 HudManager.shared.showError(withMessage: K.errorMessage)
                 return }
-            print("獎勵:\(data)")
             self.itemsData = data
             self.updateAwardItems()
             HudManager.shared.hide()
@@ -52,11 +51,21 @@ class AwardTicketViewModel {
             observer.awardTicketUpdated(awardItems)
         }
     }
-        
+    
     func getItem(at index: Int) -> TicketData {
         
         guard index >= 0 && index < awardItems.count else { return TicketData()}
         
         return (itemsData?.data?[index])!
+    }
+    
+    func getItem(with missionID: String) -> TicketData {
+        
+        for i in itemsData!.data! {
+            if i.mID == missionID {
+                return i
+            }
+        }
+        return TicketData()
     }
 }

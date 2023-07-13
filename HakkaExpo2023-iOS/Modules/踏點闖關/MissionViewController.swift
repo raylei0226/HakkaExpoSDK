@@ -84,7 +84,6 @@ extension MissionViewController: AwardTicketViewModelObserver, MissionViewModelO
     }
     
     func missionItemsUpdated(_ missions: [String]) {
-        print("Missions:\(missions)")
         DispatchQueue.main.async {
             self.missionTableView.reloadData()
         }

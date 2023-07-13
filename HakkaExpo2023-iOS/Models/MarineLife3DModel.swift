@@ -8,48 +8,54 @@
 import SceneKit
 import GLTFSceneKit
 
-
 class MarineLife3DModel {
     
     private let scene: SCNScene
     
-    init(modelName: String) {
-        
-        
+    init(scene: SCNScene) {
+        self.scene = scene
+    }
+    
+    class func fromGLB(modelName: String) -> MarineLife3DModel? {
         guard let bundle = Bundle(identifier: "omniguider.HakkaExpo2023-iOS.com") else {
-            fatalError("無法找到指定的bundle")
+            fatalError("無法找到指定的 bundle")
         }
         
         guard let url = bundle.url(forResource: modelName, withExtension: "glb", subdirectory: "art.scnassets/under_the_sea") else {
-            fatalError("讀取GLB檔案時出錯: \(modelName)")
+            fatalError("讀取 GLB 檔案時出錯: \(modelName)")
         }
         
         do {
             let sceneSource = GLTFSceneSource(url: url)
-            scene = try sceneSource.scene()
-            
+            let scene = try sceneSource.scene()
+            return MarineLife3DModel(scene: scene)
         } catch {
-            fatalError("解析GLB檔案失敗: \(error.localizedDescription)")
+            fatalError("解析 GLB 檔案失敗: \(error.localizedDescription)")
+        }
+    }
+    
+    class func fromSCN(modelName: String) -> MarineLife3DModel? {
+        guard let bundle = Bundle(identifier: "omniguider.HakkaExpo2023-iOS.com") else {
+            fatalError("無法找到指定的 bundle")
+        }
+        
+        guard let url = bundle.url(forResource: modelName, withExtension: "scn", subdirectory: "art.scnassets/fishDaeFiles") else {
+            fatalError("讀取 SCN 檔案時出錯: \(modelName)")
+        }
+        
+        do {
+            if let sceneSource = SCNSceneSource(url: url, options: nil) {
+                let scene = try sceneSource.scene(options: nil)
+                return MarineLife3DModel(scene: scene)
+            } else {
+                return nil
+            }
+        } catch {
+            fatalError("解析檔案失敗: \(modelName), \(error.localizedDescription)")
         }
     }
     
     func getNode() -> SCNNode? {
-        
-        let node = scene.rootNode
-        
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light?.type = .omni
-        lightNode.light?.color = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0.4950331126)
-        lightNode.position = SCNVector3(0, 10, 0)
-        node.addChildNode(lightNode)
-        
-//        let material = SCNMaterial()
-//        material.lightingModel = .physicallyBased
-//        material.metalness.contents = 0.8
-//        material.roughness.contents = 0.2
-//        node.geometry?.materials = [material]
-        
-        return node
+        return scene.rootNode
     }
 }

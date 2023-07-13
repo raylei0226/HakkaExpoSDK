@@ -66,6 +66,7 @@ class AwardInfoViewController: BasicViewController {
             guard let gridData = gridData else { return }
             
             titleLabel.text = gridData.title
+            missionDataLabel.text = ""
             awardImageView.sd_setImage(with: URL(string: gridData.image ?? ""), placeholderImage: Configs.setupPlaceholderImage(in: AwardInfoViewController.self))
             levelInfoLabel.text = gridData.description
             noticeImageView.image = isAwardInformation ? warningImage : lightBallImage
@@ -96,10 +97,16 @@ class AwardInfoViewController: BasicViewController {
 extension AwardInfoViewController: QRCodeScannerDelegate {
 
     func qrCodeScanned(result: String) {
-        print("掃描結果:\(result)")
-        let model = MissionAlertViewModel(alertType: .receivedTheReward)
-        MissionAlertView.instance.configure(with: model)
-        MissionAlertView.instance.showAlert(with: .receivedTheReward)
+        guard result == ticketData?.verifyCode else {
+            HudManager.shared.showError(withMessage: "領獎失敗，QRCode不正確")
+            return
+        }
+        guard let mID = UserDefaults.standard.value(forKey: K.missionID) else { return }
+        RestAPI.shared.getMissionReward(mID as! String) { data in
+            if data?.errorMessage == "" {
+                Router.shared.backToMissionLevel(self)
+            }
+        }
     }
 
     func qrCodeScanFailed(error: Error) {

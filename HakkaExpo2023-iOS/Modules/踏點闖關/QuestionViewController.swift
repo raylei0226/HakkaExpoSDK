@@ -25,6 +25,8 @@ class QuestionViewControler: BasicViewController {
     
     var answer: String?
     
+    var option: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,7 @@ class QuestionViewControler: BasicViewController {
         guard let data = nineGrid else { return }
         
         print("Data:\(data)")
-       
+        
         setupUI(data)
     }
     
@@ -57,18 +59,55 @@ class QuestionViewControler: BasicViewController {
         self.answer = question?.answer
     }
     
-    @IBAction func optionsClicked(_ sender: CustomToggleButton) {
+    private func checkAnswer(option: String) {
         
-        print("TAG:\(sender.tag)")
+        if self.option == self.answer {
+            guard let mID = UserDefaults.standard.value(forKey: K.missionID), let gID = nineGrid?.id else { return }
+            RestAPI.shared.getMissionComplete(mID as! String, gID) { data in
+                print("通關結果:\(String(describing: data?.data))")
+                Router.shared.backToMissionLevel(self)
+            }
+            
+        } else {
+            
+            guard let tip = nineGrid?.question?.tip else { return }
+            
+            let alert = UIAlertController(title: "關卡提示", message: "💡" + tip, preferredStyle: .alert)
+            alert.modalPresentationStyle = .popover
+            
+            if #available(iOS 13.0, *) {
+                alert.overrideUserInterfaceStyle = .light
+            } else {
+                // Fallback on earlier versions
+            }
+            
+            let action = UIAlertAction(title: "知道了！", style: .default) { action in
+                self.option = nil
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    @IBAction func optionsClicked(_ sender: UIButton) {
+        
+        if sender.tag == 55 {
+            guard let option = option else {
+                HudManager.shared.showError(withMessage: "請選擇答案")
+                return
+            }
+            self.checkAnswer(option: option)
+        }
         
         guard optionsButtonArray != nil else { return }
         
         for i in optionsButtonArray! {
             if i == sender {
                 i.toogleState = .selected
+                self.option = String(i.tag)
             } else {
                 i.toogleState = .unselect
             }
         }
-   }
+    }
 }

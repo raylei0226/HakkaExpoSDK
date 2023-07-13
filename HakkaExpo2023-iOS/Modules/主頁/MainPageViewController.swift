@@ -10,9 +10,10 @@ import UIKit
 import SDWebImage
 import SDWebImageWebPCoder
 import Alamofire
+import Firebase
 
 
-@objc public class MainPageViewController: UIViewController {
+ class MainPageViewController: UIViewController {
 
     @IBOutlet weak var carouselCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -27,12 +28,13 @@ import Alamofire
     
     private var timer: Timer?
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         //取得裝置DeviceID
         let uuid = DeviceIDManager.shared.getDeviceID()
-        print("裝置ID: \(uuid)")
+        
+        GMSServices.provideAPIKey("AIzaSyCmLqkyCvz3QtQ-1uw7xPQX0TR1K71QZsA")
         
         SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
         
@@ -44,11 +46,23 @@ import Alamofire
         carouselViewModel.observers.append(self)
     }
 
-    override public func viewWillAppear(_ animated: Bool) {
+     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
     
+     
+     private func setupFBC() {
+         let currentBundle = Bundle(for: MainPageViewController.self)
+         guard
+             let filePath = currentBundle.path(forResource: "GoogleService-Info", ofType: "plist"),
+//             let filePath = currentBundle.path(forResource: "Hakka-GoogleService-Info", ofType: "plist"),
+             let fileopts = FirebaseOptions(contentsOfFile: filePath)
+         else {
+             return
+         }
+         FirebaseApp.configure(options: fileopts)
+     }
    
     private func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
@@ -95,7 +109,7 @@ import Alamofire
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-        
+
         //tag 1:前往官網 2:踏點闖關 3:360環景 4:智慧導引 5:AR互動 6:退出 7:更多
         switch sender.tag {
             
