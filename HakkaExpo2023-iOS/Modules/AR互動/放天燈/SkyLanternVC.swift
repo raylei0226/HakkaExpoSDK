@@ -48,6 +48,11 @@ class SkyLanternVC: UIViewController {
         checkResources()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        clear()
+    }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         inputTextView.resignFirstResponder()
     }
@@ -67,7 +72,7 @@ class SkyLanternVC: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SkyLanternARVC") as? SkyLanternARVC {
             vc.userImage = image
             navigationController?.pushViewController(vc, animated: true)
-            clear()
+//            clear()
         }
     }
     
@@ -186,7 +191,7 @@ extension SkyLanternVC {
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             return newImage
-        }else if currentType == .text {
+        } else if currentType == .text {
             let textView = UIView(frame: CGRect(x: 0, y: 0, width: inputTextView.bounds.height, height: inputTextView.bounds.width))
             textToCustomView(textView)
 //            textToVerticalLabel(textView)
@@ -283,6 +288,7 @@ extension SkyLanternVC {
 
 //MARK: - Resources
 extension SkyLanternVC {
+    
     private func initResources() {
         SkyLanternResources.shared.setup()
     }
@@ -292,7 +298,7 @@ extension SkyLanternVC {
             indicatorView.isHidden = true
             view.isUserInteractionEnabled = true
             NotificationCenter.default.removeObserver(self, name: .didSkyLanternResourcesUpdate, object: nil)
-        }else {
+        } else {
             indicatorView.isHidden = false
             view.isUserInteractionEnabled = false
             NotificationCenter.default.addObserver(self, selector: #selector(checkResources), name: .didSkyLanternResourcesUpdate, object: nil)

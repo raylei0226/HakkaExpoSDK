@@ -25,7 +25,6 @@ enum Asset: String {
     case back = "back"
     case userLocation = "user_location"
     case poiBackground = "poi_background"
-    
     var image: UIImage? {return UIImage(named: rawValue, in: Configs.Bunlde(), compatibleWith: nil)
     }
 }
@@ -83,6 +82,18 @@ struct Configs {
     static func setupPlaceholderImage(in vcClass: AnyClass) -> UIImage {
         return UIImage(named: "pic2", in: Bundle(for: vcClass), compatibleWith: nil)!
     }
+
+    static let fbKeyForDemo = "AIzaSyDg_0j0HxK-CNlL00Ovx6BVhCIpGzzUXvs"
+    
+    static let fbKeyForTaoyuanTest = "AIzaSyCz0F623yTaHmLyI_dSOu0fVWVsqFTnHEQ"
+    
+    static let hakkaTestKey = "AIzaSyCz0F623yTaHmLyI_dSOu0fVWVsqFTnHEQ"
+    
+    static let fbPlistForDemo = "HakkaGoogleService-Info"
+    
+    static let fbPlistForTaoyuanTest = "GoogleServiceForTest-Info"
+    
+    static let hakkaTest = "GoogleService-Info-Test"
     
     //專案配色
     struct Colors {
@@ -109,6 +120,7 @@ struct Configs {
         static let stingray = "stingray"
         static let whaleSwim = "whale_swim"
         static let yellowTang = "yellowTang"
+        static let whaleBlue = "whale_blue"
     }
     
     struct Basic {
@@ -132,6 +144,28 @@ struct Configs {
         static let mapWebsite = "https://www.hakkaexpo2023.tw/facility/fourPlace"
         static let anyplaceDomin = "https://omnig-anyplace.omniguider.com/"
     }
+    
+    struct FireBaseModel {
+        var plistName: String
+        var apiKey: String
+    }
+    
+    static func configBundelID(with id: String) -> FireBaseModel {
+        
+        var firebaseModel: FireBaseModel!
+        
+        if id.contains("demo") {
+            firebaseModel = FireBaseModel(plistName: self.fbPlistForDemo, apiKey: self.fbKeyForDemo)
+            return firebaseModel
+        } else if id.contains("HakkaTest") {
+            firebaseModel = FireBaseModel(plistName: self.hakkaTest, apiKey: self.hakkaTestKey)
+            return firebaseModel
+        } else {
+            firebaseModel = FireBaseModel(plistName: self.fbPlistForTaoyuanTest, apiKey: fbKeyForTaoyuanTest)
+            return firebaseModel
+        }
+    }
+    
     
     static let kMapStyle = "[" +
       "{" +
@@ -197,4 +231,6 @@ struct K {
     static let gridID = "ng_id"
     static let camera = "camera"
     static let fishButton = "fishButton"
+    static let googleServicePlist = "googleServicePlist"
+    static let googleServiceKey = "googleServiceKey"
 }

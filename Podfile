@@ -10,30 +10,31 @@ target 'HakkaExpo2023-iOS' do
   pod 'IndoorAtlas'
   pod 'SDWebImageWebPCoder'
 
-  pod 'ARCore/Geospatial'
   pod 'Firebase'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'FirebaseCore'
   pod 'FirebaseAnalytics'
-  pod 'FirebaseCrashlytics'
 
+  pod 'ARCore/Geospatial'
   pod 'GeoJSONSerialization'
   pod 'GoogleMaps'
   pod 'ClusterKit'
-  
-  
+
+
 end
 
 target 'Demo' do
   
   use_frameworks!
   
-  
 end
 
 post_install do |installer|
     applicationTargets = [
         'Pods-Demo',
+#        'Pods-Taoyuan',
+#        'Pods-HakkaTest',
     ]
     libraryTargets = [
     'Pods-HakkaExpo2023-iOS',

@@ -32,7 +32,9 @@
 		3B2DEF0B2A4EA712006F7321 /* MissionMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */; };
 		3B2DEF0D2A5267A9006F7321 /* GetFloorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0C2A5267A9006F7321 /* GetFloorData.swift */; };
 		3B2DEF0F2A5299F0006F7321 /* VibrationFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0E2A5299F0006F7321 /* VibrationFeedbackManager.swift */; };
-		3B3F1AD82A5F98C500F8874C /* HakkaExpoSDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F1AD72A5F98C500F8874C /* HakkaExpoSDK-Info.plist */; };
+		3B3F1AE62A6531C800F8874C /* HakkaGoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B80C30D2A32FF0E008A12E2 /* HakkaGoogleService-Info.plist */; };
+		3B3F1AE72A6531CA00F8874C /* GoogleServiceForTest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F1ADD2A6136BE00F8874C /* GoogleServiceForTest-Info.plist */; };
+		3B3F1B2F2A666B8300F8874C /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F1B2E2A666B8300F8874C /* GoogleService-Info-Test.plist */; };
 		3B43CBE42A3FFDE6000D06FE /* MissionStatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */; };
 		3B43CBE62A4025DE000D06FE /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CBE52A4025DD000D06FE /* ResponseData.swift */; };
 		3B43CC122A41AF99000D06FE /* CustomToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */; };
@@ -43,7 +45,6 @@
 		3B80C3032A31AC3D008A12E2 /* MissionAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80C3022A31AC3D008A12E2 /* MissionAlertViewModel.swift */; };
 		3B80C30A2A31D5E8008A12E2 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80C3092A31D5E8008A12E2 /* MissionViewController.swift */; };
 		3B80C30C2A32B965008A12E2 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80C30B2A32B965008A12E2 /* CustomSegmentedControl.swift */; };
-		3B80C30E2A32FF0E008A12E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B80C30D2A32FF0E008A12E2 /* GoogleService-Info.plist */; };
 		3B82F48D2A2EE6F600B1C805 /* UIImage + Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */; };
 		3B82F4A82A2F0C1D00B1C805 /* SkyLanternVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F4992A2F0C1D00B1C805 /* SkyLanternVC.swift */; };
 		3B82F4A92A2F0C1D00B1C805 /* SkyLanternCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82F49A2A2F0C1D00B1C805 /* SkyLanternCanvasView.swift */; };
@@ -224,7 +225,8 @@
 		3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapViewController.swift; sourceTree = "<group>"; };
 		3B2DEF0C2A5267A9006F7321 /* GetFloorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFloorData.swift; sourceTree = "<group>"; };
 		3B2DEF0E2A5299F0006F7321 /* VibrationFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationFeedbackManager.swift; sourceTree = "<group>"; };
-		3B3F1AD72A5F98C500F8874C /* HakkaExpoSDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HakkaExpoSDK-Info.plist"; sourceTree = "<group>"; };
+		3B3F1ADD2A6136BE00F8874C /* GoogleServiceForTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleServiceForTest-Info.plist"; sourceTree = "<group>"; };
+		3B3F1B2E2A666B8300F8874C /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
 		3B43CBE32A3FFDE6000D06FE /* MissionStatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStatusData.swift; sourceTree = "<group>"; };
 		3B43CBE52A4025DD000D06FE /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		3B43CC112A41AF99000D06FE /* CustomToogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToogleButton.swift; sourceTree = "<group>"; };
@@ -235,7 +237,7 @@
 		3B80C3022A31AC3D008A12E2 /* MissionAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionAlertViewModel.swift; sourceTree = "<group>"; };
 		3B80C3092A31D5E8008A12E2 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
 		3B80C30B2A32B965008A12E2 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
-		3B80C30D2A32FF0E008A12E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3B80C30D2A32FF0E008A12E2 /* HakkaGoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HakkaGoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B82F48C2A2EE6F600B1C805 /* UIImage + Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Bundle.swift"; sourceTree = "<group>"; };
 		3B82F4992A2F0C1D00B1C805 /* SkyLanternVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternVC.swift; sourceTree = "<group>"; };
 		3B82F49A2A2F0C1D00B1C805 /* SkyLanternCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyLanternCanvasView.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 		3BAF02C22A17091900E514E1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF02F62A174CB500E514E1 /* 主頁 */,
 				3BAF03702A2ECD3C00E514E1 /* AR選單 */,
 				3BAF033D2A24A0AA00E514E1 /* Basic */,
 				3BAF03172A1C61EC00E514E1 /* Venue */,
@@ -544,7 +547,6 @@
 				3BAF030D2A1C4FBC00E514E1 /* 智慧導引 */,
 				3BAF030C2A1C4FA200E514E1 /* 踏點闖關 */,
 				3BAF03092A1C4F1700E514E1 /* 360環景 */,
-				3BAF02F62A174CB500E514E1 /* 主頁 */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -599,8 +601,9 @@
 		3BAF02C62A170BA600E514E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3B80C30D2A32FF0E008A12E2 /* GoogleService-Info.plist */,
-				3B3F1AD72A5F98C500F8874C /* HakkaExpoSDK-Info.plist */,
+				3B80C30D2A32FF0E008A12E2 /* HakkaGoogleService-Info.plist */,
+				3B3F1ADD2A6136BE00F8874C /* GoogleServiceForTest-Info.plist */,
+				3B3F1B2E2A666B8300F8874C /* GoogleService-Info-Test.plist */,
 				3BAF03242A1C8FB400E514E1 /* Media.xcassets */,
 				3BAF03262A1C8FCC00E514E1 /* art.scnassets */,
 			);
@@ -949,8 +952,7 @@
 				3BAF02B22A1706B300E514E1 /* Sources */,
 				3BAF02B32A1706B300E514E1 /* Frameworks */,
 				3BAF02B42A1706B300E514E1 /* Resources */,
-				34EDA8A961D1377A48D49569 /* [CP] Copy Pods Resources */,
-				3B802FDF2A5F952A00D5B46F /* ShellScript */,
+				DAC492C4980AAC4CD5F145AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -977,8 +979,8 @@
 				3BAF02DA2A174A0A00E514E1 /* Frameworks */,
 				3BAF02DB2A174A0A00E514E1 /* Resources */,
 				3BAF02F52A174AD900E514E1 /* Embed Frameworks */,
-				1549A0E7F9413BD9FE671BC0 /* [CP] Embed Pods Frameworks */,
-				3973FD7F6027D7524999F2D4 /* [CP] Copy Pods Resources */,
+				F76FD830A728C2CC4C25F0A9 /* [CP] Embed Pods Frameworks */,
+				1A461F8173DD560607BADC52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1043,12 +1045,13 @@
 				3BE2905C2A54FAAC00C522B0 /* NavigationGuide.storyboard in Resources */,
 				3BAF02FA2A174CE700E514E1 /* MainPage.storyboard in Resources */,
 				3BAF03122A1C532F00E514E1 /* Panorama.storyboard in Resources */,
+				3B3F1AE72A6531CA00F8874C /* GoogleServiceForTest-Info.plist in Resources */,
 				3B80C3002A308854008A12E2 /* MissionAlertView.xib in Resources */,
 				3BAF03272A1C8FCC00E514E1 /* art.scnassets in Resources */,
 				3B238FC82A385E5800881BBC /* MissionLevleCollectionViewCell.xib in Resources */,
+				3B3F1B2F2A666B8300F8874C /* GoogleService-Info-Test.plist in Resources */,
 				3BE290622A54FAAC00C522B0 /* PoiDetailInfoView.xib in Resources */,
 				3BE2905D2A54FAAC00C522B0 /* HakkaSearch.storyboard in Resources */,
-				3B80C30E2A32FF0E008A12E2 /* GoogleService-Info.plist in Resources */,
 				3BAF03722A2ECD6600E514E1 /* ARMenu.storyboard in Resources */,
 				3BE2905A2A54FAAC00C522B0 /* NavigationStateView.xib in Resources */,
 				3BE2905F2A54FAAC00C522B0 /* Map.storyboard in Resources */,
@@ -1058,8 +1061,8 @@
 				3B238FCC2A394DCC00881BBC /* MissionTableViewCell.xib in Resources */,
 				3BAF03162A1C61DF00E514E1 /* VenueTableViewCell.xib in Resources */,
 				3BE290822A54FAAC00C522B0 /* Assets.xcassets in Resources */,
-				3B3F1AD82A5F98C500F8874C /* HakkaExpoSDK-Info.plist in Resources */,
 				3BE2905B2A54FAAC00C522B0 /* NaviMain.storyboard in Resources */,
+				3B3F1AE62A6531C800F8874C /* HakkaGoogleService-Info.plist in Resources */,
 				3BE290602A54FAAC00C522B0 /* PoiDetailTitleView.xib in Resources */,
 				3B82F4AE2A2F0C1D00B1C805 /* SkyLantern.storyboard in Resources */,
 				3B238FBC2A36B50E00881BBC /* AwardTicketTableViewCell.xib in Resources */,
@@ -1084,41 +1087,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1549A0E7F9413BD9FE671BC0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34EDA8A961D1377A48D49569 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3973FD7F6027D7524999F2D4 /* [CP] Copy Pods Resources */ = {
+		1A461F8173DD560607BADC52 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1134,25 +1103,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3B802FDF2A5F952A00D5B46F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		8632F091F96AA428B36717AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1196,6 +1146,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAC492C4980AAC4CD5F145AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F76FD830A728C2CC4C25F0A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1496,7 +1480,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2.4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5R5U2V4497;
@@ -1536,7 +1520,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2.4;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5R5U2V4497;
 				DYLIB_COMPATIBILITY_VERSION = 1;

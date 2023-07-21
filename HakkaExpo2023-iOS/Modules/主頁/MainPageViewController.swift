@@ -27,14 +27,12 @@ import Firebase
     private var carouselViewModel =  MainPageViewModel()
     
     private var timer: Timer?
-    
+         
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //取得裝置DeviceID
-        let uuid = DeviceIDManager.shared.getDeviceID()
-        
-        GMSServices.provideAPIKey("AIzaSyCmLqkyCvz3QtQ-1uw7xPQX0TR1K71QZsA")
+        _ = DeviceIDManager.shared.getDeviceID()
         
         SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
         
@@ -48,22 +46,12 @@ import Firebase
 
      override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+         
         self.navigationController?.navigationBar.isHidden = true
+         
+        self.setupGoogleService()
     }
-    
-     
-     private func setupFBC() {
-         let currentBundle = Bundle(for: MainPageViewController.self)
-         guard
-             let filePath = currentBundle.path(forResource: "GoogleService-Info", ofType: "plist"),
-//             let filePath = currentBundle.path(forResource: "Hakka-GoogleService-Info", ofType: "plist"),
-             let fileopts = FirebaseOptions(contentsOfFile: filePath)
-         else {
-             return
-         }
-         FirebaseApp.configure(options: fileopts)
-     }
-   
+
     private func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
     }
@@ -72,6 +60,23 @@ import Firebase
         timer?.invalidate()
         timer = nil
     }
+     
+     private func setupGoogleService() {
+         
+         if let id = Bundle.main.bundleIdentifier {
+             
+             let fireBaseModel = Configs.configBundelID(with: id)
+//             let fireBaseModel = Configs.FireBaseModel(plistName: Configs.googleServiceForSDK, apiKey: Configs.fbKeyForSDK)
+             
+             print("FirModel:\(fireBaseModel)")
+             
+//             GMSServices.provideAPIKey(fireBaseModel.apiKey)
+             
+             UserDefaults.standard.set(fireBaseModel.apiKey, forKey: K.googleServiceKey)
+             UserDefaults.standard.set(fireBaseModel.plistName, forKey: K.googleServicePlist)
+             
+         }
+     }
     
     private func showWebView(_ url: String) {
         
@@ -109,7 +114,7 @@ import Firebase
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-
+//        fatalError()
         //tag 1:前往官網 2:踏點闖關 3:360環景 4:智慧導引 5:AR互動 6:退出 7:更多
         switch sender.tag {
             

@@ -77,6 +77,7 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
     }
     /**刷新GARSession的狀態*/
     private func updateLocalizationState() {
+        
         guard let earth = garFrame.earth else {return}
         guard earth.earthState == .enabled else {
             localizationState = .failed
@@ -126,7 +127,7 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
                 getImageFromStorage(with: shortKey, node: newNode)
                 scene.rootNode.addChildNode(newNode)
                 addedNodes.append(identifier)
-            }else if addedNodes.contains(identifier) && isExpired {
+            } else if addedNodes.contains(identifier) && isExpired {
                 addedNodes.removeAll(where: {$0 == identifier})
             }
         }
@@ -144,9 +145,12 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
     /**設置GARSession*/
     private func setupGARSession() {
         
+//        guard let apiKey = UserDefaults.standard.string(forKey: K.googleServiceKey) else { return }
+        let apiKey = garSession_APIKey
+      
         guard garSession == nil else {return}
         do {
-            garSession = try GARSession(apiKey: garSession_APIKey, bundleIdentifier: nil)
+            garSession = try GARSession(apiKey: apiKey, bundleIdentifier: nil)
         }catch {
             updateDebugStatus("Failed to create GARSession: \(error.localizedDescription)")
             AlertManager.showAlert(in: AlertManager.topViewController()!, message: "Failed to create GARSession: \(error.localizedDescription)")
@@ -185,7 +189,7 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
     }
     /**結束*/
     func stop() {
-        guard let secondary = FirebaseApp.app(name: "HakkaExop") else {return}
+        guard let secondary = FirebaseApp.app(name: "HakkaExpo") else {return}
         secondary.delete({result in
             print(result ? "Success" : "Fail")
         })
@@ -237,17 +241,20 @@ class SkyLanternARServiceByARCore: NSObject, SkyLanternARService {
     }
 
     private func setupFirebase() {
+        
         let currentBundle = Bundle(for: SkyLanternARServiceByARCore.self)
+        
         guard
-            FirebaseApp.app(name: "HakkaExop") == nil,
-            let filePath = currentBundle.path(forResource: "GoogleService-Info", ofType: "plist"),
+            FirebaseApp.app(name: "HakkaExpo") == nil,
+            let plist = UserDefaults.standard.string(forKey: K.googleServicePlist),
+            let filePath = currentBundle.path(forResource: plist, ofType: "plist"),
             let fileopts = FirebaseOptions(contentsOfFile: filePath)
         else {
             return
         }
-        FirebaseApp.configure(name: "HakkaExop", options: fileopts)
+        FirebaseApp.configure(name: "HakkaExpo", options: fileopts)
 
-        guard let secondary = FirebaseApp.app(name: "HakkaExop") else {
+        guard let secondary = FirebaseApp.app(name: "HakkaExpo") else {
             return
         }
         firebaseReference = Database.database(app: secondary).reference()
@@ -265,12 +272,19 @@ extension SkyLanternARServiceByARCore: ARSessionDelegate {
         userDeviceEulerAnglesY = frame.camera.eulerAngles.y
         guard
             let garSession,
-            let garFrame = try? garSession.update(frame),
+//            let garFrame = try? garSession?.update(frame),
             localizationState != .failed
         else {return}
-        update(with: garFrame)
+        
+        do {
+            let garFrame = try garSession.update(frame)
+            update(with: garFrame)
+        } catch {
+            print("GarFrameError:\(error.localizedDescription)")
+        }
     }
 }
+
 
 //MARK: - LocationService
 extension SkyLanternARServiceByARCore {

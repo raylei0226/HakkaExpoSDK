@@ -72,6 +72,19 @@ class AquariumViewController: UIViewController {
         modelScene.rootNode.addChildNode(rangeNode)
         createRandomModelsWithinRange(rangeNode)
         arView.scene = modelScene
+        cancelContentLight()
+    }
+    
+    private func cancelContentLight() {
+        // 遍歷所有物體的材質，並將其emission等屬性設置為不受燈光影響
+        arView.scene.rootNode.enumerateHierarchy { (node, _) in
+            if let geometry = node.geometry {
+                for material in geometry.materials {
+                    material.emission.contents = UIColor.clear // 或者其他你希望的顏色
+                    material.lightingModel = .constant
+                }
+            }
+        }
     }
     
     private func setupCameraButton() {
@@ -82,11 +95,14 @@ class AquariumViewController: UIViewController {
     private func setupARKit() {
         
         let configuration = ARWorldTrackingConfiguration()
+        arView.autoenablesDefaultLighting = true
+        arView.automaticallyUpdatesLighting = true
         arView.session.run(configuration)
         arView.delegate = self
         arView.delegate = self
-//        arView.autoenablesDefaultLighting = true
-        arView.antialiasingMode = .multisampling4X
+        
+        
+//        arView.antialiasingMode = .multisampling4X
     }
     
     
@@ -95,12 +111,16 @@ class AquariumViewController: UIViewController {
         let minHeight: Float = -1.0
         let maxHeight: Float = 5.0
 
-        for _ in 0..<5 {
+        for _ in 0..<8 {
             let randomHeight = Float.random(in: minHeight...maxHeight)
             let randomPosition = generateRandomPositionWithinRange(rangeNode)
             let jellyNode = createTaiangleNode(with: Configs.ModelNames.moonJellyfish)
-            jellyNode.scale = SCNVector3(0.3, 0.3, 0.3)
+            jellyNode.scale = SCNVector3(0.2, 0.2, 0.2)
             jellyNode.position = SCNVector3(x: randomPosition.x, y: randomHeight, z: randomPosition.z)
+            let light = SCNLight()
+            light.type = .spot
+            light.color = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            jellyNode.light = light
             rangeNode.addChildNode(jellyNode)
             moveNodeBackAndForth(node: jellyNode, destinationPoint: SCNVector3(jellyNode.position.x, jellyNode.position.y - 1.5, jellyNode.position.z), duration: 15.0)
         }
@@ -118,12 +138,12 @@ class AquariumViewController: UIViewController {
         
         for _ in 0..<1 {
             let randomHeight = Float.random(in: 5.5...7.0)
-            if let whaleNode = MarineLife3DModel.fromGLB(modelName: Configs.ModelNames.whaleSwim)?.getNode() {
-                whaleNode.scale = SCNVector3(1.0, 1.0, 1.0)
+            if let whaleNode = MarineLife3DModel.fromGLB(modelName: Configs.ModelNames.whaleBlue)?.getNode() {
+                whaleNode.scale = SCNVector3(1.5, 1.5, 1.5)
                 whaleNode.position = SCNVector3(x: -20, y: randomHeight, z: -30)
                 let rotateAction = SCNAction.rotateBy(x: 0, y: .pi / 2, z: 0, duration: 3.0)
                 rangeNode.addChildNode(whaleNode)
-                moveNodeToTargetAndBack(node: whaleNode, targetPosition: SCNVector3(x: 35, y: 0, z: 0), addAction: rotateAction, duration: 40, rotateDuration: 8)
+                moveNodeToTargetAndBack(node: whaleNode, targetPosition: SCNVector3(x: 35, y: 0, z: 0), addAction: rotateAction, duration: 35, rotateDuration: 5)
             }
         }
         
@@ -133,13 +153,13 @@ class AquariumViewController: UIViewController {
                 whaleNode2.position = SCNVector3(40, 40, 50)
                 let rotateAction = SCNAction.rotateBy(x: 0, y: -90, z: 0, duration: 3.0)
                 rangeNode.addChildNode(whaleNode2)
-                moveNodeToTargetAndBack(node: whaleNode2, targetPosition: SCNVector3(x: -40, y: 40, z: 0), addAction: rotateAction, duration: 40, rotateDuration: 8)
+                moveNodeToTargetAndBack(node: whaleNode2, targetPosition: SCNVector3(x: -40, y: 40, z: 0), addAction: rotateAction, duration: 35, rotateDuration: 5)
             }
         }
         
         for _ in 0..<25 {
 //            for _ in 0..<15 {
-            let randomHeight = Float.random(in: 0.0...4.0)
+            let randomHeight = Float.random(in: 0.0...3.0)
             let randomPosition = generateRandomPositionWithinRange(rangeNode)
             if let stingrayNode = MarineLife3DModel.fromGLB(modelName: Configs.ModelNames.stingray)?.getNode() {
                 stingrayNode.scale = SCNVector3(x: 2.5, y: 2.5, z: 2.5)
@@ -147,7 +167,7 @@ class AquariumViewController: UIViewController {
                 rangeNode.addChildNode(stingrayNode)
                 moveNodeToTargetAndBack(node: stingrayNode, targetPosition: SCNVector3(x: generateRandomPositionWithinRange(rangeNode).x,
                                                                                         y: generateRandomPositionWithinRange(rangeNode).y,
-                                                                                       z: 30), addAction: nil, duration: 30, rotateDuration: 5)
+                                                                                       z: 25), addAction: nil, duration: 25, rotateDuration: 3)
             }
         }
         
@@ -210,7 +230,7 @@ class AquariumViewController: UIViewController {
                 groupfishNode.position = SCNVector3(x: -10, y: randimHeight, z: 0)
                 rangeNode.addChildNode(groupfishNode)
                 let rotateAction = SCNAction.rotateBy(x: 0, y: (.pi / 2 ), z: 0, duration: 1.0)
-                moveNodeToTargetAndBack(node: groupfishNode, targetPosition: SCNVector3(x: 10, y: (groupfishNode.position.y), z: Float.random(in: 3.0...5.0)), addAction: rotateAction, duration: 30, rotateDuration: 1.5)
+                moveNodeToTargetAndBack(node: groupfishNode, targetPosition: SCNVector3(x: 10, y: (groupfishNode.position.y), z: Float.random(in: 3.0...5.0)), addAction: rotateAction, duration: 25, rotateDuration: 1.5)
             }
         }
     }
@@ -219,8 +239,8 @@ class AquariumViewController: UIViewController {
     private func generateRandomPositionWithinRange(_ rangeNode: SCNNode) -> SCNVector3 {
         
         let randomAngle = Float.random(in: 0...(2 * Float.pi))
-        let randomRadius = Float.random(in: 0...10)
-        let randomY = Float.random(in: 0...5)
+        let randomRadius = Float.random(in: 1...10)
+        let randomY = Float.random(in: -1...5)
         
         let x = randomRadius * cos(randomAngle)
         let y = randomY
@@ -398,7 +418,6 @@ class AquariumViewController: UIViewController {
         
         return triangleNode
     }
-    
     
     func rotateModelAroundCenter(modelNode: SCNNode, clockwise: Bool) {
         let rotationDuration: TimeInterval = 5000.0

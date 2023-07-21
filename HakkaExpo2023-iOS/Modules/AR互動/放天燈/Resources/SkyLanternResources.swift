@@ -162,8 +162,9 @@ extension SkyLanternResources {
 extension SkyLanternResources {
     private func setFirePathUrlByLocal() {
         let bundle = Bundle(for: SkyLanternResources.self)
-        guard let path = bundle.path(forResource: "TaipeiSkyLamp_Fire_v1", ofType: "png") else {return}
+        guard let path = bundle.path(forResource: "SkyLantern_Fire", ofType: "png") else {return}
         SkyLanternResources.firePathUrl = URL(fileURLWithPath: path)
+        print("Path:\(path)")
     }
     
     private func setFirePathUrl() {
@@ -201,7 +202,7 @@ extension SkyLanternResources {
 extension SkyLanternResources {
     private func setMaterialPathByLocal() {
         let bundle = Bundle(for: SkyLanternResources.self)
-        guard let path = bundle.path(forResource: "SKyLamp", ofType: "jpg") else {return}
+        guard let path = bundle.path(forResource: "SkyLantern_Texture", ofType: "jpg") else {return}
         SkyLanternResources.materialPath = path
     }
     
@@ -242,13 +243,14 @@ extension SkyLanternResources {
         if isUseLocalData {
             let bundle = Bundle(for: SkyLanternResources.self)
             guard
-                let path = bundle.path(forResource: "TaipeiSkyLamp_v2", ofType: "glb"),
+                let path = bundle.path(forResource: "SkyLantern", ofType: "glb"),
                 let sceneSource = try? GLTFSceneSource(path: path)
             else {return nil}
             return sceneSource
         }else {
             guard let url = URL(string: domainName + modelFileName) else {return nil}
             return GLTFSceneSource(url: url)
+           
         }
     }
 }

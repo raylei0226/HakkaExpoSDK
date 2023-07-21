@@ -38,7 +38,7 @@ class SkyLanternARVC: UIViewController {
     private var currentStatus = SkyLanternStatus.prepare
     private var isPhotosBeingSaved = false
     
-    private let isDebug = false
+    private let isDebug = true
     private let isStressTesting = false
 
     //MARK: - Life Cycle
@@ -69,7 +69,6 @@ class SkyLanternARVC: UIViewController {
             currentStatus = .put
         }else {
             AlertManager.showAlert(in: self, message: "擺放天燈失敗。")
-            
         }
     }
     
@@ -109,8 +108,8 @@ class SkyLanternARVC: UIViewController {
                     self.navigationController?.popViewController(animated: true)
                 }
             }))
-            AlertManager.showAlert(in: self, actions: [UIAlertAction(title: "否", style: .default)])
-
+            alert.addAction(UIAlertAction(title: "否", style: .cancel))
+            present(alert, animated: true)
         }else {
             self.navigationController?.popViewController(animated: true)
         }
@@ -125,6 +124,7 @@ class SkyLanternARVC: UIViewController {
         initSkyLanternARService()
         debugView.isHidden = !isDebug
         stressTestingView.isHidden = !isStressTesting
+        HudManager.shared.showProgressWithMessage("天燈準備中", seconds: 5.0)
     }
     
     private func initSkyLanternARService() {

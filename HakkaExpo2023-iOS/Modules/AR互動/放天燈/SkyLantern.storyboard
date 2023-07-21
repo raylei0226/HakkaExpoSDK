@@ -56,7 +56,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入祈福願望" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-4g-cUX">
                                         <rect key="frame" x="123.66666666666667" y="32" width="142.66666666666663" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.18039215689999999" green="0.71372549019999998" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="themePurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-4r-xOX">
@@ -64,8 +64,8 @@
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gYV-xR-Ecf">
                                                 <rect key="frame" x="8" y="8" width="342" height="527"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <color key="textColor" systemColor="labelColor"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="themePurple"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
                                                 <connections>
@@ -73,7 +73,7 @@
                                                 </connections>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.97254901960784312" green="0.99607843137254903" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gYV-xR-Ecf" firstAttribute="top" secondItem="aBG-4r-xOX" secondAttribute="top" constant="8" id="1wq-nY-NqX"/>
                                             <constraint firstAttribute="trailing" secondItem="gYV-xR-Ecf" secondAttribute="trailing" constant="8" id="QgM-HJ-nfK"/>
@@ -84,7 +84,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提醒：字數限制20字，字體大小均同，如需段行，請在文字間空格。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUG-dD-DF8">
                                         <rect key="frame" x="32" y="574.33333333333337" width="326" height="40.666666666666629"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.1803921568627451" green="0.71372549019607845" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="themePurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -637,14 +637,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" width="143" height="143"/>
+        <image name="camera" width="74" height="74"/>
         <image name="concaveWhite" width="415.66665649414062" height="75"/>
         <namedColor name="themePurple">
             <color red="0.45098039215686275" green="0.19215686274509805" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

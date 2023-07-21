@@ -15,8 +15,8 @@
  */
 
 #import <ARCoreGARSession/GARSessionConfiguration.h>
-#import <ARCoreGeospatial/GARStreetscapeGeometryMode.h>
 #import <ARCoreGeospatial/GARGeospatialMode.h>
+#import <ARCoreGeospatial/GARStreetscapeGeometryMode.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
