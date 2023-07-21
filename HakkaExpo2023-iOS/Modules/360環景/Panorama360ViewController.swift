@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PanoramaViewController: BasicViewController {
+class Panorama360ViewController: BasicViewController {
     
     @IBOutlet weak var panoramaTableView: UITableView!
     
@@ -19,7 +19,7 @@ class PanoramaViewController: BasicViewController {
         
         self.navigationItem.title = "360環景"
         
-        panoramaTableView.register(UINib(nibName: "PanoramaTableViewCell", bundle: Bundle(for: PanoramaViewController.self)), forCellReuseIdentifier: Configs.CellNames.panoramaTableViewCell)
+        panoramaTableView.register(UINib(nibName: "PanoramaTableViewCell", bundle: Bundle(for: Panorama360ViewController.self)), forCellReuseIdentifier: Configs.CellNames.panoramaTableViewCell)
         
         panoramaViewModel.observers.append(self)
     }
@@ -36,7 +36,7 @@ class PanoramaViewController: BasicViewController {
     }
 }
 
-extension PanoramaViewController: PanoramaViewModelObserver {
+extension Panorama360ViewController: PanoramaViewModelObserver {
     
     func panoramaItemsUpdate(_ items: [String]) {
         print("items:\(items)")
@@ -50,7 +50,7 @@ extension PanoramaViewController: PanoramaViewModelObserver {
 
 
 
-extension PanoramaViewController: UITableViewDelegate, UITableViewDataSource {
+extension Panorama360ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return panoramaViewModel.numberOfItems

@@ -73,7 +73,7 @@
 		3BAF03032A1B1F0B00E514E1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03022A1B1F0B00E514E1 /* NetworkManager.swift */; };
 		3BAF03062A1B20A800E514E1 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03052A1B20A800E514E1 /* RestAPI.swift */; };
 		3BAF03082A1C4F0F00E514E1 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03072A1C4F0F00E514E1 /* MainPageViewModel.swift */; };
-		3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF030A2A1C4F7100E514E1 /* PanoramaViewController.swift */; };
+		3BAF030B2A1C4F7100E514E1 /* Panorama360ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF030A2A1C4F7100E514E1 /* Panorama360ViewController.swift */; };
 		3BAF03122A1C532F00E514E1 /* Panorama.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF03112A1C532F00E514E1 /* Panorama.storyboard */; };
 		3BAF03152A1C61DF00E514E1 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF03132A1C61DF00E514E1 /* VenueTableViewCell.swift */; };
 		3BAF03162A1C61DF00E514E1 /* VenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF03142A1C61DF00E514E1 /* VenueTableViewCell.xib */; };
@@ -240,7 +240,7 @@
 		3BAF03022A1B1F0B00E514E1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3BAF03052A1B20A800E514E1 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		3BAF03072A1C4F0F00E514E1 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
-		3BAF030A2A1C4F7100E514E1 /* PanoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
+		3BAF030A2A1C4F7100E514E1 /* Panorama360ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panorama360ViewController.swift; sourceTree = "<group>"; };
 		3BAF03112A1C532F00E514E1 /* Panorama.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Panorama.storyboard; sourceTree = "<group>"; };
 		3BAF03132A1C61DF00E514E1 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
 		3BAF03142A1C61DF00E514E1 /* VenueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueTableViewCell.xib; sourceTree = "<group>"; };
@@ -630,7 +630,7 @@
 		3BAF03092A1C4F1700E514E1 /* 360環景 */ = {
 			isa = PBXGroup;
 			children = (
-				3BAF030A2A1C4F7100E514E1 /* PanoramaViewController.swift */,
+				3BAF030A2A1C4F7100E514E1 /* Panorama360ViewController.swift */,
 				3BAF03112A1C532F00E514E1 /* Panorama.storyboard */,
 				3BAF03482A25F1B400E514E1 /* PanoramaViewModel.swift */,
 				3BAF034C2A25FBFE00E514E1 /* PanoramaTableViewCell.swift */,
@@ -1139,7 +1139,7 @@
 				3BE290702A54FAAC00C522B0 /* FloorMenuVC.swift in Sources */,
 				3BE2907A2A54FAAC00C522B0 /* OGPointProvider.swift in Sources */,
 				3B82F4B42A2F0C1D00B1C805 /* SkyLanternNode.swift in Sources */,
-				3BAF030B2A1C4F7100E514E1 /* PanoramaViewController.swift in Sources */,
+				3BAF030B2A1C4F7100E514E1 /* Panorama360ViewController.swift in Sources */,
 				3BE290722A54FAAC00C522B0 /* PoiDetailTitleView.swift in Sources */,
 				3BAF03062A1B20A800E514E1 /* RestAPI.swift in Sources */,
 				3B43CC122A41AF99000D06FE /* CustomToogleButton.swift in Sources */,

@@ -35,7 +35,7 @@ class PanoramaTableViewCell: UITableViewCell {
     func cofigure(url imageURL: String, name: String) {
 //        let url = URL(string: Configs.Network.domain + "/" + imageURL)
         let url = URL(string: imageURL)
-        panoramaImageView.sd_setImage(with: url, placeholderImage: Configs.setupPlaceholderImage(in: PanoramaViewController.self))
+        panoramaImageView.sd_setImage(with: url, placeholderImage: Configs.setupPlaceholderImage(in: Panorama360ViewController.self))
         nameLabel.text = name
     }
     
