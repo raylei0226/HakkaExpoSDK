@@ -28,7 +28,6 @@
 		3B238FDD2A3D41E900881BBC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B238FDC2A3D41E900881BBC /* SnapKit */; };
 		3B238FE12A3D8EF800881BBC /* CustomMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238FE02A3D8EF800881BBC /* CustomMaskView.swift */; };
 		3B281A412A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
-		3B281A422A4C446B00166E15 /* Data + HexParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281A402A4C446B00166E15 /* Data + HexParse.swift */; };
 		3B2DEF0B2A4EA712006F7321 /* MissionMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0A2A4EA712006F7321 /* MissionMapViewController.swift */; };
 		3B2DEF0D2A5267A9006F7321 /* GetFloorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0C2A5267A9006F7321 /* GetFloorData.swift */; };
 		3B2DEF0F2A5299F0006F7321 /* VibrationFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DEF0E2A5299F0006F7321 /* VibrationFeedbackManager.swift */; };
@@ -67,14 +66,6 @@
 		3BAF02D42A17203700E514E1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02D32A17203700E514E1 /* Reachability.swift */; };
 		3BAF02D62A17290A00E514E1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02D52A17290A00E514E1 /* AppCoordinator.swift */; };
 		3BAF02D82A17294200E514E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02D72A17294200E514E1 /* Coordinator.swift */; };
-		3BAF02E02A174A0A00E514E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02DF2A174A0A00E514E1 /* AppDelegate.swift */; };
-		3BAF02E22A174A0A00E514E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02E12A174A0A00E514E1 /* SceneDelegate.swift */; };
-		3BAF02E42A174A0A00E514E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02E32A174A0A00E514E1 /* ViewController.swift */; };
-		3BAF02E72A174A0A00E514E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF02E52A174A0A00E514E1 /* Main.storyboard */; };
-		3BAF02E92A174A0C00E514E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF02E82A174A0C00E514E1 /* Assets.xcassets */; };
-		3BAF02EC2A174A0C00E514E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF02EA2A174A0C00E514E1 /* LaunchScreen.storyboard */; };
-		3BAF02F12A174AD800E514E1 /* HakkaExpo2023_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */; };
-		3BAF02F22A174AD800E514E1 /* HakkaExpo2023_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3BAF02F82A174CD600E514E1 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02F72A174CD600E514E1 /* MainPageViewController.swift */; };
 		3BAF02FA2A174CE700E514E1 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF02F92A174CE700E514E1 /* MainPage.storyboard */; };
 		3BAF02FD2A174ED800E514E1 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF02FC2A174ED800E514E1 /* Configs.swift */; };
@@ -175,32 +166,7 @@
 		3BE2908E2A54FAAC00C522B0 /* DirectionMarkersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE290542A54FAAC00C522B0 /* DirectionMarkersListModel.swift */; };
 		3BE2922A2A580A9700C522B0 /* Int + DegressToRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE292292A580A9700C522B0 /* Int + DegressToRadians.swift */; };
 		3BE2922D2A580AFB00C522B0 /* SCNVector3 + normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2922C2A580AFB00C522B0 /* SCNVector3 + normalized.swift */; };
-		D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B8F7F2DE5DDAC2CFB5C0B /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3BAF02F32A174AD800E514E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BAF02AD2A1706B300E514E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BAF02B52A1706B300E514E1;
-			remoteInfo = "HakkaExpo2023-iOS";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3BAF02F52A174AD900E514E1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3BAF02F22A174AD800E514E1 /* HakkaExpo2023_iOS.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B238FB92A36B50E00881BBC /* AwardTicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTicketTableViewCell.swift; sourceTree = "<group>"; };
@@ -260,7 +226,6 @@
 		3BAF02D32A17203700E514E1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		3BAF02D52A17290A00E514E1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3BAF02D72A17294200E514E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		3BAF02DD2A174A0A00E514E1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF02DF2A174A0A00E514E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BAF02E12A174A0A00E514E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3BAF02E32A174A0A00E514E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -388,15 +353,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BAF02DA2A174A0A00E514E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BAF02F12A174AD800E514E1 /* HakkaExpo2023_iOS.framework in Frameworks */,
-				D09D66AFE26D62E68DEB9AC7 /* Pods_Demo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -492,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */,
-				3BAF02DD2A174A0A00E514E1 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -970,28 +925,6 @@
 			productReference = 3BAF02B62A1706B300E514E1 /* HakkaExpo2023_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3BAF02DC2A174A0A00E514E1 /* Demo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3BAF02EE2A174A0C00E514E1 /* Build configuration list for PBXNativeTarget "Demo" */;
-			buildPhases = (
-				8632F091F96AA428B36717AF /* [CP] Check Pods Manifest.lock */,
-				3BAF02D92A174A0A00E514E1 /* Sources */,
-				3BAF02DA2A174A0A00E514E1 /* Frameworks */,
-				3BAF02DB2A174A0A00E514E1 /* Resources */,
-				3BAF02F52A174AD900E514E1 /* Embed Frameworks */,
-				F76FD830A728C2CC4C25F0A9 /* [CP] Embed Pods Frameworks */,
-				1A461F8173DD560607BADC52 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3BAF02F42A174AD800E514E1 /* PBXTargetDependency */,
-			);
-			name = Demo;
-			productName = Demo;
-			productReference = 3BAF02DD2A174A0A00E514E1 /* Demo.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1005,9 +938,6 @@
 					3BAF02B52A1706B300E514E1 = {
 						CreatedOnToolsVersion = 14.3;
 						LastSwiftMigration = 1430;
-					};
-					3BAF02DC2A174A0A00E514E1 = {
-						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -1032,7 +962,6 @@
 			projectRoot = "";
 			targets = (
 				3BAF02B52A1706B300E514E1 /* HakkaExpo2023-iOS */,
-				3BAF02DC2A174A0A00E514E1 /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -1074,58 +1003,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BAF02DB2A174A0A00E514E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BAF02EC2A174A0C00E514E1 /* LaunchScreen.storyboard in Resources */,
-				3BAF02E92A174A0C00E514E1 /* Assets.xcassets in Resources */,
-				3BAF02E72A174A0A00E514E1 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A461F8173DD560607BADC52 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8632F091F96AA428B36717AF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B1D12A8AC54FE5E81E64F5DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1163,23 +1043,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HakkaExpo2023-iOS/Pods-HakkaExpo2023-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F76FD830A728C2CC4C25F0A9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1313,26 +1176,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BAF02D92A174A0A00E514E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BAF02E42A174A0A00E514E1 /* ViewController.swift in Sources */,
-				3B281A422A4C446B00166E15 /* Data + HexParse.swift in Sources */,
-				3BAF02E02A174A0A00E514E1 /* AppDelegate.swift in Sources */,
-				3BAF02E22A174A0A00E514E1 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3BAF02F42A174AD800E514E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3BAF02B52A1706B300E514E1 /* HakkaExpo2023-iOS */;
-			targetProxy = 3BAF02F32A174AD800E514E1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3BAF02E52A174A0A00E514E1 /* Main.storyboard */ = {
@@ -1552,80 +1396,6 @@
 			};
 			name = Release;
 		};
-		3BAF02EF2A174A0C00E514E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6018B7B80A7322FD7047128 /* Pods-Demo.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9V5M2X2S8X;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/HakkaExpo2023-iOS",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Demo/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "取用藍牙進行掃描";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "HakkaExpo 需要取用您的位置";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.hakka;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3BAF02F02A174A0C00E514E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92FAFC231239541F503F75B2 /* Pods-Demo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9V5M2X2S8X;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/HakkaExpo2023-iOS",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Demo/Info.plist;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "取用藍牙進行掃描";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "HakkaExpo 需要取用您的位置";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.hakka;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1643,15 +1413,6 @@
 			buildConfigurations = (
 				3BAF02BE2A1706B300E514E1 /* Debug */,
 				3BAF02BF2A1706B300E514E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3BAF02EE2A174A0C00E514E1 /* Build configuration list for PBXNativeTarget "Demo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3BAF02EF2A174A0C00E514E1 /* Debug */,
-				3BAF02F02A174A0C00E514E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
