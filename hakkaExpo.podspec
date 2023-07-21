@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'HakkaExpo2023-iOS'
+  spec.name         = 'hakkaExpo'
   spec.version      = '1.2.4'
   spec.authors      = { 
     'Ray' => 'ray@omniguider.com'
