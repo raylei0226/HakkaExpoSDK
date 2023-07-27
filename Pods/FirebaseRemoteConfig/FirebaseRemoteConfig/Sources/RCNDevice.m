@@ -33,19 +33,19 @@ static NSString *const RCNDeviceContextKeyDeviceLocale = @"device_locale";
 static NSString *const RCNDeviceContextKeyLocaleLanguage = @"locale_language";
 static NSString *const RCNDeviceContextKeyGMPProjectIdentifier = @"GMP_project_Identifier";
 
-NSString *FIRRemoteConfigAppVersion(void) {
+NSString *FIRRemoteConfigAppVersion() {
   return [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
 }
 
-NSString *FIRRemoteConfigAppBuildVersion(void) {
+NSString *FIRRemoteConfigAppBuildVersion() {
   return [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
 }
 
-NSString *FIRRemoteConfigPodVersion(void) {
+NSString *FIRRemoteConfigPodVersion() {
   return FIRFirebaseVersion();
 }
 
-RCNDeviceModel FIRRemoteConfigDeviceSubtype(void) {
+RCNDeviceModel FIRRemoteConfigDeviceSubtype() {
   NSString *model = [GULAppEnvironmentUtil deviceModel];
   if ([model hasPrefix:@"iPhone"]) {
     return RCNDeviceModelPhone;
@@ -56,7 +56,7 @@ RCNDeviceModel FIRRemoteConfigDeviceSubtype(void) {
   return RCNDeviceModelOther;
 }
 
-NSString *FIRRemoteConfigDeviceCountry(void) {
+NSString *FIRRemoteConfigDeviceCountry() {
   return [[[NSLocale currentLocale] objectForKey:NSLocaleCountryCode] lowercaseString];
 }
 

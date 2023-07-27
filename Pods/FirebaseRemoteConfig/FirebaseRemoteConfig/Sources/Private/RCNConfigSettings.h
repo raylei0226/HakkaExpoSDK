@@ -79,8 +79,6 @@
 @property(nonatomic, readwrite, assign) NSString *lastETag;
 /// The timestamp of the last eTag update.
 @property(nonatomic, readwrite, assign) NSTimeInterval lastETagUpdateTime;
-// Last fetched template version.
-@property(nonatomic, readwrite, assign) NSString *lastTemplateVersion;
 
 #pragma mark Throttling properties
 
@@ -92,14 +90,6 @@
 @property(nonatomic, readwrite, assign) double exponentialBackoffRetryInterval;
 /// Returns the time in seconds until the next request is allowed while in exponential backoff mode.
 @property(nonatomic, readonly, assign) NSTimeInterval exponentialBackoffThrottleEndTime;
-/// Returns the current retry interval in seconds set for exponential backoff for the Realtime
-/// service.
-@property(nonatomic, readwrite, assign) double realtimeExponentialBackoffRetryInterval;
-/// Returns the time in seconds until the next request is allowed while in exponential backoff mode
-/// for the Realtime service.
-@property(nonatomic, readonly, assign) NSTimeInterval realtimeExponentialBackoffThrottleEndTime;
-/// Realtime connection attempts.
-@property(nonatomic, readwrite, assign) int realtimeRetryCount;
 
 #pragma mark Throttling Methods
 
@@ -123,20 +113,11 @@
 
 /// Updates the metadata table with the current fetch status.
 /// @param fetchSuccess True if fetch was successful.
-- (void)updateMetadataWithFetchSuccessStatus:(BOOL)fetchSuccess
-                             templateVersion:(NSString *)templateVersion;
+- (void)updateMetadataWithFetchSuccessStatus:(BOOL)fetchSuccess;
 
 /// Increases the throttling time. Should only be called if the fetch error indicates a server
 /// issue.
 - (void)updateExponentialBackoffTime;
-
-/// Increases the throttling time for Realtime. Should only be called if the Realtime error
-/// indicates a server issue.
-- (void)updateRealtimeExponentialBackoffTime;
-
-/// Returns the difference between the Realtime backoff end time and the current time in a
-/// NSTimeInterval format.
-- (NSTimeInterval)getRealtimeBackoffInterval;
 
 /// Returns true if we are in exponential backoff mode and it is not yet the next request time.
 - (BOOL)shouldThrottle;

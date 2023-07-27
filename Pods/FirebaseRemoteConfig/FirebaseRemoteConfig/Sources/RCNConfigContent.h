@@ -16,8 +16,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "FirebaseRemoteConfig/Sources/Public/FirebaseRemoteConfig/FIRRemoteConfig.h"
-
 typedef NS_ENUM(NSInteger, RCNDBSource) {
   RCNDBSourceActive,
   RCNDBSourceDefault,
@@ -64,8 +62,5 @@ typedef NS_ENUM(NSInteger, RCNDBSource) {
 
 /// Gets the active config and Personalization metadata.
 - (NSDictionary *)getConfigAndMetadataForNamespace:(NSString *)FIRNamespace;
-
-/// Returns the updated parameters between fetched and active config.
-- (FIRRemoteConfigUpdate *)getConfigUpdateForNamespace:(NSString *)FIRNamespace;
 
 @end

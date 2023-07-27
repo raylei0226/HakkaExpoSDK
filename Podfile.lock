@@ -11,45 +11,45 @@ PODS:
   - ClusterKit (0.5.0):
     - ClusterKit/Core (= 0.5.0)
   - ClusterKit/Core (0.5.0)
-  - Firebase (10.12.0):
-    - Firebase/Core (= 10.12.0)
-  - Firebase/Core (10.12.0):
+  - Firebase (10.5.0):
+    - Firebase/Core (= 10.5.0)
+  - Firebase/Core (10.5.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (~> 10.12.0)
-  - Firebase/CoreOnly (10.12.0):
-    - FirebaseCore (= 10.12.0)
-  - Firebase/Database (10.12.0):
+    - FirebaseAnalytics (~> 10.5.0)
+  - Firebase/CoreOnly (10.5.0):
+    - FirebaseCore (= 10.5.0)
+  - Firebase/Database (10.5.0):
     - Firebase/CoreOnly
-    - FirebaseDatabase (~> 10.12.0)
-  - Firebase/RemoteConfig (10.12.0):
+    - FirebaseDatabase (~> 10.5.0)
+  - Firebase/RemoteConfig (10.5.0):
     - Firebase/CoreOnly
-    - FirebaseRemoteConfig (~> 10.12.0)
-  - Firebase/Storage (10.12.0):
+    - FirebaseRemoteConfig (~> 10.5.0)
+  - Firebase/Storage (10.5.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (~> 10.12.0)
+    - FirebaseStorage (~> 10.5.0)
   - FirebaseABTesting (10.12.0):
     - FirebaseCore (~> 10.0)
-  - FirebaseAnalytics (10.12.0):
-    - FirebaseAnalytics/AdIdSupport (= 10.12.0)
+  - FirebaseAnalytics (10.5.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.5.0)
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebaseAnalytics/AdIdSupport (10.12.0):
+  - FirebaseAnalytics/AdIdSupport (10.5.0):
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
-    - GoogleAppMeasurement (= 10.12.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - GoogleAppMeasurement (= 10.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseAppCheckInterop (10.12.0)
   - FirebaseAuthInterop (10.12.0)
-  - FirebaseCore (10.12.0):
+  - FirebaseCore (10.5.0):
     - FirebaseCoreInternal (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/Logger (~> 7.8)
@@ -57,7 +57,7 @@ PODS:
     - FirebaseCore (~> 10.0)
   - FirebaseCoreInternal (10.12.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
-  - FirebaseDatabase (10.12.0):
+  - FirebaseDatabase (10.5.0):
     - FirebaseCore (~> 10.0)
     - leveldb-library (~> 1.22)
   - FirebaseInstallations (10.12.0):
@@ -65,38 +65,38 @@ PODS:
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/UserDefaults (~> 7.8)
     - PromisesObjC (~> 2.1)
-  - FirebaseRemoteConfig (10.12.0):
+  - FirebaseRemoteConfig (10.5.0):
     - FirebaseABTesting (~> 10.0)
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
-  - FirebaseStorage (10.12.0):
+  - FirebaseStorage (10.5.0):
     - FirebaseAppCheckInterop (~> 10.0)
     - FirebaseAuthInterop (~> 10.0)
     - FirebaseCore (~> 10.0)
     - FirebaseCoreExtension (~> 10.0)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
   - GeoJSONSerialization (0.0.4)
-  - GoogleAppMeasurement (10.12.0):
-    - GoogleAppMeasurement/AdIdSupport (= 10.12.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+  - GoogleAppMeasurement (10.5.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleAppMeasurement/AdIdSupport (10.12.0):
-    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.12.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+  - GoogleAppMeasurement/AdIdSupport (10.5.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleAppMeasurement/WithoutAdIdSupport (10.12.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
-    - GoogleUtilities/MethodSwizzler (~> 7.11)
-    - GoogleUtilities/Network (~> 7.11)
-    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.5.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
   - GoogleDataTransport (9.2.3):
     - GoogleUtilities/Environment (~> 7.7)
@@ -152,13 +152,11 @@ PODS:
 DEPENDENCIES:
   - ARCore/Geospatial
   - ClusterKit
-  - Firebase
-  - Firebase/Database
-  - Firebase/Storage
-  - FirebaseAnalytics
-  - FirebaseCore
+  - Firebase (= 10.5.0)
+  - Firebase/Database (= 10.5.0)
+  - Firebase/Storage (= 10.5.0)
   - GeoJSONSerialization
-  - GoogleMaps
+  - GoogleMaps (= 5.2.0)
   - IndoorAtlas
   - SDWebImageWebPCoder
 
@@ -195,20 +193,20 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ARCore: ea370d583257a0a66406f5b400a5669a72a206f9
   ClusterKit: 6d4b2fdfdd2a74a386fd67dd60a29a69851745e0
-  Firebase: 07150e75d142fb9399f6777fa56a187b17f833a0
+  Firebase: 3d6637234ab163e31852834617b4fe1df3b7af6d
   FirebaseABTesting: 09c328e6a86d562b4e1146c8a9073deadc566b77
-  FirebaseAnalytics: 0270389efbe3022b54ec4588862dabec3477ee98
+  FirebaseAnalytics: 6f7430030cb6b22fe1db2e3bed782e999b76dc00
   FirebaseAppCheckInterop: f95a4feb9089867aff1a4bdc2ce309137e07736a
   FirebaseAuthInterop: 047153f3c2928822032190aa5194e332670a0d66
-  FirebaseCore: f86a1394906b97ac445ae49c92552a9425831bed
+  FirebaseCore: 324b8d182d9ff7e3f6d1fa2f04b082d1c7a3e366
   FirebaseCoreExtension: 0ce5ac36042001cfa233ce7bfa28e5c313cf80f4
   FirebaseCoreInternal: 950500ad8a08963657f6d8c67b579740c06d6aa1
-  FirebaseDatabase: 6d998d7ef2c1723b3e798a85e61a7dc0504b1ea0
+  FirebaseDatabase: 149317118d3387b560d1b79c82d918288178f72e
   FirebaseInstallations: 7b99ef103f013624444c614397038219c45f8e63
-  FirebaseRemoteConfig: bc7f260e6596956fafbb532443c19bd3c30f5258
-  FirebaseStorage: 1d7ca8c8953fc61ccacaa7c612696b5402968a0d
+  FirebaseRemoteConfig: acc04f51d74adfd9d5439d32126e01b520983737
+  FirebaseStorage: 858ba102341232ad8f4e3a457090858200716966
   GeoJSONSerialization: 55a3d24fe9af26508e3af76873114b39b13ba479
-  GoogleAppMeasurement: 2d800fab85e7848b1e66a6f8ce5bca06c5aad892
+  GoogleAppMeasurement: 40c70a7d89013f0eca72006c4b9732163ea4cdae
   GoogleDataTransport: f0308f5905a745f94fb91fea9c6cbaf3831cb1bd
   GoogleMaps: 025272d5876d3b32604e5c080dc25eaf68764693
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
@@ -221,6 +219,6 @@ SPEC CHECKSUMS:
   SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
   SDWebImageWebPCoder: f0f287cee4cd96a59937fbf3c77a8cfda9ba67b0
 
-PODFILE CHECKSUM: 37c5406ff533c4d06b67d799e4b5a040e54b6922
+PODFILE CHECKSUM: d88dd03e4d5e36617b68965689fa7e9ee2073108
 
 COCOAPODS: 1.11.3

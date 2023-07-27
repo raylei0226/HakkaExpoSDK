@@ -10,15 +10,13 @@ target 'HakkaExpo2023-iOS' do
   pod 'IndoorAtlas'
   pod 'SDWebImageWebPCoder'
 
-  pod 'Firebase'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Database'
-  pod 'FirebaseCore'
-  pod 'FirebaseAnalytics'
+  pod 'Firebase', '10.5.0'
+  pod 'Firebase/Storage', '10.5.0'
+  pod 'Firebase/Database', '10.5.0'
 
   pod 'ARCore/Geospatial'
   pod 'GeoJSONSerialization'
-  pod 'GoogleMaps'
+  pod 'GoogleMaps', '5.2.0'
   pod 'ClusterKit'
 
 

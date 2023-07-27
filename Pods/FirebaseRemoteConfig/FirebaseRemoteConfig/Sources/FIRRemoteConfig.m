@@ -26,7 +26,6 @@
 #import "FirebaseRemoteConfig/Sources/RCNConfigContent.h"
 #import "FirebaseRemoteConfig/Sources/RCNConfigDBManager.h"
 #import "FirebaseRemoteConfig/Sources/RCNConfigExperiment.h"
-#import "FirebaseRemoteConfig/Sources/RCNConfigRealtime.h"
 #import "FirebaseRemoteConfig/Sources/RCNConfigValue_Internal.h"
 #import "FirebaseRemoteConfig/Sources/RCNDevice.h"
 #import "FirebaseRemoteConfig/Sources/RCNPersonalization.h"
@@ -34,8 +33,6 @@
 /// Remote Config Error Domain.
 /// TODO: Rename according to obj-c style for constants.
 NSString *const FIRRemoteConfigErrorDomain = @"com.google.remoteconfig.ErrorDomain";
-// Remote Config Realtime Error Domain
-NSString *const FIRRemoteConfigUpdateErrorDomain = @"com.google.remoteconfig.update.ErrorDomain";
 /// Remote Config Error Info End Time Seconds;
 NSString *const FIRRemoteConfigThrottledEndTimeInSecondsKey = @"error_throttled_end_time_seconds";
 /// Minimum required time interval between fetch requests made to the backend.
@@ -69,7 +66,6 @@ typedef void (^FIRRemoteConfigListener)(NSString *_Nonnull, NSDictionary *_Nonnu
   RCNConfigSettings *_settings;
   RCNConfigFetch *_configFetch;
   RCNConfigExperiment *_configExperiment;
-  RCNConfigRealtime *_configRealtime;
   dispatch_queue_t _queue;
   NSString *_appName;
   NSMutableArray *_listeners;
@@ -168,11 +164,6 @@ static NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, FIRRemote
                                                      queue:_queue
                                                  namespace:_FIRNamespace
                                                    options:options];
-
-    _configRealtime = [[RCNConfigRealtime alloc] init:_configFetch
-                                             settings:_settings
-                                            namespace:_FIRNamespace
-                                              options:options];
 
     [_settings loadConfigFromMetadataTable];
 
@@ -604,13 +595,6 @@ typedef void (^FIRRemoteConfigActivateChangeCompletion)(BOOL changed, NSError *_
                 configSettings.minimumFetchInterval, configSettings.fetchTimeout);
   };
   dispatch_async(_queue, setConfigSettingsBlock);
-}
-
-#pragma mark - Realtime
-
-- (FIRConfigUpdateListenerRegistration *)addOnConfigUpdateListener:
-    (void (^_Nonnull)(FIRRemoteConfigUpdate *update, NSError *_Nullable error))listener {
-  return [self->_configRealtime addConfigUpdateListener:listener];
 }
 
 @end

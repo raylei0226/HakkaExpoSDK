@@ -39,7 +39,7 @@ static NSString *const RCNDatabaseName = @"RemoteConfig.sqlite3";
 static NSString *const RCNRemoteConfigStorageSubDirectory = @"Google/RemoteConfig";
 
 /// Remote Config database path for deprecated V0 version.
-static NSString *RemoteConfigPathForOldDatabaseV0(void) {
+static NSString *RemoteConfigPathForOldDatabaseV0() {
   NSArray *dirPaths =
       NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
   NSString *docPath = dirPaths.firstObject;
@@ -97,7 +97,7 @@ static BOOL RemoteConfigCreateFilePathIfNotExist(NSString *filePath) {
   return YES;
 }
 
-static NSArray *RemoteConfigMetadataTableColumnsInOrder(void) {
+static NSArray *RemoteConfigMetadataTableColumnsInOrder() {
   return @[
     RCNKeyBundleIdentifier, RCNKeyNamespace, RCNKeyFetchTime, RCNKeyDigestPerNamespace,
     RCNKeyDeviceContext, RCNKeyAppContext, RCNKeySuccessFetchTime, RCNKeyFailureFetchTime,
@@ -827,22 +827,12 @@ static NSArray *RemoteConfigMetadataTableColumnsInOrder(void) {
       experimentMetadata = [[NSMutableDictionary alloc] init];
     }
 
-    /// Load activated experiments payload.
-    NSMutableArray *activeExperimentPayloads =
-        [strongSelf loadExperimentTableFromKey:@RCNExperimentTableKeyActivePayload];
-    if (!activeExperimentPayloads) {
-      activeExperimentPayloads = [[NSMutableArray alloc] init];
-    }
-
     if (handler) {
       dispatch_async(dispatch_get_main_queue(), ^{
         handler(
             YES, @{
               @RCNExperimentTableKeyPayload : [experimentPayloads copy],
-              @RCNExperimentTableKeyMetadata : [experimentMetadata copy],
-              /// Activated experiments only need ExperimentsDescriptions data, which
-              /// experimentPayloads contains.
-              @RCNExperimentTableKeyActivePayload : [activeExperimentPayloads copy]
+              @RCNExperimentTableKeyMetadata : [experimentMetadata copy]
             });
       });
     }
